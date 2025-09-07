@@ -24,7 +24,20 @@ const VolunteerSection = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const volunteerExperiences = WorkExperienceData.volunteerWorkExperience;
 
-    const handleExpand = (experience: any) => {
+    interface VolunteerExperience {
+        companyName: string;
+        companyDescription: string;
+        category: string;
+        companyLogo: any;
+        role: string;
+        companyColor: string;
+        responsibilities: Array<{
+            date: string;
+            description: string[];
+        }>;
+    }
+
+    const handleExpand = (experience: VolunteerExperience) => {
         setSelectedExperience(experience);
         setIsPopupOpen(true);
     };
@@ -86,10 +99,10 @@ const VolunteerSection = () => {
                             gridTemplateRows: '1fr'
                         }}
                     >
-                        {volunteerExperiences.map((experience: any, index: number) => (
+                        {volunteerExperiences.map((experience: VolunteerExperience, index: number) => (
                             <div key={index} style={{ scrollSnapAlign: 'start' }} className={`${index === volunteerExperiences.length - 1 ? 'mr-2' : ''} volunteer-card`}>
                                 <VolunteerCard
-                                    ref={experienceCardRef}
+                                    ref={experienceCardRef as React.RefObject<HTMLDivElement>}
                                     {...experience}
                                     index={index}
                                     onExpand={() => handleExpand(experience)}

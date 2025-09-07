@@ -56,7 +56,7 @@ const RelatedWorkSection = () => {
                             preText={item.preText}
                             image={item.image}
                             pageRoute={item.pageRoute}
-                            relatedWorkRef={cardsRef}
+                            relatedWorkRef={cardsRef as React.RefObject<HTMLDivElement>}
                         />
                     ))}
                 </div>

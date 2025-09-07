@@ -1,12 +1,19 @@
 "use client";
 
 import React, { forwardRef } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { FaWifi } from "react-icons/fa";
+
+interface Icon {
+    title: string;
+    icon: StaticImageData;
+    pageRoute: string;
+    active: boolean;
+}
 
 interface CarPlayDeviceProps {
     className?: string;
-    icons: any[];
+    icons: Icon[];
 }
 
 const CarPlayDevice = forwardRef<HTMLDivElement, CarPlayDeviceProps>(

@@ -18,7 +18,7 @@ export const Footer = () => {
         {/* Motivational Quote Section */}
         <div className="flex-1 flex justify-center col-span-5 md:col-span-2 px-10 my-5 md:my-0">
           <blockquote className="text-gray-600 text-center md:text-left italic max-w-md">
-            "{FooterData.quote}"
+            &quot;{FooterData.quote}&quot;
           </blockquote>
         </div>
 

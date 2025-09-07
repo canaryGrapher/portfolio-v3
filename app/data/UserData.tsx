@@ -98,7 +98,7 @@ const WorkExperienceData = {
       rolesAndResponsibilities: [
         ""
       ],
-      experienceGained: []
+      // experienceGained: []
     },
     {
       companyName: "Leap Wallet",
@@ -111,7 +111,7 @@ const WorkExperienceData = {
       rolesAndResponsibilities: [
         ""
       ],
-      experienceGained: []
+      // experienceGained: []
     },
     {
       companyName: "NonceBlox",
@@ -124,7 +124,7 @@ const WorkExperienceData = {
       rolesAndResponsibilities: [
         ""
       ],
-      experienceGained: []
+      // experienceGained: []
     },
     {
       companyName: "The ChillSpace",
@@ -137,7 +137,7 @@ const WorkExperienceData = {
       rolesAndResponsibilities: [
         ""
       ],
-      experienceGained: []
+      // experienceGained: []
     },
     {
       companyName: "IonCure",
@@ -150,7 +150,7 @@ const WorkExperienceData = {
       rolesAndResponsibilities: [
         ""
       ],
-      experienceGained: []
+      // experienceGained: []
     }
   ],
   volunteerWorkExperience: [

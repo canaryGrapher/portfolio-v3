@@ -13,7 +13,7 @@ interface ExperienceCardProps {
     bannerImage: StaticImageData;
     onExpand: () => void;
     index: number;
-    ref: any;
+    ref?: React.Ref<HTMLDivElement>;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({

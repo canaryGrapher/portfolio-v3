@@ -5,6 +5,7 @@ import { ExperienceCard, ExperiencePopup, ScrollSlider } from '../pageComponents
 import { WorkExperienceData } from '@/data/UserData';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { StaticImageData } from 'next/image';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -24,7 +25,17 @@ const WorkExSection = () => {
     const directionRef = useRef<1 | -1>(1); // 1 = right, -1 = left
     const workExperiences = WorkExperienceData.professionalWorkExperience;
 
-    const handleExpand = (experience: any) => {
+    interface WorkExperience {
+        companyName: string;
+        jobTitle: string;
+        companyDescription: string;
+        employmentType: string;
+        startDate: string;
+        endDate: string;
+        bannerImage: StaticImageData;
+    }
+
+    const handleExpand = (experience: WorkExperience) => {
         setSelectedExperience(experience);
         setIsPopupOpen(true);
     };

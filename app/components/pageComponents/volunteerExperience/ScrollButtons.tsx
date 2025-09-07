@@ -1,6 +1,19 @@
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
-const ScrollButtons = ({ scrollToCard, currentCardIndex, volunteerExperiences }: { scrollToCard: (index: number) => void, currentCardIndex: number, volunteerExperiences: any[] }) => {
+interface VolunteerExperience {
+    companyName: string;
+    companyDescription: string;
+    category: string;
+    companyLogo: any;
+    role: string;
+    companyColor: string;
+    responsibilities: Array<{
+        date: string;
+        description: string[];
+    }>;
+}
+
+const ScrollButtons = ({ scrollToCard, currentCardIndex, volunteerExperiences }: { scrollToCard: (index: number) => void, currentCardIndex: number, volunteerExperiences: VolunteerExperience[] }) => {
     const buttonClass = "cursor-pointer w-12 h-12 border-4 border-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-all duration-200 text-black hover:text-gray-200";
     return (
         <div className="flex justify-end items-center space-x-4 mt-8">
