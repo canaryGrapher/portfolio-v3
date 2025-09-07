@@ -18,6 +18,7 @@ interface VolunteerCardProps {
     }[];
     onExpand: () => void;
     index: number;
+    ref: React.RefObject<HTMLDivElement>;
 }
 
 const VolunteerCard: React.FC<VolunteerCardProps> = ({
@@ -29,10 +30,12 @@ const VolunteerCard: React.FC<VolunteerCardProps> = ({
     index,
     onExpand,
     category,
+    ref,
 }) => {
     return (
         <div
-            className={`bg-white w-[400px] h-full min-h-[250px] rounded-2xl p-5 relative flex flex-col justify-between overflow-hidden ${index === 0 ? 'ml-[calc((100vw-80rem)/2)]' : ''}`}
+            ref={ref}
+            className={`bg-white w-[300px] md:w-[400px] h-full min-h-[150px] md:min-h-[250px] rounded-2xl p-5 relative flex flex-col justify-between overflow-hidden ${index === 0 ? 'ml-5 md:ml-[calc((100vw-80rem)/2)]' : ''}`}
         >
             {/* Card content */}
             <div className="flex flex-col space-y-2 items-start">
@@ -41,15 +44,15 @@ const VolunteerCard: React.FC<VolunteerCardProps> = ({
                     <Image src={companyLogo} alt={companyName} />
                 </div>
                 {/* Company Name */}
-                <h3 className="text-xs font-medium text-black m-0">
+                <h3 className="text-xs md:text-base font-medium text-black m-0">
                     {companyName}
                 </h3>
                 {/* Role */}
-                <p className="text-black text-xl font-bold m-0">
+                <p className="text-black text-base md:text-xl font-bold m-0">
                     {role}
                 </p>
                 {/* Company Description */}
-                <p className="p-0 text-gray-500 text-sm w-full">
+                <p className="p-0 text-gray-500 text-xs md:text-sm w-full">
                     {companyDescription}
                 </p>
             </div>

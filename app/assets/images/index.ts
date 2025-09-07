@@ -1,4 +1,4 @@
-import HeroImage from "./HeroImage.jpg";
+import * as HeroImage from "./hero";
 import * as WorkExBannerBackground from "./WorkEx/Bannerbackground";
 import * as VolunteerWork from "./WorkEx/VolunteerWork";
 import * as RelatedWork from "./RelatedWork";

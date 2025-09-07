@@ -1,85 +1,159 @@
 "use client";
 
 import { HeroSectionData } from "@/data/UserData";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
+import { FaMouse } from "react-icons/fa";
 
-gsap.registerPlugin(ScrollTrigger);
+// Register GSAP plugins
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 const HeroSection = () => {
+
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const nameRef = useRef<HTMLHeadingElement>(null);
+    const backgroundRef = useRef<HTMLDivElement>(null);
+    const imageRef = useRef<HTMLImageElement>(null);
+
     useEffect(() => {
+        if (sectionRef.current) {
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top top",
+                    end: "bottom top",
+                    pin: true,
+                    scrub: 1,
+                }
+            });
 
-        gsap.from("#hero-section-header", {
-            opacity: 0,
-            y: 100,
-            duration: 1.5,
-            ease: "power2.inOut",
-        });
+            timeline.from(".heading-part", {
+                y: 100,
+                duration: 1,
+                ease: "power2.in",
+                stagger: 0.1,
+                opacity: 0,
+            }, "0")
 
-        gsap.to("#hero-section-video-container", {
-            width: "80%",
-            scrollTrigger: {
-                trigger: "#hero-section",
-                start: "top top",
-                end: "bottom top",
-                scrub: 1,
-            }
-        });
+            timeline.to(nameRef.current, {
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out",
+            }, "0.5")
 
-        gsap.to("#hero-section-video", {
-            borderRadius: "20px",
-            duration: 1.5,
-            scrollTrigger: {
-                trigger: "#hero-section-header",
-                start: "top top",
-                end: "bottom top",
-                scrub: 1,
-            }
-        });
+            timeline.fromTo(".heading-part", {
+                y: 0,
+                duration: 1,
+                ease: "power2.out",
+                stagger: 0.1,
+                opacity: 1,
+            }, {
+                y: -100,
+                duration: 1,
+                ease: "power2.in",
+                stagger: 0.1,
+                opacity: 0,
+            }, "1")
 
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
+            timeline.fromTo(backgroundRef.current, {
+                opacity: 0,
+                duration: 1,
+                delay: 1.5,
+                height: "0%",
+                width: "0%",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+            }, {
+                opacity: 1,
+                duration: 1,
+                ease: "power2.in",
+                height: "100%",
+                width: "100%",
+                top: "0%",
+                left: "0%",
+                transform: "translate(0%, 0%)",
+            }, "1.5")
+
+            timeline.to(backgroundRef.current, {
+                duration: 1,
+                ease: "power2.out",
+                width: "90%",
+                height: "60%",
+                left: "5%",
+                right: "5%",
+                bottom: "20%",
+                top: "20%",
+            }, "2")
+
+            timeline.to(imageRef.current, {
+                duration: 1,
+                ease: "power2.in",
+                borderRadius: "50px",
+            }, "2.5")
+        }
     }, []);
 
     return (
-        <section className="flex flex-col text-center w-full bg-black pb-10" id="hero-section">
-            {/* Header Section */}
-            <div className="text-white pt-10 pb-20" id="hero-section-header">
-                <div className="mx-auto text-center">
-                    <p className="text-sm">user.start()</p>
-                    <h1 className="text-4xl md:text-6xl font-medium">{HeroSectionData.name}</h1>
-                </div>
-            </div>
-
+        <section
+            className="relative max-h-screen h-screen overflow-hidden text-center w-full bg-black"
+            id="hero-section"
+            ref={sectionRef}>
             {/* Main Content Section */}
-            <div className="grid grid-cols-1 relative">
-                <div className="flex justify-center">
-                    <div 
-                        id="hero-section-video-container"
-                        className="w-full transition-all duration-300 ease-out rounded-full"
-                    >
-                        <img
-                            id="hero-section-video"
-                            src={HeroSectionData.image.src}
-                            alt="Motorcycle adventure landscape"
-                            className="rounded-none object-cover w-full h-full"
-                        />
+            <div className="flex flex-col justify-center items-center h-full relative">
+                {/* Text Overlay */}
+                <div className="mx-auto flex flex-col items-center text-center w-full mb-32 md:mb-0">
+                    <div className="flex flex-col justify-around h-full mx-aut font-black">
+                        <h1
+                            ref={nameRef}
+                            className="text-[120px] md:text-[250px] font-black leading-none"
+                            style={{
+                                backgroundImage: `url(${HeroSectionData.image.HeroImage.src})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundClip: 'text',
+                                color: 'transparent'
+                            }}
+                        >
+                            <span className="hidden md:block">{HeroSectionData.name.toUpperCase()}</span>
+                            <span className="block md:hidden whitespace-pre-line leading-none">{HeroSectionData.name.toUpperCase().split(" ").join("\n")}</span>
+                        </h1>
+                    </div>
+                    <div className="text-gray-400 flex flex-row">
+                        {HeroSectionData.title?.map((title, index) => (
+                            <p key={index} className={`text-xl md:text-4xl font-medium leading-tight heading-part ${index === HeroSectionData.title?.length - 1 ? 'mr-0' : 'mr-2'}`}>
+                                {title}{index < HeroSectionData.title?.length - 1 ? '.' : ''}
+                            </p>
+                        ))}
                     </div>
                 </div>
-
-                {/* Text Overlay */}
-                <div className="absolute z-10 h-full flex items-center text-center w-full">
-                    <div className="max-w-7xl mx-auto px-6 w-full">
-                        <div className="text-white flex flex-col items-center justify-center h-full">
-                            <h2 className="text-4xl md:text-6xl font-bold opacity-90 leading-tight">
-                                {HeroSectionData.title}
-                            </h2>
-                        </div>
-                    </div>
+                {/* Video Section */}
+                <div className="opacity-0 absolute top-0 left-0 h-screen w-screen" ref={backgroundRef}>
+                    <img
+                        ref={imageRef}
+                        id="hero-section-video"
+                        src={HeroSectionData.image.HeroImage.src}
+                        alt="Motorcycle adventure landscape"
+                        className="object-cover w-full h-full"
+                        style={{
+                            objectFit: "cover",
+                            objectPosition: "center",
+                        }}
+                    />
                 </div>
             </div>
+            {/* Scroll down indicator */}
+            <div className="absolute bottom-20 left-0 w-full h-10 flex flex-col justify-center items-center">
+                <div className="animate-bounce mb-2">
+                <FaMouse className="text-white text-2xl" />
+                </div>
+                <p className="text-gray-300 font-medium text-xs">Scroll down</p>
+            </div>
+            {/* Header Section */}
         </section>
     );
 };

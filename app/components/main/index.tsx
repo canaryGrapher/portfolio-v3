@@ -9,8 +9,8 @@ import FunStuffSection from "./7-FunStuffSection";
 const Main = () => {
     return (
         <div className="w-full">
-            {/* <HeroSection /> */}
-            {/* <AboutSection /> */}
+            <HeroSection />
+            <AboutSection />
             <SkillsSection />
             <WorkExSection />
             <VolunteerSection />

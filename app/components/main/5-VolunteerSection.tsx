@@ -3,8 +3,21 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { VolunteerCard, VolunteerPopup, ScrollButtons } from '../pageComponents/volunteerExperience';
 import { WorkExperienceData } from '@/data/UserData';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+// Register GSAP plugins
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 const VolunteerSection = () => {
+
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const headerRef = useRef<HTMLDivElement>(null);
+    const experienceCardRef = useRef<HTMLDivElement>(null);
+
     const [selectedExperience, setSelectedExperience] = useState<any>(null);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -32,11 +45,28 @@ const VolunteerSection = () => {
         }
     };
 
+    useEffect(() => {
+        if (sectionRef.current) {
+            gsap.from(".volunteer-card", {
+                opacity: 0,
+                x: 50,
+                duration: 1.5,
+                ease: "power2.in",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: headerRef.current,
+                    start: "bottom bottom",
+                    toggleActions: "play none none none",
+                }
+            });
+        }
+    }, []);
+
     return (
-        <section className="w-full bg-gray-300 py-20">
+        <section className="w-full bg-gray-300 py-20" ref={sectionRef}>
             <div className="mx-auto">
                 {/* Section Header */}
-                <div className="mb-10 max-w-7xl mx-auto">
+                <div className="mb-10 max-w-7xl mx-auto text-center md:text-left" ref={headerRef}>
                     <p className="text-sm text-gray-800 font-mono mb-4">
                         user.volunteer()
                     </p>
@@ -57,8 +87,9 @@ const VolunteerSection = () => {
                         }}
                     >
                         {volunteerExperiences.map((experience: any, index: number) => (
-                            <div key={index} style={{ scrollSnapAlign: 'start' }} className={`${index === volunteerExperiences.length - 1 ? 'mr-2' : ''}`}>
+                            <div key={index} style={{ scrollSnapAlign: 'start' }} className={`${index === volunteerExperiences.length - 1 ? 'mr-2' : ''} volunteer-card`}>
                                 <VolunteerCard
+                                    ref={experienceCardRef}
                                     {...experience}
                                     index={index}
                                     onExpand={() => handleExpand(experience)}
@@ -69,11 +100,13 @@ const VolunteerSection = () => {
                 </div>
 
                 {/* Navigation Arrows */}
+                <div className="flex flex-row justify-center md:justify-end md:mr-20">
                     <ScrollButtons
                         scrollToCard={scrollToCard}
                         currentCardIndex={currentCardIndex}
                         volunteerExperiences={volunteerExperiences}
                     />
+                </div>
             </div>
 
             {/* Popup */}

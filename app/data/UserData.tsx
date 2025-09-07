@@ -5,7 +5,7 @@ import Technologies from "./Technologies";
 
 const HeroSectionData = {
   name: "Yash Aryan",
-  title: "Developer. Storyteller. Explorer.",
+  title: ["Developer", "Thinker", "Explorer"],
   description: "I'm a developer who loves to tell stories and explore new things.",
   image: HeroImage,
 };

@@ -13,6 +13,7 @@ interface ExperienceCardProps {
     bannerImage: StaticImageData;
     onExpand: () => void;
     index: number;
+    ref: any;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -24,7 +25,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     endDate,
     bannerImage,
     index,
-    onExpand
+    onExpand,
+    ref
 }) => {
     const getBannerSrc = () => {
         if (typeof bannerImage === 'string') return bannerImage;
@@ -34,14 +36,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
     return (
         <div
-            className={`w-[420px] h-[600px] flex-none rounded-2xl p-8 relative flex flex-col justify-start overflow-hidden mr-2`}
+            ref={ref}
+            className={`w-[300px] md:w-[420px] h-[400px] md:h-[600px] flex-none rounded-2xl p-8 relative flex flex-col justify-start overflow-hidden mr-2 ${index === 0 ? 'ml-5 md:ml-[calc((100vw-1280px)/2)]' : ''}`}
             style={{ 
                 backgroundImage: `url(${getBannerSrc()})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                // Dynamic left margin so the first card starts aligned with centered content width (1280px)
-                marginLeft: index === 0 ? 'calc((100vw - 1280px) / 2)' as any : undefined
             }}
         >
             {/* Dark overlay for better text readability */}
@@ -50,27 +51,27 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             {/* Content */}
             <div className="relative w-full p-5">
                 {/* Company Name */}
-                <h3 className="text-4xl font-bold text-white mb-2">
+                <h3 className="text-2xl md:text-4xl font-bold text-white md:mb-2">
                     {companyName}
                 </h3>
 
                 {/* Role */}
-                <p className="text-xl text-white">
+                <p className="text-base md:text-xl text-white">
                     {jobTitle}
                 </p>
 
                 {/* Employment Type */}
-                <p className="text-white opacity-80 mb-2 text-lg">
+                <p className="text-white opacity-80 mb-2 text-xs md:text-lg">
                     ({employmentType})
                 </p>
 
                 {/* Work duration */}
-                <p className="text-gray-300 opacity-80 mb-8 text-sm">
+                <p className="text-gray-300 opacity-80 mb-2 smd:mb-8 text-xs md:text-sm">
                     {startDate} - {endDate}
                 </p>
 
                 {/* Description */}
-                <p className="text-white text-lg">
+                <p className="text-white text-xs md:text-lg">
                     {companyDescription}
                 </p>
             </div>
