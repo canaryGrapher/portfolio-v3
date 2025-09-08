@@ -30,7 +30,8 @@
     "paths": {
       "@/assets/*": ["./app/assets/*"],
       "@/data/*": ["./app/data/*"],
-      "@/components/*": ["./app/components/*"]
+      "@/components/*": ["./app/components/*"],
+      "@/interface/*": ["./app/interface/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

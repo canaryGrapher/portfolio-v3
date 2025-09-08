@@ -21,7 +21,7 @@ const RelatedWorkSection = () => {
             gsap.from(cardsRef.current, {
                 opacity: 0,
                 y: 100,
-                duration: 1.5,
+                duration: 0.5,
                 ease: "power2.in",
                 stagger: 0.2,
                 scrollTrigger: {

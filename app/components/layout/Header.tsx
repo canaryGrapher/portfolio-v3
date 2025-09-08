@@ -4,6 +4,7 @@ import { useState } from "react";
 import HeaderData from "@/data/Headers";
 import Image from "next/image";
 import Link from "next/link";
+import { FaTimes } from "react-icons/fa";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,8 +84,7 @@ export const Header = () => {
               className="w-8 h-8 flex items-center justify-center"
               aria-label="Close menu"
             >
-              <span className="block w-6 h-0.5 bg-white rotate-45" />
-              <span className="block w-6 h-0.5 bg-white -rotate-45 -translate-y-0.5" />
+              <FaTimes className="text-2xl" />
             </button>
           </div>
 

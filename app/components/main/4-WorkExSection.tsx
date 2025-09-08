@@ -25,17 +25,7 @@ const WorkExSection = () => {
     const directionRef = useRef<1 | -1>(1); // 1 = right, -1 = left
     const workExperiences = WorkExperienceData.professionalWorkExperience;
 
-    interface WorkExperience {
-        companyName: string;
-        jobTitle: string;
-        companyDescription: string;
-        employmentType: string;
-        startDate: string;
-        endDate: string;
-        bannerImage: StaticImageData;
-    }
-
-    const handleExpand = (experience: WorkExperience) => {
+    const handleExpand = (experience) => {
         setSelectedExperience(experience);
         setIsPopupOpen(true);
     };
@@ -142,8 +132,8 @@ const WorkExSection = () => {
         if (sectionRef.current) {
             gsap.from(".experience-card", {
                 opacity: 0,
-                x: 50,
-                duration: 1.5,
+                y: 50,
+                duration: 0.5,
                 ease: "power2.in",
                 stagger: 0.1,
                 scrollTrigger: {

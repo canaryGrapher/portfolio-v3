@@ -1,5 +1,6 @@
+import { WorkExperience } from "@/interface/UserData";
 import { HeroImage, RelatedWork, VolunteerWork, WorkExBannerBackground, FunStuff } from "@/assets/images"
-import { IntroLottie } from "@/assets/lotties"
+import { IntroLottie, IntroLottieResponsive } from "@/assets/lotties"
 import { Skills, Fun } from "@/assets/vectors";
 import Technologies from "./Technologies";
 
@@ -12,6 +13,7 @@ const HeroSectionData = {
 
 const IntroSectionData = {
   lottieObject: IntroLottie,
+  responsiveLottieObject: IntroLottieResponsive,
   lines: [
     "Hello! I am Yash Aryan, a software engineer from India.",
     "I specialize in web development, with experience in AWS Services, Web3 development, and sometimes, designing websites.",
@@ -55,7 +57,7 @@ const SkillsData = {
   ],
 };
 
-const WorkExperienceData = {
+const WorkExperienceData: WorkExperience = {
   professionalWorkExperience: [
     {
       companyName: "FireAI",
@@ -66,13 +68,19 @@ const WorkExperienceData = {
       endDate: "Jun'25",
       companyDescription: "A software company specializing in AI-powered business intelligence. Their platform transforms complex business data into actionable insights with real-time analytics, predictive capabilities, and secure automation—helping organizations make smarter, faster decisions and drive growth",
       rolesAndResponsibilities: [
-        "Developed a high-performance synchronization application end-to-end  using ElectronJS from prototyping to production for cross-device data sync, enhancing efficiency and security end-to-end.",
-        "Created a Node.js microservice to integrate third-party platforms with FireAI, enabling seamless data import and automation.",
-        "Led the end-to-end development and deployment of FireAI's landing page, resulting in improved performance and user engagement.",
-        "Utilized AWS services for deployment, monitoring, and scaling of the application, ensuring high availability and performance.",
-        "Worked closely with the product team to understand user needs and requirements, and delivered features that met their expectations.",
-        "Collaborated with the design team to create a visually appealing and user-friendly interface for the application.",
-        "Worked closely with the Business Analytics team to integrate the application with their platform, enabling seamless data transfer and automation."
+        {
+          title: "Lead Application Developer",
+          duration: "Oct'24 - Jun'25",
+          description: [
+            "Developed a high-performance synchronization application end-to-end  using ElectronJS from prototyping to production for cross-device data sync, enhancing efficiency and security end-to-end.",
+            "Created a Node.js microservice to integrate third-party platforms with FireAI, enabling seamless data import and automation.",
+            "Led the end-to-end development and deployment of FireAI's landing page, resulting in improved performance and user engagement.",
+            "Utilized AWS services for deployment, monitoring, and scaling of the application, ensuring high availability and performance.",
+            "Worked closely with the product team to understand user needs and requirements, and delivered features that met their expectations.",
+            "Collaborated with the design team to create a visually appealing and user-friendly interface for the application.",
+            "Worked closely with the Business Analytics team to integrate the application with their platform, enabling seamless data transfer and automation."
+          ]
+        }
       ],
       experienceGained: [
         {
@@ -96,9 +104,20 @@ const WorkExperienceData = {
       endDate: "Sep'24",
       companyDescription: "ICICI Bank is one of India's leading private sector banks, delivering a comprehensive range of banking and financial services to corporate, retail, and SME customers. With a global presence and deep expertise, ICICI Bank is recognized for innovation, reliability, and financial strength",
       rolesAndResponsibilities: [
-        ""
+        {
+          title: "",
+          duration: "",
+          description: []
+        }
       ],
-      // experienceGained: []
+      experienceGained: [
+        {
+          name: "",
+          technologies: []
+        }
+      ],
+      companyColor: "",
+      gradientColors: []
     },
     {
       companyName: "Leap Wallet",
@@ -109,9 +128,20 @@ const WorkExperienceData = {
       endDate: "Jul'22",
       companyDescription: "Leap Wallet is a versatile crypto wallet designed for the web3 ecosystem, enabling users to securely manage cryptocurrencies, NFTs, staking rewards, and airdrops across multiple chains. With mobile and browser apps, Leap Wallet streamlines DeFi, trading, and portfolio management for both enthusiasts and developers",
       rolesAndResponsibilities: [
-        ""
+        {
+          title: "",
+          duration: "",
+          description: []
+        }
       ],
-      // experienceGained: []
+      experienceGained: [
+        {
+          name: "",
+          technologies: []
+        }
+      ],
+      companyColor: "",
+      gradientColors: []
     },
     {
       companyName: "NonceBlox",
@@ -122,9 +152,20 @@ const WorkExperienceData = {
       endDate: "Sep'21",
       companyDescription: "Nonceblox is a blockchain technology company specializing in creating scalable and secure blockchain solutions. They develop applications and platforms across multiple chains such as Ethereum and Polygon, helping businesses harness Web3 innovations for digital transformation and growth.",
       rolesAndResponsibilities: [
-        ""
+        {
+          title: "",
+          duration: "",
+          description: []
+        }
       ],
-      // experienceGained: []
+      experienceGained: [
+        {
+          name: "",
+          technologies: []
+        }
+      ],
+      companyColor: "",
+      gradientColors: []
     },
     {
       companyName: "The ChillSpace",
@@ -135,8 +176,20 @@ const WorkExperienceData = {
       endDate: "Nov'20",
       companyDescription: "The ChillSpace is a vibrant community hub and co-working space based out of Manipal, that fosters creativity, collaboration, and innovation. It offers flexible workstations, event hosting, and networking opportunities in a comfortable and inspiring environment, supporting startups, freelancers, and creative professionals.",
       rolesAndResponsibilities: [
-        ""
+        {
+          title: "",
+          duration: "",
+          description: []
+        }
       ],
+      experienceGained: [
+        {
+          name: "",
+          technologies: []
+        }
+      ],
+      companyColor: "",
+      gradientColors: []
       // experienceGained: []
     },
     {
@@ -148,9 +201,20 @@ const WorkExperienceData = {
       endDate: "Aug'20",
       companyDescription: "Ioncure Tech Private Limited is an AI-driven health-tech company focused on innovative drug discovery, epilepsy care, brain diagnostics, and biotech solutions. Their technology combines research and data to improve patient outcomes and advance medical science globally.",
       rolesAndResponsibilities: [
-        ""
+        {
+          title: "",
+          duration: "",
+          description: []
+        }
       ],
-      // experienceGained: []
+      experienceGained: [
+        {
+          name: "",
+          technologies: []
+        }
+      ],
+      companyColor: "",
+      gradientColors: []
     }
   ],
   volunteerWorkExperience: [

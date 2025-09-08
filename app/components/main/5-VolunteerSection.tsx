@@ -62,8 +62,8 @@ const VolunteerSection = () => {
         if (sectionRef.current) {
             gsap.from(".volunteer-card", {
                 opacity: 0,
-                x: 50,
-                duration: 1.5,
+                y: 50,
+                duration: 0.5,
                 ease: "power2.in",
                 stagger: 0.1,
                 scrollTrigger: {

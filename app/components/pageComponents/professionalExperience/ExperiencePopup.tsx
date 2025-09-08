@@ -2,26 +2,7 @@
 
 import React from 'react';
 
-interface ExperiencePopupProps {
-    isOpen: boolean;
-    onClose: () => void;
-    experience: {
-        company: string;
-        role: string;
-        type: string;
-        duration: string;
-        description: string;
-        companyColor: string;
-        logo: React.ReactNode;
-        responsibilities: string[];
-        experienceGained: {
-            category: string;
-            skills: string[];
-        }[];
-    } | null;
-}
-
-const ExperiencePopup: React.FC<ExperiencePopupProps> = ({
+const ExperiencePopup = ({
     isOpen,
     onClose,
     experience
@@ -47,7 +28,7 @@ const ExperiencePopup: React.FC<ExperiencePopupProps> = ({
                 {/* Header */}
                 <div 
                     className="p-8 relative overflow-hidden"
-                    style={{ backgroundColor: experience.companyColor }}
+                    // style={{ backgroundColor: experience.companyColor }}
                 >
                     {/* Abstract Background */}
                     <div className="absolute top-0 right-0 w-48 h-48 opacity-20">

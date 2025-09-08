@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { FaMouse } from "react-icons/fa";
+import { MdSwipeDown } from "react-icons/md";
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -17,6 +18,7 @@ const HeroSection = () => {
     const nameRef = useRef<HTMLHeadingElement>(null);
     const backgroundRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLImageElement>(null);
+    const nameRefPost = useRef<HTMLHeadingElement>(null);
 
     useEffect(() => {
         if (sectionRef.current) {
@@ -30,6 +32,7 @@ const HeroSection = () => {
                 }
             });
 
+            // Hide the heading parts
             timeline.from(".heading-part", {
                 y: 100,
                 duration: 1,
@@ -38,12 +41,8 @@ const HeroSection = () => {
                 opacity: 0,
             }, "0")
 
-            timeline.to(nameRef.current, {
-                opacity: 0,
-                duration: 1,
-                ease: "power2.out",
-            }, "0.5")
 
+            // Show the heading parts
             timeline.fromTo(".heading-part", {
                 y: 0,
                 duration: 1,
@@ -56,8 +55,16 @@ const HeroSection = () => {
                 ease: "power2.in",
                 stagger: 0.1,
                 opacity: 0,
+            }, "0.5")
+
+            // Hide the name
+            timeline.to(nameRef.current, {
+                opacity: 0,
+                duration: 1,
+                ease: "power2.out",
             }, "1")
 
+            // Show the background
             timeline.fromTo(backgroundRef.current, {
                 opacity: 0,
                 duration: 1,
@@ -78,6 +85,7 @@ const HeroSection = () => {
                 transform: "translate(0%, 0%)",
             }, "1.5")
 
+            // Shrink the background
             timeline.to(backgroundRef.current, {
                 duration: 1,
                 ease: "power2.out",
@@ -89,11 +97,30 @@ const HeroSection = () => {
                 top: "20%",
             }, "2")
 
+            // Show the name post
+            timeline.fromTo(nameRefPost.current,
+                {
+                    y: -100,
+                    opacity: 0,
+                    duration: 1,
+                    delay: 1.5,
+                    ease: "power2.in",
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                }, "2.5")
+
+            // Round the background border
             timeline.to(imageRef.current, {
                 duration: 1,
                 ease: "power2.in",
                 borderRadius: "50px",
-            }, "2.5")
+            }, "3")
+
+
         }
     }, []);
 
@@ -131,6 +158,7 @@ const HeroSection = () => {
                         ))}
                     </div>
                 </div>
+
                 {/* Video Section */}
                 <div className="opacity-0 absolute top-0 left-0 h-screen w-screen" ref={backgroundRef}>
                     <img
@@ -144,14 +172,29 @@ const HeroSection = () => {
                             objectPosition: "center",
                         }}
                     />
+                    <div
+                        ref={nameRefPost}
+                        className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center"
+                    >
+                        <h2
+                            className="text-white/30 text-[120px] md:text-[250px] font-bold leading-none">
+                            {HeroSectionData.name.toUpperCase()}
+                        </h2>
+                    </div>
                 </div>
             </div>
+
             {/* Scroll down indicator */}
-            <div className="absolute bottom-20 left-0 w-full h-10 flex flex-col justify-center items-center">
-                <div className="animate-bounce mb-2">
-                <FaMouse className="text-white text-2xl" />
+            <div className="absolute bottom-40 md:bottom-20 left-0 w-full h-10 flex flex-col justify-center items-center">
+                <div className="hidden md:block animate-bounce mb-2">
+                    <FaMouse className="text-white text-2xl" />
                 </div>
-                <p className="text-gray-300 font-medium text-xs">Scroll down</p>
+                <div className="block md:hidden animate-bounce mb-2">
+                    <MdSwipeDown className="text-white text-2xl" />
+                </div>
+
+                <p className="text-gray-300 font-medium text-xs hidden md:block">Scroll down</p>
+                <p className="text-gray-300 font-medium text-xs block md:hidden">Swipe down</p>
             </div>
             {/* Header Section */}
         </section>
