@@ -2,42 +2,25 @@
 
 import React from 'react';
 import { StaticImageData } from 'next/image';
+import { ProfessionalExperience } from '@/interface/UserData';
 
-interface ExperienceCardProps {
-    companyName: string;
-    jobTitle: string;
-    companyDescription: string;
-    employmentType: string;
-    startDate: string;
-    endDate: string;
-    bannerImage: StaticImageData;
-    onExpand: () => void;
+interface Props extends ProfessionalExperience {
     index: number;
-    ref?: React.Ref<HTMLDivElement>;
+    ref: React.RefObject<HTMLDivElement>;
+    onExpand: () => void;
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({
-    companyName,
-    jobTitle,
-    companyDescription,
-    employmentType,
-    startDate,
-    endDate,
-    bannerImage,
-    index,
-    onExpand,
-    ref
-}) => {
+const ExperienceCard: React.FC<Props> = (props) => {
     const getBannerSrc = () => {
-        if (typeof bannerImage === 'string') return bannerImage;
-        if ('src' in bannerImage) return bannerImage.src;
-        return (bannerImage as StaticImageData).src;
+        if (typeof props.bannerImage === 'string') return props.bannerImage;
+        if ('src' in props.bannerImage) return props.bannerImage.src;
+        return (props.bannerImage as StaticImageData).src;
     };
 
     return (
         <div
-            ref={ref}
-            className={`w-[300px] md:w-[420px] h-[400px] md:h-[600px] flex-none rounded-2xl p-8 relative flex flex-col justify-start overflow-hidden mr-2 ${index === 0 ? 'ml-5 md:ml-[calc((100vw-1280px)/2)]' : ''}`}
+            ref={props.ref}
+            className={`w-[300px] md:w-[420px] h-[400px] md:h-[600px] flex-none rounded-2xl p-8 relative flex flex-col justify-start overflow-hidden mr-2 ${props.index === 0 ? 'ml-5 md:ml-[calc((100vw-1280px)/2)]' : ''}`}
             style={{ 
                 backgroundImage: `url(${getBannerSrc()})`,
                 backgroundSize: 'cover',
@@ -52,33 +35,33 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <div className="relative w-full p-5">
                 {/* Company Name */}
                 <h3 className="text-2xl md:text-4xl font-bold text-white md:mb-2">
-                    {companyName}
+                    {props.companyName}
                 </h3>
 
                 {/* Role */}
                 <p className="text-base md:text-xl text-white">
-                    {jobTitle}
+                    {props.jobTitle}
                 </p>
 
                 {/* Employment Type */}
                 <p className="text-white opacity-80 mb-2 text-xs md:text-lg">
-                    ({employmentType})
+                    ({props.employmentType})
                 </p>
 
                 {/* Work duration */}
                 <p className="text-gray-300 opacity-80 mb-2 smd:mb-8 text-xs md:text-sm">
-                    {startDate} - {endDate}
+                    {props.startDate} - {props.endDate}
                 </p>
 
                 {/* Description */}
                 <p className="text-white text-xs md:text-lg">
-                    {companyDescription}
+                    {props.companyDescription}
                 </p>
             </div>
 
             {/* Expand Button */}
             <button
-                onClick={onExpand}
+                onClick={props.onExpand}
                 className="absolute bottom-6 right-0 mr-5 w-12 h-12 bg-white rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200 z-20"
             >
                 <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">

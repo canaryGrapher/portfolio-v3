@@ -1,12 +1,12 @@
 import { WorkExperience } from "@/interface/UserData";
-import { HeroImage, RelatedWork, VolunteerWork, WorkExBannerBackground, FunStuff } from "@/assets/images"
+import { HeroImage, RelatedWork, VolunteerWork, WorkExBannerBackground, WorkExPopupImages, FunStuff } from "@/assets/images"
 import { IntroLottie, IntroLottieResponsive } from "@/assets/lotties"
 import { Skills, Fun } from "@/assets/vectors";
 import Technologies from "./Technologies";
 
 const HeroSectionData = {
   name: "Yash Aryan",
-  title: ["Developer", "Thinker", "Explorer"],
+  title: ["Developer", "Thinker", "Explorer"],  
   description: "I'm a developer who loves to tell stories and explore new things.",
   image: HeroImage,
 };
@@ -62,6 +62,7 @@ const WorkExperienceData: WorkExperience = {
     {
       companyName: "FireAI",
       bannerImage: WorkExBannerBackground.FireAIBannerBackground,
+      popupImage: WorkExPopupImages.FireAIPopupImage,
       jobTitle: "Lead Application Developer",
       employmentType: "Full Time",
       startDate: "Oct'24",
@@ -79,7 +80,8 @@ const WorkExperienceData: WorkExperience = {
             "Worked closely with the product team to understand user needs and requirements, and delivered features that met their expectations.",
             "Collaborated with the design team to create a visually appealing and user-friendly interface for the application.",
             "Worked closely with the Business Analytics team to integrate the application with their platform, enabling seamless data transfer and automation."
-          ]
+          ],
+          employmentType: "Full Time"
         }
       ],
       experienceGained: [
@@ -98,6 +100,7 @@ const WorkExperienceData: WorkExperience = {
     {
       companyName: "ICICI Bank",
       bannerImage: WorkExBannerBackground.ICICIBankBannerBackground,
+      popupImage: WorkExPopupImages.ICICIBankPopupImage,
       jobTitle: "Deputy Manager II",
       employmentType: "Full Time",
       startDate: "Aug'22",
@@ -107,7 +110,8 @@ const WorkExperienceData: WorkExperience = {
         {
           title: "",
           duration: "",
-          description: []
+          description: [],
+          employmentType: "Full Time"
         }
       ],
       experienceGained: [
@@ -122,6 +126,7 @@ const WorkExperienceData: WorkExperience = {
     {
       companyName: "Leap Wallet",
       bannerImage: WorkExBannerBackground.LeapWalletBannerBackground,
+      popupImage: WorkExPopupImages.LeapWalletPopupImage,
       jobTitle: "Full Stack Developer",
       employmentType: "Contract",
       startDate: "Jul'22",
@@ -131,7 +136,8 @@ const WorkExperienceData: WorkExperience = {
         {
           title: "",
           duration: "",
-          description: []
+          description: [],
+          employmentType: "Contract"
         }
       ],
       experienceGained: [
@@ -146,6 +152,7 @@ const WorkExperienceData: WorkExperience = {
     {
       companyName: "NonceBlox",
       bannerImage: WorkExBannerBackground.NonceBloxBannerBackground,
+      popupImage: WorkExPopupImages.NonceBloxPopupImage,
       jobTitle: "Full Stack Developer",
       employmentType: "Intern",
       startDate: "Jul'21",
@@ -155,7 +162,8 @@ const WorkExperienceData: WorkExperience = {
         {
           title: "",
           duration: "",
-          description: []
+          description: [],
+          employmentType: "Intern"
         }
       ],
       experienceGained: [
@@ -170,6 +178,7 @@ const WorkExperienceData: WorkExperience = {
     {
       companyName: "The ChillSpace",
       bannerImage: WorkExBannerBackground.ChillSpaceBannerBackground,
+      popupImage: WorkExPopupImages.ChillSpacePopupImage,
       jobTitle: "Frontend Developer",
       employmentType: "Intern",
       startDate: "Sep'20",
@@ -179,7 +188,8 @@ const WorkExperienceData: WorkExperience = {
         {
           title: "",
           duration: "",
-          description: []
+          description: [],
+          employmentType: "Intern"
         }
       ],
       experienceGained: [
@@ -195,6 +205,7 @@ const WorkExperienceData: WorkExperience = {
     {
       companyName: "IonCure",
       bannerImage: WorkExBannerBackground.IonCureBannerBackground,
+      popupImage: WorkExPopupImages.IonCurePopupImage,
       jobTitle: "Web Designer and Developer",
       employmentType: "Intern",
       startDate: "May'20",
@@ -204,7 +215,8 @@ const WorkExperienceData: WorkExperience = {
         {
           title: "",
           duration: "",
-          description: []
+          description: [],
+          employmentType: "Intern"
         }
       ],
       experienceGained: [
