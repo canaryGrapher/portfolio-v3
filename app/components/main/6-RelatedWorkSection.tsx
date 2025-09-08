@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { RelatedWorkData } from "@/data/UserData";
-import { RelatedWorkCard } from "@/components/pageComponents/relatedWork";
+import { RelatedWorkCard } from "@/components/main/pageComponents/relatedWork";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -16,7 +17,7 @@ const RelatedWorkSection = () => {
     const headerRef = useRef<HTMLDivElement>(null);
     const cardsRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         if (sectionRef.current) {
             gsap.from(cardsRef.current, {
                 opacity: 0,
@@ -32,7 +33,7 @@ const RelatedWorkSection = () => {
                 }
             });
         }
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section className="w-full bg-black py-20" ref={sectionRef}>

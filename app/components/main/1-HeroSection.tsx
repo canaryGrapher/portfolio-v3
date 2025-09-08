@@ -3,7 +3,8 @@
 import { HeroSectionData } from "@/data/UserData";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
 import { FaMouse } from "react-icons/fa";
 import { MdSwipeDown } from "react-icons/md";
 
@@ -20,7 +21,7 @@ const HeroSection = () => {
     const imageRef = useRef<HTMLImageElement>(null);
     const nameRefPost = useRef<HTMLHeadingElement>(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         if (sectionRef.current) {
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -119,10 +120,8 @@ const HeroSection = () => {
                 ease: "power2.in",
                 borderRadius: "50px",
             }, "3")
-
-
         }
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section

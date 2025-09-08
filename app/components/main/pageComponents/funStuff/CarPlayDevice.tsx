@@ -3,6 +3,7 @@
 import React, { forwardRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { FaWifi } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
 
 interface Icon {
     title: string;
@@ -17,6 +18,8 @@ interface CarPlayDeviceProps {
 
 const CarPlayDevice = forwardRef<HTMLDivElement, CarPlayDeviceProps>(
     ({ icons }, ref) => {
+        const router = useRouter();
+        
         return (
             <div
                 ref={ref}
@@ -42,7 +45,7 @@ const CarPlayDevice = forwardRef<HTMLDivElement, CarPlayDeviceProps>(
                 {/* App Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-5 p-18">
                     {icons.slice(0, 4).map((item, index) => (
-                        <div key={index} className="p-4 text-center transition-all duration-300 cursor-pointer hover:scale-105">
+                        <div key={index} className="p-4 text-center transition-all duration-300 cursor-pointer hover:scale-105" onClick={() => router.push(item.pageRoute)}>
                             <div className="block mx-auto mb-2">
                                 <Image
                                     src={item.icon.src}

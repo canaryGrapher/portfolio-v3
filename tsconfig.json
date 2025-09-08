@@ -31,7 +31,8 @@
       "@/assets/*": ["./app/assets/*"],
       "@/data/*": ["./app/data/*"],
       "@/components/*": ["./app/components/*"],
-      "@/interface/*": ["./app/interface/*"]
+      "@/interface/*": ["./app/interface/*"],
+      "@/utils/*": ["./app/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

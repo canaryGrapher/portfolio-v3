@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { useLottie } from "lottie-react";
 import { IntroSectionData } from "@/data/UserData";
 import { FaArrowDown } from 'react-icons/fa';
@@ -54,7 +55,7 @@ const AboutSection = () => {
 
     const lottieObject = useLottie(IntroLottieOptions, IntroLottieStyle);
 
-    useEffect(() => {
+    useGSAP(() => {
         if (sectionRef.current && lottieRef.current) {
             const timeline = gsap.timeline({
                 scrollTrigger: {
@@ -63,12 +64,13 @@ const AboutSection = () => {
                     end: "bottom top",
                     scrub: 1,
                     pin: true,
+                    id: "about-section-trigger",
                 }
             });
 
             // Animate Lottie along with the timeline
-            const totalParagraphs = IntroSectionData.lines.length; // Use actual data length
-            const lastParagraphEndTime = (totalParagraphs - 1) * 0.5 + 0.3; // When last paragraph finishes
+            const totalParagraphs = IntroSectionData.lines.length;
+            const lastParagraphEndTime = (totalParagraphs - 1) * 0.5 + 0.3;
 
             timeline.to(mobileBlackoutRef.current, {
                 opacity: 0,
@@ -77,16 +79,14 @@ const AboutSection = () => {
             }, "0");
 
             timeline.to({ frame: 0 }, {
-                // delay: 1,
                 frame: TOTAL_LOTTIE_FRAMES - 1,
-                duration: lastParagraphEndTime + 0.5, // Continue 0.5s after last paragraph
+                duration: lastParagraphEndTime + 0.5,
                 ease: "none",
                 onUpdate: function () {
                     const currentFrame = Math.round(this.targets()[0].frame);
                     lottieObject.goToAndStop(currentFrame, true);
                 },
                 onComplete: function () {
-                    // Keep Lottie on the last frame
                     lottieObject.goToAndStop(TOTAL_LOTTIE_FRAMES - 1, true);
                 }
             }, "0.1");
@@ -112,12 +112,12 @@ const AboutSection = () => {
                             y: -100,
                             duration: 0.3,
                             ease: "power2.in",
-                        }, (index + 1) * 0.5 - 0.1); // Hide before next paragraph appears
+                        }, (index + 1) * 0.5 - 0.1);
                     }
                 }
             });
         }
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section ref={sectionRef} className="w-screen h-screen bg-black relative overflow-hidden">

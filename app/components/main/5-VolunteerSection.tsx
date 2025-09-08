@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { VolunteerCard, VolunteerPopup, ScrollButtons } from '../pageComponents/volunteerExperience';
+import { VolunteerCard, VolunteerPopup, ScrollButtons } from './pageComponents/volunteerExperience';
 import { WorkExperienceData } from '@/data/UserData';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { useGSAP } from '@gsap/react';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -58,7 +58,7 @@ const VolunteerSection = () => {
         }
     };
 
-    useEffect(() => {
+    useGSAP(() => {
         if (sectionRef.current) {
             gsap.from(".volunteer-card", {
                 opacity: 0,
@@ -73,7 +73,7 @@ const VolunteerSection = () => {
                 }
             });
         }
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section className="w-full bg-gray-300 pb-20" ref={sectionRef}>

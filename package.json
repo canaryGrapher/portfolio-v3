@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
     "lottie-react": "^2.4.1",
     "next": "15.4.6",

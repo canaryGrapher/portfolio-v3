@@ -1,10 +1,11 @@
 "use client";
 
 import { SkillsData } from "@/data/UserData";
-import { SkillCard } from "@/components/pageComponents/skillsSection";
-import { useEffect, useRef } from "react";
+import { SkillCard } from "@/components/main/pageComponents/skillsSection";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -15,7 +16,7 @@ const SkillsSection = () => {
 
     const sectionRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         if (sectionRef.current) {
             gsap.from(".skills-section-card", {
                 opacity: 0,
@@ -31,7 +32,7 @@ const SkillsSection = () => {
                 }
             });
         }
-    }, []);
+    }, { scope: sectionRef });
 
     return (
         <section className="min-h-screen bg-black py-20 px-6" ref={sectionRef}>

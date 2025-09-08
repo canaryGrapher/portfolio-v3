@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
-import { ExperienceCard, ExperiencePopup, ScrollSlider } from '../pageComponents/professionalExperience';
+import { ExperienceCard, ExperiencePopup, ScrollSlider } from './pageComponents/professionalExperience';
 import { WorkExperienceData } from '@/data/UserData';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { StaticImageData } from 'next/image';
 
 // Register GSAP plugins
@@ -128,7 +129,7 @@ const WorkExSection = () => {
     }, [isAutoScrolling]);
 
 
-    useEffect(() => {
+    useGSAP(() => {
         if (sectionRef.current) {
             gsap.from(".experience-card", {
                 opacity: 0,
@@ -143,7 +144,7 @@ const WorkExSection = () => {
                 }
             });
         }
-    }, []);
+    }, { scope: sectionRef });
 
     useEffect(() => {
         const container = scrollContainerRef.current;

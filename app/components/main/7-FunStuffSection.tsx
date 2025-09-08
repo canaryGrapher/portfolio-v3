@@ -1,13 +1,14 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import React, { useRef } from 'react';
+import { gsap } from 'gsap';    
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import {
     AbstractBackground,
     SectionHeader,
     CarPlayDevice,
-} from '../pageComponents/funStuff';
+} from './pageComponents/funStuff';
 import { FunStuffData } from '@/data/UserData';
 
 // Register GSAP plugins
@@ -26,7 +27,7 @@ const FunStuffSection = () => {
 
     const backgroundWallpaper = FunStuffData.backgroundVideo;
 
-    useEffect(() => {
+    useGSAP(() => {
         if (contentContainerRef.current) {
 
             const carPlayTimeline = gsap.timeline({
@@ -65,7 +66,7 @@ const FunStuffSection = () => {
             }, "0.2");
 
         }
-    }, []);
+    }, { scope: sectionRef });
 
 
 
