@@ -76,7 +76,7 @@ const VolunteerSection = () => {
     }, []);
 
     return (
-        <section className="w-full bg-gray-300 py-20" ref={sectionRef}>
+        <section className="w-full bg-gray-300 pb-20" ref={sectionRef}>
             <div className="mx-auto">
                 {/* Section Header */}
                 <div className="mb-10 max-w-7xl mx-auto text-center md:text-left" ref={headerRef}>
@@ -93,7 +93,7 @@ const VolunteerSection = () => {
                     {/* Scrollable Cards */}
                     <div
                         ref={scrollContainerRef}
-                        className="grid grid-flow-col auto-cols-max gap-2 overflow-x-auto scrollbar-hide pb-8"
+                        className="grid grid-flow-col auto-cols-max gap-2 overflow-x-auto scrollbar-hide"
                         style={{
                             scrollSnapType: 'x mandatory',
                             gridTemplateRows: '1fr'
@@ -113,7 +113,7 @@ const VolunteerSection = () => {
                 </div>
 
                 {/* Navigation Arrows */}
-                <div className="flex flex-row justify-center md:justify-end md:mr-20">
+                <div className="flex flex-row justify-end mr-10">
                     <ScrollButtons
                         scrollToCard={scrollToCard}
                         currentCardIndex={currentCardIndex}

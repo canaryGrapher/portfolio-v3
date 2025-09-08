@@ -154,7 +154,7 @@ const WorkExSection = () => {
     }, []);
 
     return (
-        <section className="max-w-screen bg-gray-300 py-20" ref={sectionRef}>
+        <section className="max-w-screen bg-gray-300 pt-20 pb-10" ref={sectionRef}>
             <div className="mx-auto">
                 {/* Section Header */}
                 <div className="mb-10 max-w-7xl mx-auto text-center md:text-left" ref={headerRef}>

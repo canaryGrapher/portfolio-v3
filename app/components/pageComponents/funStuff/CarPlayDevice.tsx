@@ -12,16 +12,15 @@ interface Icon {
 }
 
 interface CarPlayDeviceProps {
-    className?: string;
     icons: Icon[];
 }
 
 const CarPlayDevice = forwardRef<HTMLDivElement, CarPlayDeviceProps>(
-    ({ className = "", icons }, ref) => {
+    ({ icons }, ref) => {
         return (
             <div
                 ref={ref}
-                className={`md:my-10 mx-auto w-full min-h-[500px] h-full md:bg-white/20 backdrop-blur-xl rounded-[20px] md:border border-white/20 flex flex-col md:flex-row-reverse justify-between relative ${className}`}
+                className={`md:my-10 mx-auto w-full min-h-[300px] md:min-h-[400px] lg:min-h-[500px] md:bg-white/20 md:backdrop-blur-xs rounded-[20px] md:border border-white/20 flex flex-col md:flex-row-reverse justify-between relative`}
             >
                 {/* Status Bar */}
                 <div className="hidden md:flex flex-col justify-between bg-white/40 backdrop-blur-xl rounded-tr-[20px] rounded-br-[20px] w-[80px]">

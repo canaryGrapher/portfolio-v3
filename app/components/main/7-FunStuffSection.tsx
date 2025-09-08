@@ -6,7 +6,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
     AbstractBackground,
     SectionHeader,
-    AbstractImage,
     CarPlayDevice,
 } from '../pageComponents/funStuff';
 import { FunStuffData } from '@/data/UserData';
@@ -25,7 +24,7 @@ const FunStuffSection = () => {
     const abstractImageRef = useRef<HTMLDivElement>(null);
     const overlayRef = useRef<HTMLDivElement>(null);
 
-    const backgroundWallpaper = FunStuffData.backgroundImage;
+    const backgroundWallpaper = FunStuffData.backgroundVideo;
 
     useEffect(() => {
         if (contentContainerRef.current) {
@@ -37,8 +36,6 @@ const FunStuffSection = () => {
                     end: "bottom top",
                     scrub: 1,
                     pin: true,
-                    // snap: 1,
-                    // pinSpacing: false,
                     toggleActions: "play complete reverse reset",
                 }
             });

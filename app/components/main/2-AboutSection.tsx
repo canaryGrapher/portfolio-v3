@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLottie } from "lottie-react";
 import { IntroSectionData } from "@/data/UserData";
+import { FaArrowDown } from 'react-icons/fa';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -20,6 +21,7 @@ const AboutSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const lottieRef = useRef<HTMLDivElement>(null);
     const paragraphsRef = useRef<(HTMLParagraphElement | null)[]>([]);
+    const mobileBlackoutRef = useRef<HTMLDivElement>(null);
 
     // Check screen size on mount and resize
     useEffect(() => {
@@ -68,7 +70,14 @@ const AboutSection = () => {
             const totalParagraphs = IntroSectionData.lines.length; // Use actual data length
             const lastParagraphEndTime = (totalParagraphs - 1) * 0.5 + 0.3; // When last paragraph finishes
 
+            timeline.to(mobileBlackoutRef.current, {
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.in",
+            }, "0");
+
             timeline.to({ frame: 0 }, {
+                // delay: 1,
                 frame: TOTAL_LOTTIE_FRAMES - 1,
                 duration: lastParagraphEndTime + 0.5, // Continue 0.5s after last paragraph
                 ease: "none",
@@ -80,7 +89,7 @@ const AboutSection = () => {
                     // Keep Lottie on the last frame
                     lottieObject.goToAndStop(TOTAL_LOTTIE_FRAMES - 1, true);
                 }
-            }, "0");
+            }, "0.1");
 
             // Animate each paragraph one at a time
             paragraphsRef.current.forEach((paragraph, index) => {
@@ -112,6 +121,15 @@ const AboutSection = () => {
 
     return (
         <section ref={sectionRef} className="w-screen h-screen bg-black relative overflow-hidden">
+            <div className="w-screen h-screen absolute md:hidden top-0 left-0 bg-black z-10 flex flex-col justify-start pt-25 items-center" ref={mobileBlackoutRef} style={{
+                transform: isMobile ? 'scale(1.2)' : 'scale(1)',
+            }}>
+                <h2 className="text-4xl font-bold text-white">About Me</h2>
+                <p className="text-white">Get to know a little about me</p>
+                <div className="animate-bounce pt-20">
+                    <FaArrowDown />
+                </div>
+            </div>
             <div ref={lottieRef} className="w-screen h-screen absolute top-0 left-0">
                 {lottieObject.View}
             </div>

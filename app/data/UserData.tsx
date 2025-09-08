@@ -1,12 +1,13 @@
 import { WorkExperience } from "@/interface/UserData";
 import { HeroImage, RelatedWork, VolunteerWork, WorkExBannerBackground, WorkExPopupImages, FunStuff } from "@/assets/images"
+import { FunVideo } from "@/assets/videos"
 import { IntroLottie, IntroLottieResponsive } from "@/assets/lotties"
 import { Skills, Fun } from "@/assets/vectors";
 import Technologies from "./Technologies";
 
 const HeroSectionData = {
   name: "Yash Aryan",
-  title: ["Developer", "Thinker", "Explorer"],  
+  title: ["Developer", "Thinker", "Explorer"],
   description: "I'm a developer who loves to tell stories and explore new things.",
   image: HeroImage,
 };
@@ -259,7 +260,9 @@ const WorkExperienceData: WorkExperience = {
         {
           date: "Nov'21-May'22",
           description: [
-            ""
+            "Worked as a Chapter Leader for CodeCademy",
+            "Conducted webinars on Binance Ecosystem and Blockchain in general",
+            "Promoted CodeCademy as a product in my university"
           ]
         }
       ]
@@ -423,7 +426,7 @@ const RelatedWorkData = [
 ]
 
 const FunStuffData = {
-  backgroundImage: FunStuff.BackgroundImage,
+  backgroundVideo: FunVideo,
   icons: [
     {
       title: "Photos",
