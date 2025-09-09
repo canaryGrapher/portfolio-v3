@@ -1,16 +1,10 @@
 "use client";
 
-import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
-import { VolunteerExperience } from '@/interface/UserData';
+import { VolunteerCardProps } from '@/interface/pages/Landing';
 
-interface VolunteerCardProps extends VolunteerExperience {
-    onExpand: () => void;
-    index: number;
-    ref: React.RefObject<HTMLDivElement>;
-}
 
 const VolunteerCard: React.FC<VolunteerCardProps> = (props) => {
     return (

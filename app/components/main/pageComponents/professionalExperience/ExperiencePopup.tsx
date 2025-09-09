@@ -4,15 +4,10 @@ import React from 'react';
 import { ProfessionalExperience } from '@/interface/UserData';
 import Image from 'next/image';
 import { FaTimes } from 'react-icons/fa';
-
-interface Props {
-    isOpen: boolean;
-    onClose: () => void;
-    experience: ProfessionalExperience;
-}
+import { ProfessionalExperiencePopupProps } from '@/interface/pages/Landing';
 
 
-const ExperiencePopup: React.FC<Props> = (props) => {
+const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
     const [activeTooltipKey, setActiveTooltipKey] = React.useState<string | null>(null);
     if (!props.isOpen || !props.experience) return null;
 
@@ -83,14 +78,14 @@ const ExperiencePopup: React.FC<Props> = (props) => {
                     {/* Experience Gained Section */}
                     <div className='flex flex-col'>
                         <h4 className="text-2xl mb-4 text-black">Experience Gained</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <ul>
+                        <div className="grid gap-6">
+                            <ul className="w-full">
                                 {props.experience.experienceGained.map((category, index) => (
                                     <li key={index} className="pb-5 list-disc list-outside ml-4 text-gray-600">
                                         <h5 className="mb-1 text-gray-600">
                                             {category.name}
                                         </h5>
-                                        <div className={`flex flex-wrap gap-2`}>
+                                        <div className="flex flex-wrap gap-2 w-full">
                                             {category.technologies.map((skill, skillIndex) => {
                                                 const tooltipKey = `${index}-${skillIndex}`;
                                                 const isActive = activeTooltipKey === tooltipKey;

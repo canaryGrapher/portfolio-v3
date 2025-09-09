@@ -69,7 +69,7 @@ const Technologies = {
         "icon": Icons.CosmosIcon,
         "name": "Cosmos Network"
     },
-    "Local Storage": {
+    "LocalStorage": {
         "icon": Icons.LocalStorageIcon,
         "name": "Local Storage"
     },
@@ -141,6 +141,10 @@ const Technologies = {
         "icon": Icons.SolanaIcon,
         "name": "Solana"
     },
+    "Ethereum": {
+        "icon": Icons.EthereumIcon,
+        "name": "Ethereum"
+    },
     "Tailwind": {
         "icon": Icons.TailwindIcon,
         "name": "Tailwind"
@@ -165,7 +169,7 @@ const Technologies = {
         "icon": Icons.FigmaIcon,
         "name": "Figma"
     },
-    "Adobe XD": {
+    "AdobeXD": {
         "icon": Icons.AdobeXDIcon,
         "name": "Adobe XD"
     }

@@ -40,10 +40,6 @@ import StakeholderManagementIcon from "./stakeholderManagement.svg"
 import GitHubActionsIcon from "./githubActions.svg"
 import MicrosoftClarityIcon from "./microsoftClarity.svg"
 import CosmosIcon from "./cosmos.svg"
+import EthereumIcon from "./ethereum.svg"
 
-
-
-
-
-
-export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon };
+export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon };

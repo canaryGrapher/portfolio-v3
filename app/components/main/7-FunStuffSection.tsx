@@ -35,7 +35,7 @@ const FunStuffSection = () => {
                     trigger: sectionRef.current,
                     start: "top top",
                     end: "bottom top",
-                    scrub: 1,
+                    scrub: 5,
                     pin: true,
                     toggleActions: "play complete reverse reset",
                 }

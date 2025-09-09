@@ -1,12 +1,11 @@
 "use client";
 
 import React, { forwardRef } from 'react';
+import { ClassNameProps } from '@/interface/pages/Landing';
 
-interface SectionHeaderProps {
-    className?: string;
-}
 
-const SectionHeader = forwardRef<HTMLDivElement, SectionHeaderProps>(
+
+const SectionHeader = forwardRef<HTMLDivElement, ClassNameProps>(
     ({ className = "" }, ref) => {
         return (
             <div ref={ref} className={`z-20 max-w-full mx-auto text-center md:text-left ${className}`}>

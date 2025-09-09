@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
+import { VolunteerExperience } from '@/interface/UserData';
 import { VolunteerCard, VolunteerPopup, ScrollButtons } from './pageComponents/volunteerExperience';
 import { WorkExperienceData } from '@/data/UserData';
 import { gsap } from 'gsap';
@@ -23,19 +24,6 @@ const VolunteerSection = () => {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const volunteerExperiences = WorkExperienceData.volunteerWorkExperience;
-
-    interface VolunteerExperience {
-        companyName: string;
-        companyDescription: string;
-        category: string;
-        companyLogo: any;
-        role: string;
-        companyColor: string;
-        responsibilities: Array<{
-            date: string;
-            description: string[];
-        }>;
-    }
 
     const handleExpand = (experience: VolunteerExperience) => {
         setSelectedExperience(experience);

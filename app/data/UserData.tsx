@@ -88,11 +88,19 @@ const WorkExperienceData: WorkExperience = {
       experienceGained: [
         {
           name: "Desktop Application Development",
-          technologies: [Technologies.ElectronJS, Technologies.TypeScript, Technologies.ReactJS]
+          technologies: [Technologies.ElectronJS, Technologies.ReactJS]
         },
         {
-          name: "Micro-service Development and Maintenance",
-          technologies: [Technologies.NodeJS, Technologies.PostgreSQL, Technologies.GitHub, Technologies.ExpressJS, Technologies.Redis]
+          name: "Micro-service Development",
+          technologies: [Technologies.NodeJS, Technologies.ExpressJS, Technologies.PostgreSQL, Technologies.Redis, Technologies.GitHub]
+        },
+        {
+          name: "Service Deployment",
+          technologies: [Technologies.Docker, Technologies.ECS, Technologies.Route53, Technologies.EC2, Technologies.GitHubActions, Technologies.RDS, Technologies.CloudWatch, Technologies.APIGateway]
+        },
+        {
+          name: "Frontend Application Development",
+          technologies: [Technologies.ReactJS, Technologies.LocalStorage, Technologies.Tailwind, Technologies.NextJS, Technologies.Redux, Technologies.MicrosoftClarity]
         }
       ],
       companyColor: "#0169FD",
@@ -125,8 +133,16 @@ const WorkExperienceData: WorkExperience = {
       ],
       experienceGained: [
         {
-          name: "",
-          technologies: []
+          name: "Product Management",
+          technologies: [Technologies.Jira, Technologies.Confluence, Technologies.Excel, Technologies.PowerPoint, Technologies.Word, Technologies.MSTeams, Technologies.StakeholderManagement]
+        },
+        {
+          name: "Api Testing & Monitoring",
+          technologies: [Technologies.Postman, Technologies.Dynatrace]
+        },
+        {
+          name: "Frontend Development",
+          technologies: [Technologies.Svelte, Technologies.JavaScript, Technologies.GitHub]
         }
       ],
       companyColor: "#FA6316",
@@ -156,9 +172,13 @@ const WorkExperienceData: WorkExperience = {
       ],
       experienceGained: [
         {
-          name: "",
-          technologies: []
-        }
+          name: "Chromium Extension Development",
+          technologies: [Technologies.Chromium, Technologies.ReactJS, Technologies.GitHub]
+        },
+        {
+          name: "Blockchain",
+          technologies: [Technologies.Web3, Technologies.Metamask, Technologies.Solana]
+        },
       ],
       companyColor: "#14D95B",
       gradientColors: ["#14D95B", "#029956"]
@@ -187,8 +207,12 @@ const WorkExperienceData: WorkExperience = {
       ],
       experienceGained: [
         {
-          name: "",
-          technologies: []
+          name: "Frontend Development",
+          technologies: [Technologies.ReactJS, Technologies.Tailwind, Technologies.BootStrap, Technologies.Web3, Technologies.Metamask, Technologies.Ethereum]
+        },
+        {
+          name: "Backend Development",
+          technologies: [Technologies.NodeJS, Technologies.ExpressJS, Technologies.Redis, Technologies.GitHub]
         }
       ],
       companyColor: "#A179D1",
@@ -217,8 +241,8 @@ const WorkExperienceData: WorkExperience = {
       ],
       experienceGained: [
         {
-          name: "",
-          technologies: []
+          name: "Frontend Development",
+          technologies: [Technologies.HTML, Technologies.CSS, Technologies.JavaScript, Technologies.BootStrap]
         }
       ],
       companyColor: "#D25E61",
@@ -247,8 +271,12 @@ const WorkExperienceData: WorkExperience = {
       ],
       experienceGained: [
         {
-          name: "",
-          technologies: []
+          name: "Frontend Development",
+          technologies: [Technologies.HTML, Technologies.CSS, Technologies.JavaScript, Technologies.BootStrap]
+        },
+        {
+          name: "Web Design",
+          technologies: [Technologies.AdobeXD, Technologies.Figma]
         }
       ],
       companyColor: "#FEADA9",

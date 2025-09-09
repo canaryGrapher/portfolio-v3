@@ -1,24 +1,15 @@
 "use client";
 
 import React, { forwardRef } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { FaWifi } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
-
-interface Icon {
-    title: string;
-    icon: StaticImageData;
-    pageRoute: string;
-    active: boolean;
-}
-
-interface CarPlayDeviceProps {
-    icons: Icon[];
-}
+import { CarPlayDeviceProps } from '@/interface/pages/Landing';
 
 const CarPlayDevice = forwardRef<HTMLDivElement, CarPlayDeviceProps>(
     ({ icons }, ref) => {
         const router = useRouter();
+        const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
         
         return (
             <div
@@ -28,7 +19,7 @@ const CarPlayDevice = forwardRef<HTMLDivElement, CarPlayDeviceProps>(
                 {/* Status Bar */}
                 <div className="hidden md:flex flex-col justify-between bg-white/40 backdrop-blur-xl rounded-tr-[20px] rounded-br-[20px] w-[80px]">
                     <div className="flex-col justify-start w-full">
-                        <div className="text-black text-xl font-bold text-center mt-5">10:36</div>
+                        <div className="text-black text-xl font-bold text-center mt-5">{time}</div>
                         <FaWifi className="text-black text-3xl mx-auto mt-2" />
                     </div>
                     {/* Grid Icon */}

@@ -4,15 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
-import { StaticImageData } from 'next/image';
+import { RelatedWorkCardProps } from '@/interface/pages/Landing';
 
-interface RelatedWorkCardProps {
-    title: string;
-    preText: string;
-    image: StaticImageData;
-    pageRoute: string;
-    relatedWorkRef: React.RefObject<HTMLDivElement>;
-}
 
 const RelatedWorkCard: React.FC<RelatedWorkCardProps> = ({
     title,

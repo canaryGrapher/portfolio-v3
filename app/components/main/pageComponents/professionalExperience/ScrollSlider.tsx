@@ -2,16 +2,10 @@
 
 import React from "react";
 import { FaPlay, FaPause } from "react-icons/fa";
+import { ScrollSliderProps } from '@/interface/pages/Landing';
 
-interface ScrollSliderProps {
-    isAutoScrolling: boolean;
-    progress: number; // 0..1
-    onToggleAutoScroll: () => void;
-    onSeek: (progress: number) => void; // 0..1
-}
-
-const TRACK_PX = 256; // w-64
-const THUMB_PX = 40;  // w-10
+const TRACK_PX = 256; 
+const THUMB_PX = 40;  
 
 const ScrollSlider: React.FC<ScrollSliderProps> = ({
     isAutoScrolling,

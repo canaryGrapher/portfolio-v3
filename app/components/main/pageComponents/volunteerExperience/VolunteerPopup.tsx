@@ -1,14 +1,10 @@
 "use client";
 
 import React from 'react';
-import { VolunteerExperience } from '@/interface/UserData';
 import Image from 'next/image';
+import { VolunteerPopupProps } from '@/interface/pages/Landing';
 
-interface VolunteerPopupProps {
-    isOpen: boolean;
-    onClose: () => void;
-    experience: VolunteerExperience | null;
-}
+
 
 const VolunteerPopup: React.FC<VolunteerPopupProps> = (props) => {
     if (!props.isOpen || !props.experience) return null;

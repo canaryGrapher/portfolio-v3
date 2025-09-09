@@ -2,15 +2,11 @@
 
 import React from 'react';
 import { StaticImageData } from 'next/image';
-import { ProfessionalExperience } from '@/interface/UserData';
+import { ExperienceCardProps } from '@/interface/pages/Landing';
 
-interface Props extends ProfessionalExperience {
-    index: number;
-    ref: React.RefObject<HTMLDivElement>;
-    onExpand: () => void;
-}
 
-const ExperienceCard: React.FC<Props> = (props) => {
+
+const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
     const getBannerSrc = () => {
         if (typeof props.bannerImage === 'string') return props.bannerImage;
         if ('src' in props.bannerImage) return props.bannerImage.src;

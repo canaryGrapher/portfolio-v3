@@ -2,12 +2,7 @@
 
 import React, { forwardRef } from 'react';
 import Image from 'next/image';
-import { StaticImageData } from 'next/image';
-
-interface AbstractImageProps {
-    className?: string;
-    image: StaticImageData;
-}
+import { AbstractImageProps } from '@/interface/pages/Landing';
 
 const AbstractImage = forwardRef<HTMLDivElement, AbstractImageProps>(
     ({ className = "", image }, ref) => {

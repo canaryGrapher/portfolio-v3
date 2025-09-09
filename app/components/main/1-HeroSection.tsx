@@ -29,7 +29,7 @@ const HeroSection = () => {
                     start: "top top",
                     end: "bottom top",
                     pin: true,
-                    scrub: 1,
+                    scrub: 5,
                 }
             });
 

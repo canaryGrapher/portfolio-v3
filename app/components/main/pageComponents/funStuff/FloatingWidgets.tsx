@@ -1,12 +1,10 @@
 "use client";
 
 import React, { forwardRef } from 'react';
+import { ClassNameProps } from '@/interface/pages/Landing';
 
-interface FloatingWidgetsProps {
-    className?: string;
-}
 
-const FloatingWidgets = forwardRef<HTMLDivElement, FloatingWidgetsProps>(
+const FloatingWidgets = forwardRef<HTMLDivElement, ClassNameProps>(
     ({ className = "" }, ref) => {
         return (
             <div ref={ref} className={`absolute -top-20 -left-20 space-y-4 ${className}`}>

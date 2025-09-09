@@ -1,12 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
-interface SkillCardProps {
-    icon: string;
-    title: string;
-    description: string;
-    className?: string;
-}
+import { SkillCardProps } from '@/interface/pages/Landing';
 
 const SkillCard: React.FC<SkillCardProps> = ({ icon, title, description, className }) => {
     return (

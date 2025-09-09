@@ -1,12 +1,8 @@
 "use client";
 
 import React, { forwardRef } from 'react';
-import { StaticImageData } from 'next/image';
+import { AbstractBackgroundProps } from '@/interface/pages/Landing';
 import Image from 'next/image';
-
-interface AbstractBackgroundProps {
-    backgroundWallpaper: StaticImageData;
-}
 
 const AbstractBackground = forwardRef<HTMLDivElement, AbstractBackgroundProps>(
     ({ backgroundWallpaper }, ref) => {
