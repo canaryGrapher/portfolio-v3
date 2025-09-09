@@ -92,7 +92,7 @@ const WorkExperienceData: WorkExperience = {
         },
         {
           name: "Micro-service Development and Maintenance",
-          technologies: [Technologies.NodeJS, Technologies.PostgreSQL, Technologies.GitHub]
+          technologies: [Technologies.NodeJS, Technologies.PostgreSQL, Technologies.GitHub, Technologies.ExpressJS, Technologies.Redis]
         }
       ],
       companyColor: "#0169FD",
@@ -109,9 +109,17 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "ICICI Bank is one of India's leading private sector banks, delivering a comprehensive range of banking and financial services to corporate, retail, and SME customers. With a global presence and deep expertise, ICICI Bank is recognized for innovation, reliability, and financial strength",
       rolesAndResponsibilities: [
         {
-          title: "",
-          duration: "",
-          description: [],
+          title: "Deputy Manager II",
+          duration: "Aug'22 - Sep'24",
+          description: [
+            "Contributed to the design and development of composite APIs that streamline multiple service calls into single endpoints, improving efficiency and developer experience.",
+            "Collaborated with cross-functional teams to align backend services with evolving customer needs and digital strategy.",
+            "Planned and prototyped flows like Digital Adoption Platform and Web Authentication.",
+            "Developed modular front-end components to optimize the user onboarding journey.",
+            "Provided targeted code snippets and quick-fix implementations to assist core developers in resolving issues like OTP field masking and password manager compatibility.",
+            "Conducted comprehensive end-to-end testing of RESTful APIs using Postman.",
+            "Built and maintained automated test suites to ensure high availability and minimize regression issues.",
+          ],
           employmentType: "Full Time"
         }
       ],
@@ -121,8 +129,8 @@ const WorkExperienceData: WorkExperience = {
           technologies: []
         }
       ],
-      companyColor: "",
-      gradientColors: []
+      companyColor: "#FA6316",
+      gradientColors: ["#AF1C21", "#F35F20"]
     },
     {
       companyName: "Leap Wallet",
@@ -135,9 +143,14 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "Leap Wallet is a versatile crypto wallet designed for the web3 ecosystem, enabling users to securely manage cryptocurrencies, NFTs, staking rewards, and airdrops across multiple chains. With mobile and browser apps, Leap Wallet streamlines DeFi, trading, and portfolio management for both enthusiasts and developers",
       rolesAndResponsibilities: [
         {
-          title: "",
-          duration: "",
-          description: [],
+          title: "Full Stack Developer",
+          duration: "Jul'22 - Jul'22",
+          description: [
+            "Contributed actively towards the Chromium extension development",
+            "Implemented multi-currency support for enhanced user experience.",
+            "Optimized forgot password flow for seamless navigation.",
+            "Managed chain flow and enabled token swap flow for improved functionality.",
+          ],
           employmentType: "Contract"
         }
       ],
@@ -147,8 +160,8 @@ const WorkExperienceData: WorkExperience = {
           technologies: []
         }
       ],
-      companyColor: "",
-      gradientColors: []
+      companyColor: "#14D95B",
+      gradientColors: ["#14D95B", "#029956"]
     },
     {
       companyName: "NonceBlox",
@@ -161,9 +174,14 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "Nonceblox is a blockchain technology company specializing in creating scalable and secure blockchain solutions. They develop applications and platforms across multiple chains such as Ethereum and Polygon, helping businesses harness Web3 innovations for digital transformation and growth.",
       rolesAndResponsibilities: [
         {
-          title: "",
-          duration: "",
-          description: [],
+          title: "Full Stack Developer",
+          duration: "Jul'21 - Sep'21",
+          description: [
+            "Communicated design discrepancies with clients for projects like Polygon Governance and Nervora.",
+            "Managed junior interns on various projects, reporting progress to project manager.",
+            "Developed backend support for web applications like ForestKnight and Bloktopia.",
+            "Integrated Web3 technologies for crypto wallets using Web3.js and MetaMask.",
+          ],
           employmentType: "Intern"
         }
       ],
@@ -173,8 +191,8 @@ const WorkExperienceData: WorkExperience = {
           technologies: []
         }
       ],
-      companyColor: "",
-      gradientColors: []
+      companyColor: "#A179D1",
+      gradientColors: ["#A68EDD", "#9343B1"]
     },
     {
       companyName: "The ChillSpace",
@@ -187,9 +205,13 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "The ChillSpace is a vibrant community hub and co-working space based out of Manipal, that fosters creativity, collaboration, and innovation. It offers flexible workstations, event hosting, and networking opportunities in a comfortable and inspiring environment, supporting startups, freelancers, and creative professionals.",
       rolesAndResponsibilities: [
         {
-          title: "",
-          duration: "",
-          description: [],
+          title: "Frontend Developer",
+          duration: "Sep'20 - Nov'20",
+          description: [
+            "Reproduced web pages from UI designs using HTML, CSS, and JavaScript for the 'Hourglass Portal' project.",
+            "Suggested structural changes for better usability and coordinated with the design team for enhancements.",
+            "Contributed to the development of a user management portal-cum-reward system for the Recreation Center at The ChillSpace.",
+          ],
           employmentType: "Intern"
         }
       ],
@@ -199,9 +221,8 @@ const WorkExperienceData: WorkExperience = {
           technologies: []
         }
       ],
-      companyColor: "",
-      gradientColors: []
-      // experienceGained: []
+      companyColor: "#D25E61",
+      gradientColors: ["#0C0C0C", "#CF5E5E"]
     },
     {
       companyName: "IonCure",
@@ -214,9 +235,13 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "Ioncure Tech Private Limited is an AI-driven health-tech company focused on innovative drug discovery, epilepsy care, brain diagnostics, and biotech solutions. Their technology combines research and data to improve patient outcomes and advance medical science globally.",
       rolesAndResponsibilities: [
         {
-          title: "",
-          duration: "",
-          description: [],
+          title: "Web Designer and Developer",
+          duration: "May'20 - Aug'20",
+          description: [
+            "Designed and developed a website for Ioncure's Solve@Pandemic 2020 project",
+            "Analyzed company requirements to create a suitable website",
+            "Coordinated with senior employees to ensure the application met their expectations",
+          ],
           employmentType: "Intern"
         }
       ],
@@ -226,8 +251,8 @@ const WorkExperienceData: WorkExperience = {
           technologies: []
         }
       ],
-      companyColor: "",
-      gradientColors: []
+      companyColor: "#FEADA9",
+      gradientColors: ["#AF1C21", "#EF752B"]
     }
   ],
   volunteerWorkExperience: [
@@ -255,14 +280,16 @@ const WorkExperienceData: WorkExperience = {
       category: "Education",
       companyLogo: VolunteerWork.CodeCademy,
       role: "Chapter Leader",
-      companyColor: "#",
+      companyColor: "#204056",
       responsibilities: [
         {
           date: "Nov'21-May'22",
           description: [
-            "Worked as a Chapter Leader for CodeCademy",
-            "Conducted webinars on Binance Ecosystem and Blockchain in general",
-            "Promoted CodeCademy as a product in my university"
+            "Chapter leader for the Manipal Chapter of the Codecademy Community.",
+            "Organize events and share knowledge with community members through webinars and chats.",
+            "Promote Codecademy as a product in my university",
+            "Help others achieve their learning goals by providing guidance and support",
+            "Assist in the development of the Codecademy community"
           ]
         }
       ]
@@ -273,12 +300,14 @@ const WorkExperienceData: WorkExperience = {
       category: "Social Service",
       companyLogo: VolunteerWork.Rotaract,
       role: "Member",
-      companyColor: "#",
+      companyColor: "#B33B60",
       responsibilities: [
         {
           date: "Nov'21-May'22",
           description: [
-            ""
+            "Served as an engaged member of the club for nearly one academic year",
+            "Participated in community service initiatives, including visiting nursing homes to interact with senior citizens",
+            "Contributed to animal welfare by delivering donations collected from the university to an animal care center"
           ]
         }
       ]
@@ -289,12 +318,14 @@ const WorkExperienceData: WorkExperience = {
       category: "Environment",
       companyLogo: VolunteerWork.AIESEC,
       role: "Member",
-      companyColor: "#",
+      companyColor: "#377CEB",
       responsibilities: [
         {
           date: "Nov'21-May'22",
           description: [
-            ""
+            "Volunteered for the World Cleanup Day event organized by AIESEC at Manipal Academy of Higher Education",
+            "Collaborated with fellow volunteers to clean various areas around the university",
+            "Actively participated in environmental initiatives by picking up litter and promoting cleanliness"
           ]
         }
       ]
@@ -305,24 +336,30 @@ const WorkExperienceData: WorkExperience = {
       category: "Science & Technology",
       companyLogo: VolunteerWork.TechTatva,
       role: "Event Organizer",
-      companyColor: "#",
+      companyColor: "#C64421",
       responsibilities: [
         {
-          date: "",
+          date: "Sept'20-Oct'20",
           description: [
-            ""
+            "One of the three Category Heads for Manipal Institute of Technology's tech-fest TechTatva'20, Turing, a CyberSec related category.",
+            "Oversee Ctrl+C event, a WebDev event where the participants were challenged to create a rigged website replicating the one provided to them and extract data from the account upon successful login.",
+            "Oversee the event and act immediately in case of server crashes, or other discrepancies",
+            "Responsible for maintaining the deployment of the other events under this category on the server.",
+            "Event Head for Manipal Institute of Technology's tech-fest TechTatva'20, for Turing, a CyberSec-related category.",
+            "Oversee the Ctrl+C event, a WebDev event where the participants had to create a rigged website replicating the one provided to them and extract data from the account upon successful login."
           ]
         },
         {
-          date: "",
+          date: "Sept'19-Oct'19",
           description: [
-            ""
+            "Assigned with the task of creating web vulnerability questions for the CTF event.",
+            "Responsible for deployment of a part of the questions"
           ]
         },
         {
-          date: "",
+          date: "Sept'18-Oct'18",
           description: [
-            ""
+            "Part of the System Admin and Web Development team for managing the website of the tech-fest of Manipal Institute of Technology"
           ]
         }
       ]
@@ -332,13 +369,17 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "Linux User's Group is a community of Linux enthusiasts who share their knowledge and experiences with each other.",
       category: "Science & Technology",
       companyLogo: VolunteerWork.LUG,
-      role: "Member",
-      companyColor: "#",
+      role: "Core Committee Member",
+      companyColor: "#F0CC36",
       responsibilities: [
         {
-          date: "",
+          date: "Sept'18-Jul'21",
           description: [
-            ""
+            "Joined the Linux Users Group community to expand skills and knowledge as a beginner in Linux",
+            "Actively contributed to discussions and supported fellow members with Linux-related issues",
+            "Advanced to the core committee of the community through active participation and leadership",
+            "Organized and conducted seminars and awareness drives to promote Linux adoption",
+            "Led the Linux Installation Drive, assisting new students with installing Linux distributions on their PCs and troubleshooting setup issues"
           ]
         }
       ]
@@ -348,13 +389,18 @@ const WorkExperienceData: WorkExperience = {
       companyDescription: "Manipal Information Security Team is a student-led organization that promotes information security and cyber awareness among its members.",
       category: "Science & Technology",
       companyLogo: VolunteerWork.MIST,
-      role: "Member",
-      companyColor: "#",
+      role: "Head of Web Development",
+      companyColor: "#010101",
       responsibilities: [
         {
-          date: "",
+          date: "Nov'19 - Nov'22",
           description: [
-            ""
+            "Maintaining and updating the club's website, ensuring seamless performance and up-to-date content.",
+            "Managing hosting infrastructure for various events organized by the club.",
+            "Leading the redesign and development of the club's website for a modernized and improved user experience.",
+            "Organizing and conducting technical workshops, webinars, and meetups to share knowledge with fellow members.",
+            "Overseeing and mentoring freshers, guiding them through web development projects and event management.",
+            "Driving social media campaigns to enhance the club's online presence and engagement.",
           ]
         }
       ]
@@ -365,12 +411,14 @@ const WorkExperienceData: WorkExperience = {
       category: "Health",
       companyLogo: VolunteerWork.Sociio,
       role: "Web Developer",
-      companyColor: "#",
+      companyColor: "#1B9F41",
       responsibilities: [
         {
-          date: "",
+          date: "Nov'21-May'22",
           description: [
-            ""
+            "Understand the project and make recommendations for various functionalities",
+            "Make apt UI designs for the project.",
+            "Help with the hosting of the web application on cloud platforms"
           ]
         }
       ]
@@ -381,12 +429,15 @@ const WorkExperienceData: WorkExperience = {
       category: "Education",
       companyLogo: VolunteerWork.IIsC,
       role: "Web Developer",
-      companyColor: "#",
+      companyColor: "#131313",
       responsibilities: [
         {
-          date: "",
+          date: "Oct'21-Jun'22",
           description: [
-            ""
+            "Collaborated with the Materials Theory and Simulations Group at the Materials Research Centre, Indian Institute of Science (IISc) Bangalore on the aNANt initiative",
+            "Contributed to the development of an open-access online repository of functional materials",
+            "Redesigned the existing website to improve usability and interface design",
+            "Implemented additional features to enhance the platform's functionality and user experience"
           ]
         }
       ]

@@ -62,7 +62,7 @@ const ExperiencePopup: React.FC<Props> = (props) => {
                     </div>
 
                     {/* Responsibilities Section */}
-                    <div className='py-10'>
+                    <div className='py-5'>
                         {/* Role and Duration */}
                         {props.experience.rolesAndResponsibilities.map((role, index) => (
                             <div className="mt-6" key={index}>

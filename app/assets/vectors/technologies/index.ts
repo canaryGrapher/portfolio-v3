@@ -4,5 +4,22 @@ import TypeScriptIcon from "./typescript.svg"
 import NodeJSIcon from "./nodeJS.svg"
 import PostgreSQLIcon from "./postgres.svg"
 import GitHubIcon from "./gitHub.svg"
+import ExpressJSIcon from "./express-js.svg"
+import RedisIcon from "./redis.svg"
+import DockerIcon from "./docker.svg"
+import ECSIcon from "./ecs.svg"
+import EC2Icon from "./ec2.svg"
+import RDSIcon from "./rds.svg"
+import Route53Icon from "./route53.svg"
+import CloudWatchIcon from "./cloudWatch.svg"
+import APIGatewayIcon from "./apiGateway.svg"
+import PowerPointIcon from "./powerpoint.svg"
+import WordIcon from "./word.svg"
+import MSTeamsIcon from "./msTeams.svg"
+import ExcelIcon from "./excel.svg"
+import JiraIcon from "./jira.svg"
+import ConfluenceIcon from "./confluence.svg"
+import LocalStorageIcon from "./localStorage.svg"
 
-export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon };
+
+export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon };

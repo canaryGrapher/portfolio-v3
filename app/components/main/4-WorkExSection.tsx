@@ -6,7 +6,6 @@ import { WorkExperienceData } from '@/data/UserData';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { StaticImageData } from 'next/image';
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
