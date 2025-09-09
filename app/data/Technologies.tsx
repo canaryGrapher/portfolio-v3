@@ -34,7 +34,7 @@ const Technologies = {
         "name": "Redis"
     },
     "GitHubActions": {
-        "icon": "",
+        "icon": Icons.GitHubActionsIcon,
         "name": "GitHub Actions"
     },
     "APIGateway": {
@@ -65,12 +65,12 @@ const Technologies = {
         "icon": Icons.CloudWatchIcon,
         "name": "AWS CloudWatch"
     },
-    "Elastic Load Balancer": {
-        "icon": Icons.ElasticLoadBalancerIcon,
-        "name": "Elastic Load Balancer"
+    "Cosmos": {
+        "icon": Icons.CosmosIcon,
+        "name": "Cosmos Network"
     },
     "Local Storage": {
-        "icon": "",
+        "icon": Icons.LocalStorageIcon,
         "name": "Local Storage"
     },
     "NextJS": {
@@ -101,9 +101,13 @@ const Technologies = {
         "icon": Icons.WordIcon,
         "name": "Word"
     },
-    "MS Teams": {
+    "MSTeams": {
         "icon": Icons.MSTeamsIcon,
         "name": "MS Teams"
+    },
+    "StakeholderManagement": {
+        "icon": Icons.StakeholderManagementIcon,
+        "name": "Stakeholder Management"
     },
     "Postman": {
         "icon": Icons.PostmanIcon,
@@ -113,9 +117,9 @@ const Technologies = {
         "icon": Icons.DynatraceIcon,
         "name": "Dynatrace"
     },
-    "Google Analytics": {
-        "icon": Icons.GoogleAnalyticsIcon,
-        "name": "Google Analytics"
+    "MicrosoftClarity": {
+        "icon": Icons.MicrosoftClarityIcon,
+        "name": "Microsoft Clarity"
     },
     "Svelte": {
         "icon": Icons.SvelteIcon,
@@ -137,13 +141,9 @@ const Technologies = {
         "icon": Icons.SolanaIcon,
         "name": "Solana"
     },
-    "Coin Staking": {
-        "icon": Icons.CoinStakingIcon,
-        "name": "Coin Staking"
-    },
-    "Coin Swap": {
-        "icon": Icons.CoinSwapIcon,
-        "name": "Coin Swap"
+    "Tailwind": {
+        "icon": Icons.TailwindIcon,
+        "name": "Tailwind"
     },
     "JavaScript": {
         "icon": Icons.JavaScriptIcon,
@@ -158,7 +158,7 @@ const Technologies = {
         "name": "HTML"
     },
     "BootStrap": {
-        "icon": Icons.BootStrapIcon,
+        "icon": Icons.BootstrapIcon,
         "name": "BootStrap"
     },
     "Figma": {
