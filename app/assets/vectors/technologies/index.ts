@@ -20,6 +20,13 @@ import ExcelIcon from "./excel.svg"
 import JiraIcon from "./jira.svg"
 import ConfluenceIcon from "./confluence.svg"
 import LocalStorageIcon from "./localStorage.svg"
+import SvelteIcon from "./svelte.svg"
+import ReduxIcon from "./redux.svg"
+import NextJSIcon from "./nextjs.svg"
+import DynatraceIcon from "./dynatrace.svg"
+import PostmanIcon from "./postman.svg"
 
 
-export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon };
+
+
+export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon };
