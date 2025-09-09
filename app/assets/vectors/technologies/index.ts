@@ -25,8 +25,19 @@ import ReduxIcon from "./redux.svg"
 import NextJSIcon from "./nextjs.svg"
 import DynatraceIcon from "./dynatrace.svg"
 import PostmanIcon from "./postman.svg"
+import AdobeXDIcon from "./adobeXD.svg"
+import BootstrapIcon from "./bootstrap.svg"
+import ChromiumIcon from "./chromium.svg"
+import CSSIcon from "./css.svg"
+import FigmaIcon from "./figma.svg"
+import HTMLIcon from "./html.svg"
+import JavaScriptIcon from "./javascript.svg"
+import MetamaskIcon from "./metamask.svg"
+import SolanaIcon from "./solana.svg"
+import TailwindIcon from "./tailwind.svg"
 
 
 
 
-export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon };
+
+export { ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon };
