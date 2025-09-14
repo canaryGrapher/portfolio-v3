@@ -1,5 +1,5 @@
 import FooterData from "@/data/Footer";
-import { HeroSectionData } from "@/data/UserData";
+import { HeroSectionData } from "@/data/pages/landing/UserData";
 import Image from "next/image";
 
 export const Footer = () => {
