@@ -16,19 +16,19 @@ const VolunteerCard: React.FC<VolunteerCardProps> = (props) => {
             <div className="flex flex-col space-y-2 items-start">
                 {/* Company Logo */}
                 <div className="w-20 h-20">
-                    <Image src={props.companyLogo} alt={props.companyName} />
+                    <Image src={props.experience.companyLogo} alt={props.experience.companyName} />
                 </div>
                 {/* Company Name */}
                 <h3 className="text-xs md:text-base font-medium text-black m-0">
-                    {props.companyName}
+                    {props.experience.companyName}
                 </h3>
                 {/* Role */}
                 <p className="text-black text-base md:text-xl font-bold m-0">
-                    {props.role}
+                    {props.experience.role}
                 </p>
                 {/* Company Description */}
                 <p className="p-0 text-gray-500 text-sm w-full">
-                    {props.companyDescription}
+                    {props.experience.companyDescription}
                 </p>
             </div>
             {/* Expand Button */}

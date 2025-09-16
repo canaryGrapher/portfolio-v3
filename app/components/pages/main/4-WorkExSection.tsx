@@ -182,8 +182,8 @@ const WorkExSection = () => {
                                 style={{ scrollSnapAlign: isAutoScrolling ? 'none' : 'start' }}
                             >
                                 <ExperienceCard
-                                    experience={undefined} ref={experienceCardRef}
-                                    {...experience}
+                                    ref={experienceCardRef}
+                                    experience={experience}
                                     index={index}
                                     onExpand={() => handleExpand(experience)}                                />
                             </div>

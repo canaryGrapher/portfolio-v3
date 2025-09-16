@@ -7,6 +7,7 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from "react";
 import { FaMouse } from "react-icons/fa";
 import { MdSwipeDown } from "react-icons/md";
+import Image from "next/image";
 
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
@@ -18,7 +19,6 @@ const HeroSection = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const nameRef = useRef<HTMLHeadingElement>(null);
     const backgroundRef = useRef<HTMLDivElement>(null);
-    const imageRef = useRef<HTMLImageElement>(null);
     const nameRefPost = useRef<HTMLHeadingElement>(null);
 
     useGSAP(() => {
@@ -115,7 +115,7 @@ const HeroSection = () => {
                 }, "2.5")
 
             // Round the background border
-            timeline.to(imageRef.current, {
+            timeline.to('#hero-section-background', {
                 duration: 1,
                 ease: "power2.in",
                 borderRadius: "50px",
@@ -160,16 +160,13 @@ const HeroSection = () => {
 
                 {/* Video Section */}
                 <div className="opacity-0 absolute top-0 left-0 h-screen w-screen" ref={backgroundRef}>
-                    <img
-                        ref={imageRef}
-                        id="hero-section-video"
+                    <Image
+                        id="hero-section-background"
                         src={HeroSectionData.image.HeroImage.src}
                         alt="Motorcycle adventure landscape"
+                        unoptimized={true}
+                        fill
                         className="object-cover w-full h-full"
-                        style={{
-                            objectFit: "cover",
-                            objectPosition: "center",
-                        }}
                     />
                     <div
                         ref={nameRefPost}

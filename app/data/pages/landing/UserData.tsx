@@ -1,5 +1,5 @@
 import { WorkExperience } from "@/interface/UserData";
-import { HeroImage, RelatedWork, VolunteerWork, WorkExBannerBackground, WorkExPopupImages } from "@/assets/images"
+import { HeroImage, RelatedWork } from "@/assets/images"
 import { FunVideo } from "@/assets/videos"
 import { IntroLottie, IntroLottieResponsive } from "@/assets/lotties"
 import { Fun } from "@/assets/vectors";

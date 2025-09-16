@@ -91,7 +91,7 @@ const VolunteerSection = () => {
                             <div key={index} style={{ scrollSnapAlign: 'start' }} className={`${index === volunteerExperiences.length - 1 ? 'mr-2' : ''} volunteer-card`}>
                                 <VolunteerCard
                                     ref={experienceCardRef as React.RefObject<HTMLDivElement>}
-                                    {...experience}
+                                    experience={experience}
                                     index={index}
                                     onExpand={() => handleExpand(experience)}
                                 />

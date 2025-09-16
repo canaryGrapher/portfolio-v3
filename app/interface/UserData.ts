@@ -31,7 +31,7 @@ interface VolunteerExperience {
   companyDescription: string;
   category: string;
   companyLogo: StaticImageData;
-  role: string;
+  role: string; 
   companyColor: string;
   responsibilities: {
     date: string;

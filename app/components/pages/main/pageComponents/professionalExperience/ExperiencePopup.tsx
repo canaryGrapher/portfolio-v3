@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { ProfessionalExperience } from '@/interface/UserData';
 import Image from 'next/image';
 import { FaTimes } from 'react-icons/fa';
 import { ProfessionalExperiencePopupProps } from '@/interface/pages/Landing';

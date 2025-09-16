@@ -8,9 +8,9 @@ import { ExperienceCardProps } from '@/interface/pages/Landing';
 
 const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
     const getBannerSrc = () => {
-        if (typeof props.bannerImage === 'string') return props.bannerImage;
-        if ('src' in props.bannerImage) return props.bannerImage.src;
-        return (props.bannerImage as StaticImageData).src;
+        if (typeof props.experience.bannerImage === 'string') return props.experience.bannerImage;
+        if ('src' in props.experience.bannerImage) return props.experience.bannerImage.src;
+        return (props.experience.bannerImage as StaticImageData).src;
     };
 
     return (
@@ -31,27 +31,27 @@ const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
             <div className="relative w-full p-5">
                 {/* Company Name */}
                 <h3 className="text-2xl md:text-4xl font-bold text-white md:mb-2">
-                    {props.companyName}
+                    {props.experience.companyName}
                 </h3>
 
                 {/* Role */}
                 <p className="text-base md:text-xl text-white">
-                    {props.jobTitle}
+                    {props.experience.jobTitle}
                 </p>
 
                 {/* Employment Type */}
                 <p className="text-white opacity-80 mb-2 text-xs md:text-lg">
-                    ({props.employmentType})
+                    ({props.experience.employmentType})
                 </p>
 
                 {/* Work duration */}
                 <p className="text-gray-300 opacity-80 mb-2 smd:mb-8 text-xs md:text-sm">
-                    {props.startDate} - {props.endDate}
+                    {props.experience.startDate} - {props.experience.endDate}
                 </p>
 
                 {/* Description */}
                 <p className="text-white text-xs md:text-lg">
-                    {props.companyDescription}
+                    {props.experience.companyDescription}
                 </p>
             </div>
 
