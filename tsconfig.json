@@ -32,7 +32,8 @@
       "@/data/*": ["./app/data/*"],
       "@/components/*": ["./app/components/*"],
       "@/interface/*": ["./app/interface/*"],
-      "@/utils/*": ["./app/utils/*"]
+      "@/utils/*": ["./app/utils/*"],
+      "@/app/*": ["./app/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
