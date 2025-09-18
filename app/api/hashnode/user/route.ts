@@ -31,6 +31,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({ success: true, data: response.data });
   } catch (e) {
+    console.error('Error fetching Hashnode user:', e);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

@@ -85,14 +85,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-
-// Optional: Add GET method to check subscription status (if Hashnode provides such an endpoint)
-export async function GET(request: NextRequest) {
-  return NextResponse.json(
-    { 
-      error: 'Method not allowed',
-      message: 'Use POST method to subscribe to newsletter'
-    },
-    { status: 405 }
-  );
-}

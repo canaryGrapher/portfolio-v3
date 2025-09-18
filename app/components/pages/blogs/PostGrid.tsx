@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { HashnodePost } from '@/app/interface/api/hashnode';
 import ArticleTile from './pageComponent/ArticleTile';
 import UserInfo from './pageComponent/UserInfo';

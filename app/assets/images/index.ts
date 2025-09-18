@@ -7,5 +7,6 @@ import * as FunStuff from "./FunStuff";
 import * as Certificates from "./certificates";
 import * as Publications from "./publications";
 import * as Projects from "./projects";
+import * as Photos from "./photos";
 
-export { HeroImage, WorkExBannerBackground, WorkExPopupImages, VolunteerWork, RelatedWork, FunStuff, Certificates, Publications, Projects };
+export { HeroImage, WorkExBannerBackground, WorkExPopupImages, VolunteerWork, RelatedWork, FunStuff, Certificates, Publications, Projects, Photos };
