@@ -279,8 +279,7 @@ When extending this integration:
 1. Update TypeScript types in `app/types/hashnode.ts`
 2. Add new GraphQL queries to `app/lib/hashnode.ts`
 3. Create corresponding API routes in `app/api/hashnode/`
-4. Update client utilities in `app/lib/hashnode-client.ts`
-5. Add examples in `app/components/examples/`
+4. Update client utilities in `app/lib/hashnode-client.ts`å
 
 ## 📄 License
 
