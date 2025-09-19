@@ -4,7 +4,7 @@ import { PhotosHeader, PhotosFooter, PhotosContent } from '@/components/pages/ph
 const PhotosPage = () => {
     return (
         <div className="min-h-screen bg-gray-300 text-black">
-            <div className="max-w-7xl mx-auto pt-10">
+            <div className="max-w-7xl mx-auto py-10">
                 <PhotosHeader />
                 <PhotosContent />
                 <PhotosFooter />

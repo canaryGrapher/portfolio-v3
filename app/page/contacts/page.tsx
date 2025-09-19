@@ -1,15 +1,27 @@
-"use client";
-
 import React from 'react';
+import { ContactsHeader, ContactsContent, ContactsSocials } from '@/components/pages/contacts';
 
 const ContactsPage = () => {
     return (
-        <div className="min-h-screen bg-black text-white">
-            <div className="container mx-auto px-4 py-8">
-                <h1 className="text-4xl font-bold mb-8">Contacts</h1>
-                <p className="text-lg text-gray-300">
-                    This is the contacts page. Content will be added here.
-                </p>
+        <div className="min-h-screen bg-gray-300 text-black">
+            <div className="max-w-7xl mx-auto py-10 px-4">
+                {/* Header */}
+                <div className="mb-8">
+                    <ContactsHeader />
+                </div>
+                
+                {/* Main Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    {/* Left Column - Contact Form */}
+                    <div className="rounded-lg p-8">
+                        <ContactsContent />
+                    </div>
+                    
+                    {/* Right Column - Social Links */}
+                    <div className="rounded-lg p-8 flex items-center">
+                        <ContactsSocials />
+                    </div>
+                </div>
             </div>
         </div>
     );

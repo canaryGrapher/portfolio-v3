@@ -8,5 +8,6 @@ import * as Certificates from "./certificates";
 import * as Publications from "./publications";
 import * as Projects from "./projects";
 import * as Photos from "./photos";
+import * as Contacts from "./contacts";
 
-export { HeroImage, WorkExBannerBackground, WorkExPopupImages, VolunteerWork, RelatedWork, FunStuff, Certificates, Publications, Projects, Photos };
+export { HeroImage, WorkExBannerBackground, WorkExPopupImages, VolunteerWork, RelatedWork, FunStuff, Certificates, Publications, Projects, Photos, Contacts };
