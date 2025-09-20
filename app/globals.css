@@ -33,3 +33,17 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 * {
   box-sizing: border-box;
 }
+
+/* Marquee animation for job seeking banner */
+@keyframes marquee-single {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-single {
+  animation: marquee-single 40s linear infinite;
+}
