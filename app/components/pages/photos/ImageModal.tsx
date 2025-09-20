@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { OptimizedImageKitImage } from '@/app/lib/imagekit';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
@@ -24,17 +24,17 @@ const ImageModal: React.FC<ImageModalProps> = ({
 
   const currentImage = images[currentIndex];
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     const newIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
     onNavigate(newIndex);
-  };
+  }, [currentIndex, onNavigate, images.length]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     const newIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
     onNavigate(newIndex);
-  };
+  }, [currentIndex, images.length, onNavigate]);
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (!isOpen) return;
 
     switch (e.key) {
@@ -48,7 +48,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
         handleNext();
         break;
     }
-  };
+  }, [isOpen, onClose, handlePrevious, handleNext]);
 
   useEffect(() => {
     if (isOpen) {
@@ -62,7 +62,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, currentIndex]);
+  }, [isOpen, currentIndex, handleKeyDown]);
 
   useEffect(() => {
     setImageLoaded(false);

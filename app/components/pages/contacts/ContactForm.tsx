@@ -16,9 +16,40 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const wordCount = formData.message.trim().split(/\s+/).filter(word => word.length > 0).length;
-  const isOverLimit = wordCount > 500;
-  const isFormValid = formData.name.trim() && formData.phone.trim() && formData.message.trim() && !isOverLimit;
+  const charCount = formData.message.length;
+  const isOverLimit = charCount > 500;
+
+  // Validation functions
+  const isValidName = (name: string) => {
+    const trimmedName = name.trim();
+    if (trimmedName.length < 2) return false;
+    // Allow letters, spaces, hyphens, and apostrophes
+    return /^[a-zA-Z\s\-']+$/.test(trimmedName);
+  };
+
+  const isValidPhone = (phone: string) => {
+    const trimmedPhone = phone.trim();
+    if (trimmedPhone.length < 10) return false;
+    // Allow digits, +, -, spaces, and parentheses for country codes
+    return /^[\+]?[\d\s\-\(\)]+$/.test(trimmedPhone);
+  };
+
+  const isValidMessage = (message: string) => {
+    const trimmedMessage = message.trim();
+    if (trimmedMessage.length < 10) return false;
+    // Check for meaningful content (not just repeated characters or numbers)
+    const uniqueChars = new Set(trimmedMessage.toLowerCase().replace(/\s/g, '')).size;
+    const hasLetters = /[a-zA-Z]/.test(trimmedMessage);
+    const hasReasonableVariety = uniqueChars >= 3;
+
+    return hasLetters && hasReasonableVariety;
+  };
+
+  const isFormValid =
+    isValidName(formData.name) &&
+    isValidPhone(formData.phone) &&
+    isValidMessage(formData.message) &&
+    !isOverLimit;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,6 +58,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
       [name]: value,
     }));
   };
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,10 +100,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border-2 border-blue-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${formData.name && !isValidName(formData.name)
+                  ? 'border-red-500 focus:ring-red-300'
+                  : 'border-blue-500 focus:ring-blue-300'
+                }`}
               placeholder=""
               required
             />
+            {formData.name && !isValidName(formData.name) && (
+              <p className="text-red-500 text-xs mt-1">Please enter a valid name (letters only)</p>
+            )}
           </div>
 
           {/* Phone Field */}
@@ -85,10 +123,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border-2 border-blue-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${formData.phone && !isValidPhone(formData.phone)
+                  ? 'border-red-500 focus:ring-red-300'
+                  : 'border-blue-500 focus:ring-blue-300'
+                }`}
               placeholder=""
               required
             />
+            {formData.phone && !isValidPhone(formData.phone) && (
+              <p className="text-red-500 text-xs mt-1">Please enter a valid phone number (digits, +, -, spaces, parentheses allowed)</p>
+            )}
           </div>
         </div>
 
@@ -104,27 +148,31 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
               value={formData.message}
               onChange={handleInputChange}
               rows={6}
-              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent resize-none ${isOverLimit
+              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent resize-none ${isOverLimit || (formData.message && !isValidMessage(formData.message))
                   ? 'border-red-500 focus:ring-red-300'
-                  : 'border-blue-500'
+                  : 'border-blue-500 focus:ring-blue-300'
                 }`}
               placeholder=""
               required
             />
             <div className={`absolute bottom-2 right-2 text-xs ${isOverLimit ? 'text-red-500' : 'text-gray-500'
               }`}>
-              {wordCount}/500
+              {charCount}/500
             </div>
           </div>
+          {formData.message && !isValidMessage(formData.message) && (
+            <p className="text-red-500 text-xs mt-1">Please enter a meaningful message (at least 10 characters with letters)</p>
+          )}
         </div>
+
 
         {/* Submit Button */}
         <button
           type="submit"
           disabled={!isFormValid || isSubmitting}
           className={`w-32 py-3 px-6 rounded-lg font-medium transition-colors ${!isFormValid || isSubmitting
-              ? 'border-2 border-gray-500 text-gray-500 cursor-not-allowed'
-              : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
+            ? 'border-2 border-gray-500 text-gray-500 cursor-not-allowed'
+            : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
             }`}
         >
           {isSubmitting ? 'SENDING...' : 'SEND'}
@@ -133,7 +181,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
         {/* Status Messages */}
         {submitStatus === 'success' && (
           <div className="text-green-600 text-sm text-left">
-            Message sent successfully! I'll get back to you soon.
+            Message sent successfully! I&apos;ll get back to you soon.
           </div>
         )}
         {submitStatus === 'error' && (

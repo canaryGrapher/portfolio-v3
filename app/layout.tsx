@@ -1,18 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -42,14 +31,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://yasharyan.dev"), // Replace with your actual domain
+  metadataBase: new URL("https://yasharyan.dev"), 
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yasharyan.dev", // Replace with your actual domain
+    url: "https://yasharyan.dev", 
     title: "Yash Aryan - Developer, Thinker, Explorer",
     description: "Software engineer from India specializing in web development, AWS Services, Web3 development, and user experience design.",
     siteName: "Yash Aryan Portfolio",
@@ -67,7 +56,7 @@ export const metadata: Metadata = {
     title: "Yash Aryan - Developer, Thinker, Explorer",
     description: "Software engineer from India specializing in web development, AWS Services, Web3 development, and user experience design.",
     images: ["/og-image.jpg"], // You'll need to create this image
-    creator: "@yasharyan", // Replace with your actual Twitter handle
+    creator: "@canaryGrapher", // Replace with your actual Twitter handle
   },
   robots: {
     index: true,
@@ -110,7 +99,8 @@ export default function RootLayout({
         <meta name="msapplication-tap-highlight" content="no" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar-hide`}
+        className="font-sans antialiased scrollbar-hide"
+        suppressHydrationWarning={true}
       >
         <Header />
         {children}

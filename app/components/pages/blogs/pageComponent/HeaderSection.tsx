@@ -9,7 +9,7 @@ const HeaderSection: React.FC<{
 }> = ({ title, subtitle, onSubscribe }) => {
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false);
-    const [feedback, setFeedback] = useState<{ type: 'already' | 'error' | 'success' | null; text: string } | null>(null);1
+    const [feedback, setFeedback] = useState<{ type: 'already' | 'error' | 'success' | null; text: string } | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
