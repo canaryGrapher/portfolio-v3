@@ -11,6 +11,8 @@
   "dependencies": {
     "@emailjs/nodejs": "^5.0.2",
     "@gsap/react": "^2.1.2",
+    "@microsoft/clarity": "^1.0.0",
+    "@vercel/analytics": "^1.5.0",
     "gsap": "^3.13.0",
     "imagekit": "^6.0.0",
     "lottie-react": "^2.4.1",

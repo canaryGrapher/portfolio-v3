@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
+import { Analytics } from "@vercel/analytics/next"
+import Clarity from '@microsoft/clarity';
 
+Clarity.init(process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID);
 export const metadata: Metadata = {
   title: {
     default: "Yash Aryan - Developer, Thinker, Explorer",
@@ -105,6 +108,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
