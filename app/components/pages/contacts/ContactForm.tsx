@@ -91,7 +91,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
         <div className="flex flex-row gap-2">
           {/* Name Field */}
           <div className="w-1/2">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-blue-500 mb-2">
               NAME
             </label>
             <input
@@ -114,7 +114,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
 
           {/* Phone Field */}
           <div className="w-1/2">
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-blue-500 mb-2">
               PHONE NUMBER
             </label>
             <input
@@ -138,7 +138,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
 
         {/* Message Field */}
         <div className="w-full">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-blue-500 mb-2">
             MESSAGE
           </label>
           <div className="relative">
@@ -171,7 +171,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
           type="submit"
           disabled={!isFormValid || isSubmitting}
           className={`w-32 py-3 px-6 rounded-lg font-medium transition-colors ${!isFormValid || isSubmitting
-            ? 'border-2 border-gray-500 text-gray-500 cursor-not-allowed'
+            ? 'border-2 border-blue-500 text-blue-500 cursor-not-allowed'
             : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
             }`}
         >
