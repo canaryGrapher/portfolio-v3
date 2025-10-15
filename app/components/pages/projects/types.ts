@@ -9,14 +9,14 @@ export interface Project {
         link: string;
     }>;
     associatedWith: string | null;
-    associatedWithImage?: StaticImageData;
+    associatedWithImage?: string;
     startDate: string;
     endDate: string;
     technologies: Array<{
         name: string;
-        icon: StaticImageData;
+        icon: string;
     }>;
-    image: StaticImageData;
+    image: string;
 }
 
 export interface ProjectsGridProps {

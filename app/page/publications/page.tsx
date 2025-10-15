@@ -10,7 +10,7 @@ const PublicationsPage = () => {
             <div className="pt-10 max-w-7xl mx-auto">
                 {/* Hero Section */}
                 <PageHeroSection
-                    backgroundImage={Publications.publicationBG.src}
+                    backgroundImage={Publications.publicationBG}
                     title="Publications"
                     subtitle="Research showcasing applied knowledge, critical analysis, and contribution to academic discourse."
                     altText="Publication Background"

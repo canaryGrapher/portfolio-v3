@@ -137,7 +137,7 @@ const HeroSection = () => {
                             ref={nameRef}
                             className="text-[120px] md:text-[250px] font-black leading-none"
                             style={{
-                                backgroundImage: `url(${HeroSectionData.image.HeroImage.src})`,
+                                backgroundImage: `url(${HeroSectionData.image.HeroImage})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
@@ -162,7 +162,7 @@ const HeroSection = () => {
                 <div className="opacity-0 absolute top-0 left-0 h-screen w-screen" ref={backgroundRef}>
                     <Image
                         id="hero-section-background"
-                        src={HeroSectionData.image.HeroImage.src}
+                        src={HeroSectionData.image.HeroImage}
                         alt="Motorcycle adventure landscape"
                         unoptimized={true}
                         fill

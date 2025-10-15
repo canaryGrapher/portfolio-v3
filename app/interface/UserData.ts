@@ -2,8 +2,8 @@ import { StaticImageData } from "next/image";
 
 interface ProfessionalExperience {
   companyName: string;
-  bannerImage: StaticImageData;
-  popupImage: StaticImageData;
+  bannerImage: string;
+  popupImage: string;
   jobTitle: string;
   employmentType: string;
   startDate: string;
@@ -18,7 +18,7 @@ interface ProfessionalExperience {
   experienceGained: {
     name: string;
     technologies: {
-      icon: StaticImageData;
+      icon: string;
       name: string;
     }[];
   }[];
@@ -30,7 +30,7 @@ interface VolunteerExperience {
   companyName: string;
   companyDescription: string;
   category: string;
-  companyLogo: StaticImageData;
+  companyLogo: string;
   role: string; 
   companyColor: string;
   responsibilities: {

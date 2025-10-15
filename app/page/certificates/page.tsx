@@ -10,7 +10,7 @@ const CertificatesPage = () => {
             <div className="pt-10 mx-auto">
                 {/* Hero Section */}
                 <PageHeroSection
-                    backgroundImage={Certificates.certificateBG.src}
+                    backgroundImage={Certificates.certificateBG}
                     title="Certificates"
                     subtitle="A tangible demonstration of specialized skills, increasing professional credibility, and facilitating continuous learning."
                     altText="Certificate Background"

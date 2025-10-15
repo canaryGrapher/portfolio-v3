@@ -2,9 +2,9 @@ import { Contacts } from "@/assets/images";
 
 const Socials = [
     {
-        name: "hello@yasharyan.com",
+        name: "hello@yasharyan.dev",
         image: Contacts.Email,
-        href: "mailto:hello@yasharyan.com",
+        href: "mailto:hello@yasharyan.dev",
     },
     {
         name: "@lifethrottling",

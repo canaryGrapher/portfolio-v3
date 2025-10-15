@@ -23,7 +23,7 @@ const ProjectData = {
       startDate: "2021-06-01",
       endDate: "2022-02-01",
       technologies: [Technologies["NodeJS"], Technologies["TypeScript"], Technologies["NPM"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ const ProjectData = {
       startDate: "2024-01-01",
       endDate: "2024-12-01",
       technologies: [Technologies["NextJS"], Technologies["TypeScript"], Technologies["Tailwind"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 3,
@@ -63,7 +63,7 @@ const ProjectData = {
       startDate: "2023-03-01",
       endDate: "2023-08-01",
       technologies: [Technologies["ReactJS"], Technologies["NodeJS"], Technologies["PostgreSQL"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 4,
@@ -84,7 +84,7 @@ const ProjectData = {
       startDate: "2022-09-01",
       endDate: "2023-01-01",
       technologies: [Technologies["ReactJS"], Technologies["Socket.io"], Technologies["MongoDB"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 5,
@@ -104,7 +104,7 @@ const ProjectData = {
       startDate: "2023-05-01",
       endDate: "2023-07-01",
       technologies: [Technologies["ReactJS"], Technologies["TypeScript"], Technologies["Chart.js"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 6,
@@ -124,7 +124,7 @@ const ProjectData = {
       startDate: "2022-01-01",
       endDate: "2022-05-01",
       technologies: [Technologies["Ethereum"], Technologies["Web3"], Technologies["Solidity"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 7,
@@ -145,7 +145,7 @@ const ProjectData = {
       startDate: "2023-09-01",
       endDate: "2023-12-01",
       technologies: [Technologies["NodeJS"], Technologies["OpenAI"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 8,
@@ -165,7 +165,7 @@ const ProjectData = {
       startDate: "2023-01-01",
       endDate: "2023-04-01",
       technologies: [Technologies["React Native"], Technologies["Firebase"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 9,
@@ -185,7 +185,7 @@ const ProjectData = {
       startDate: "2022-06-01",
       endDate: "2022-11-01",
       technologies: [Technologies["ReactJS"], Technologies["D3.js"], Technologies["WebSocket"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 10,
@@ -206,7 +206,7 @@ const ProjectData = {
       startDate: "2022-03-01",
       endDate: "2022-08-01",
       technologies: [Technologies["NodeJS"], Technologies["Express"], Technologies["Redis"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 11,
@@ -226,7 +226,7 @@ const ProjectData = {
       startDate: "2023-06-01",
       endDate: "2023-09-01",
       technologies: [Technologies["ReactJS"], Technologies["NodeJS"], Technologies["MongoDB"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 12,
@@ -246,7 +246,7 @@ const ProjectData = {
       startDate: "2022-10-01",
       endDate: "2023-02-01",
       technologies: [Technologies["ReactJS"], Technologies["AWS"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 13,
@@ -267,7 +267,7 @@ const ProjectData = {
       startDate: "2023-04-01",
       endDate: "2023-08-01",
       technologies: [Technologies["Python"], Technologies["FastAPI"], Technologies["Docker"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 14,
@@ -287,7 +287,7 @@ const ProjectData = {
       startDate: "2023-02-01",
       endDate: "2023-06-01",
       technologies: [Technologies["ReactJS"], Technologies["Elasticsearch"], Technologies["NodeJS"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     },
     {
       id: 15,
@@ -307,7 +307,7 @@ const ProjectData = {
       startDate: "2023-10-01",
       endDate: "2024-01-01",
       technologies: [Technologies["ReactJS"], Technologies["MQTT"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.React,
+      image: Projects.ProjectImages.Anant,
     }
   ],
 };

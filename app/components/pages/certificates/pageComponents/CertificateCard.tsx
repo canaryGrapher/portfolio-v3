@@ -39,6 +39,8 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ certificate }) => {
                                         <Image
                                             src={certificate.providers.icon}
                                             alt={certificate.providers.name}
+                                            width={32}
+                                            height={32}
                                             className="w-full h-full object-fill rounded-full"
                                         />
                                     </div>

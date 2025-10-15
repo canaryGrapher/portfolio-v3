@@ -34,7 +34,7 @@ const FooterData = {
         links: [
             {
                 title: "Email",
-                href: "mailto:hello@yasharyan.com",
+                href: "mailto:hello@yasharyan.dev",
             },
             {
                 title: "Resume",

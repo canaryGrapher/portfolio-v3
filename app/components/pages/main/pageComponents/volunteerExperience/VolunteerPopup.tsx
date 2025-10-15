@@ -30,7 +30,7 @@ const VolunteerPopup: React.FC<VolunteerPopupProps> = (props) => {
                     <div className="p-0 relative overflow-hidden">
 
                         <div className="relative z-10 flex flex-col md:flex-row">
-                            <Image src={props.experience.companyLogo} alt={props.experience.companyName} className="md:w-52 md:h-52 w-24 h-24" />
+                            <Image src={props.experience.companyLogo} alt={props.experience.companyName} className="md:w-52 md:h-52 w-24 h-24" width={100} height={100} unoptimized={true} />
                             <div className="pt-5 md:p-8">
                                 <h2 className="text-lg font-bold text-gray-600">
                                     {props.experience.companyName}

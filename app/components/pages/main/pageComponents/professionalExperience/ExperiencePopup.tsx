@@ -41,7 +41,7 @@ const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
                         <div className="relative z-10 flex items-start justify-between">
                             <div className="flex flex-col space-x-6">
                                 <div className="w-full rounded-t-xl overflow-hidden">
-                                    <Image src={props.experience.popupImage} alt={props.experience.companyName} className="w-full h-auto" />
+                                    <Image src={props.experience.popupImage} alt={props.experience.companyName} className="w-full h-auto" width={100} height={100} unoptimized={true} />
                                 </div>
                                 <div>
                                     <h2 className="text-6xl font-bold text-black mb-2 mt-5">

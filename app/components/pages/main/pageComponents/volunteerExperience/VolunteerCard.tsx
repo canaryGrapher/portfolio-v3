@@ -16,7 +16,7 @@ const VolunteerCard: React.FC<VolunteerCardProps> = (props) => {
             <div className="flex flex-col space-y-2 items-start">
                 {/* Company Logo */}
                 <div className="w-20 h-20">
-                    <Image src={props.experience.companyLogo} alt={props.experience.companyName} />
+                    <Image src={props.experience.companyLogo} alt={props.experience.companyName} width={80} height={80} />
                 </div>
                 {/* Company Name */}
                 <h3 className="text-xs md:text-base font-medium text-black m-0">

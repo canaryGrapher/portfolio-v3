@@ -29,7 +29,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, formatDateRange, o
 
                     {/* Project Image */}
                     <div className="w-full h-auto rounded-lg mb-6 flex items-center justify-center">
-                        <Image src={project.image} alt={project.name} className="w-full" />
+                        <Image src={project.image} alt={project.name} className="w-full" width={100} height={100} unoptimized={true} />
                     </div>
 
                     {/* Associated Company */}
@@ -37,7 +37,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, formatDateRange, o
                         <div className="flex items-center mb-6">
                             {project.associatedWithImage && (
                                 <div className="w-8 h-8 mr-2 rounded-full" style={{
-                                    backgroundImage: `url(${project.associatedWithImage?.src || project.associatedWithImage})`,
+                                    backgroundImage: `url(${project.associatedWithImage})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat'
