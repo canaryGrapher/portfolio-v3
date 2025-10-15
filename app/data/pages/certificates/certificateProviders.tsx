@@ -1,9 +1,8 @@
 import { Certificates } from "@/assets/images";
-import { StaticImageData } from "next/image";
 
 type CertificateProvider = {
     name: string;
-    icon: StaticImageData;
+    icon: string;
 }
 
 type ProviderRecordType = Record<string, CertificateProvider>;

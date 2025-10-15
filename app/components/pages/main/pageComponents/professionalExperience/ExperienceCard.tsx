@@ -9,7 +9,7 @@ import { ExperienceCardProps } from '@/interface/pages/Landing';
 const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
     const getBannerSrc = () => {
         if (typeof props.experience.bannerImage === 'string') return props.experience.bannerImage;
-        if ('src' in props.experience.bannerImage) return props.experience.bannerImage.src;
+        if ('src' in props.experience.bannerImage) return props.experience.bannerImage;
         return (props.experience.bannerImage as StaticImageData).src;
     };
 

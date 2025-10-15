@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 interface ProfessionalExperience {
   companyName: string;
   bannerImage: string;

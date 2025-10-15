@@ -21,7 +21,7 @@ interface BaseProps {
 
 // Specific implementations
 type AbstractBackgroundProps = {
-    backgroundWallpaper: StaticImageData;
+    backgroundWallpaper: string;
 };
 
 type VolunteerPopupProps = BasePopupProps<VolunteerExperience | null>;
@@ -40,7 +40,7 @@ type ScrollSliderProps = {
 type RelatedWorkCardProps = {
     title: string;
     preText: string;
-    image: StaticImageData;
+    image: string;
     pageRoute: string;
     relatedWorkRef: React.RefObject<HTMLDivElement>;
 };
@@ -64,7 +64,7 @@ interface CarPlayDeviceProps {
 
 interface AbstractImageProps {
     className?: string;
-    image: StaticImageData;
+    image: string;
 }
 
 export type { 

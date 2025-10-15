@@ -1,22 +1,21 @@
 import certificateProviders from "./certificateProviders"
 import courseOwnerData from "./courseOwnerData";
-import { StaticImageData } from "next/image";
 
 // importing types
 type CertificateData = {
     name: string;
     providers: {
         name: string;
-        icon: StaticImageData;
+        icon: string;
     };
     organization: {
         name: string;
-        image: StaticImageData | string;
+        image: string;
     };
     issuedDate: string;
     category: string;
     link: string;
-    image: StaticImageData | string;
+    image: string;
 }
 
 // importing types 

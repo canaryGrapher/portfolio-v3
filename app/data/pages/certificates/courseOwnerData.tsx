@@ -1,8 +1,6 @@
-import { StaticImageData } from "next/image";
-
 type CourseOwnerData = {
     name: string;
-    image: StaticImageData | string;
+    image: string;
 }
 
 type CourseOwnerRecordType = Record<string, CourseOwnerData>;

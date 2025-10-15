@@ -1,7 +1,5 @@
 import React from 'react';
 import ContactForm from './ContactForm';
-import Image from 'next/image';
-import { HeroImage } from '@/assets/images';
 
 const ContactsContent = () => {
     return (

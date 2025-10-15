@@ -1,11 +1,10 @@
-import { StaticImageData } from "next/image";
 import { Publications } from "@/assets/images";
 
 interface Publications {
   name: string;
   publicationsParent: string;
   link: string;
-  image: StaticImageData;
+  image: string;
 }
 
 const publications: Record<string, Publications> = {

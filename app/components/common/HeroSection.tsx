@@ -7,7 +7,7 @@ const HeroSection = () => {
         <div className="relative h-[120vh] max-w-7xl mx-auto overflow-hidden">
             <div className="relative inset-0 w-full h-[600px]">
                 <Image
-                    src={Certificates.certificateBG.src}
+                    src={Certificates.certificateBG}
                     alt="Certificate Background"
                     fill
                     className="object-cover h-full w-full"
