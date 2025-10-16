@@ -1,7 +1,7 @@
-import { Logo } from "@/assets/vectors";
+import { LogoWhite } from "@/assets/vectors";
 
 const FooterData = {
-  logo: Logo,
+  logo: LogoWhite,
   quote: "People don't care about what you say, they care about what you build.",
   linksRow: [
     {
@@ -15,10 +15,10 @@ const FooterData = {
                 title: "GitHub",
                 href: "https://github.com/canaryGrapher",
             },
-            {
-                title: "Instagram",
-                href: "https://www.instagram.com/lifethrottling",
-            },
+            // {
+            //     title: "Instagram",
+            //     href: "https://www.instagram.com/lifethrottling",
+            // },
             {
                 title: "Twitter",
                 href: "https://x.com/canaryGrapher",

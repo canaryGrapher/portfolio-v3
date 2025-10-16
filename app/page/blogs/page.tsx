@@ -3,11 +3,13 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { HashnodeClient } from '@/app/lib/hashnode-client';
 import { HashnodePost } from '@/app/interface/api/hashnode';
 import { PostsGrid, HeaderSection } from '@/app/components/pages/blogs';
+import { useLoading } from '@/app/contexts/LoadingContext';
 
 const BlogsPage = () => {
     const [posts, setPosts] = useState<HashnodePost[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const { addLoadingTask, removeLoadingTask } = useLoading();
 
     const subscribe = async (email: string) => {
         const result = await HashnodeClient.subscribeToNewsletter({ publicationId: '5fc14563f1207e5b3cdeffd5', email });
@@ -18,8 +20,10 @@ const BlogsPage = () => {
     };
 
     useEffect(() => {
+        const taskId = 'blogs-api';
         (async () => {
             try {
+                addLoadingTask(taskId);
                 const res = await HashnodeClient.getPosts('canary.hashnode.dev', 15);
                 if (res.success && res.data?.publication) {
                     setPosts(res.data.publication.posts.edges.map(e => e.node));
@@ -30,9 +34,10 @@ const BlogsPage = () => {
                 setError(e instanceof Error ? e.message : 'Unknown error');
             } finally {
                 setLoading(false);
+                removeLoadingTask(taskId);
             }
         })();
-    }, []);
+    }, [addLoadingTask, removeLoadingTask]);
 
     const content = useMemo(() => {
         if (loading) {

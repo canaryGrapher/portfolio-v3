@@ -47,3 +47,21 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .animate-marquee-single {
   animation: marquee-single 40s linear infinite;
 }
+
+.animate-pause {
+  animation-play-state: paused;
+}
+
+/* Loading screen animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}

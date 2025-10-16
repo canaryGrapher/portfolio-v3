@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { LazyImage } from '@/components/common';
 import { ImageKitService, OptimizedImageKitImage } from '@/app/lib/imagekit';
 import ImageModal from './ImageModal';
+import { useLoading } from '@/app/contexts/LoadingContext';
 
 const PhotosContent: React.FC = () => {
   const [images, setImages] = useState<OptimizedImageKitImage[]>([]);
@@ -11,12 +12,15 @@ const PhotosContent: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { addLoadingTask, removeLoadingTask } = useLoading();
 
   useEffect(() => {
+    const taskId = 'photos-api';
     const fetchImages = async () => {
       try {
         setLoading(true);
         setError(null);
+        addLoadingTask(taskId);
         const fetchedImages = await ImageKitService.getAllImages('/captures');
         setImages(fetchedImages);
       } catch (err) {
@@ -24,11 +28,12 @@ const PhotosContent: React.FC = () => {
         setError('Failed to load images. Please try again later.');
       } finally {
         setLoading(false);
+        removeLoadingTask(taskId);
       }
     };
 
     fetchImages();
-  }, []);
+  }, [addLoadingTask, removeLoadingTask]);
 
   const handleImageClick = (index: number) => {
     setCurrentImageIndex(index);

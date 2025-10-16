@@ -7,5 +7,6 @@ const LUG = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experienc
 const MIST = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Volunteer%20Work/mist_m0YBWULy_.png?updatedAt=1760511278814"
 const Sociio = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Volunteer%20Work/sociio_Iaf1oDS9m.png?updatedAt=1760511278519"
 const IIsC = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Volunteer%20Work/iisc_669c_v_Pm.png?updatedAt=1760511278787"
+const MIT = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Volunteer%20Work/MIT_0nZb7VYqhY?updatedAt=1760623579070"
 
-export { Binance, CodeCademy, Rotaract, AIESEC, TechTatva, LUG, MIST, Sociio, IIsC };
+export { Binance, CodeCademy, Rotaract, AIESEC, TechTatva, LUG, MIST, Sociio, IIsC, MIT };

@@ -172,6 +172,38 @@ const Technologies = {
     "AdobeXD": {
         icon: Icons.AdobeXDIcon,
         name: "Adobe XD"
+    },
+    "ThreeJS": {
+        icon: Icons.ThreeJSIcon,
+        name: "ThreeJS"
+    },
+    "NPM": {
+        icon: Icons.NPMIcon,
+        name: "NPM"
+    },
+    "Linux": {
+        icon: Icons.LinuxIcon,
+        name: "Linux"
+    },
+    "Multipass": {
+        icon: Icons.MultipassIcon,
+        name: "Multipass"
+    },
+    "Google Sheets": {
+        icon: Icons.GoogleSheetsIcon,
+        name: "Google Sheets"
+    },
+    "HalfMoon": {
+        icon: Icons.HalfMoonIcon,
+        name: "HalfMoon"
+    },
+    "Puppeteer": {
+        icon: Icons.PuppeteerIcon,
+        name: "Puppeteer"
+    },
+    "MongoDB": {
+        icon: Icons.MongoDBIcon,
+        name: "MongoDB"
     }
 }
 

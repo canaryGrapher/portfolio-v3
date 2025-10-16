@@ -6,21 +6,21 @@ const Socials = [
         image: Contacts.Email,
         href: "mailto:hello@yasharyan.dev",
     },
-    {
-        name: "@lifethrottling",
-        image: Contacts.Instagram,
-        href: "https://www.instagram.com/lifethrottling",
-    },
+    // {
+    //     name: "@lifethrottling",
+    //     image: Contacts.Instagram,
+    //     href: "https://www.instagram.com/lifethrottling",
+    // },
     {
         name: "/yasharyan",
         image: Contacts.LinkedIn,
         href: "https://www.linkedin.com/in/yasharyan/",
     },
-    {
-        name: "@lifethrottling",
-        image: Contacts.Threads,
-        href: "https://www.threads.net/@lifethrottling",
-    },
+    // {
+    //     name: "@lifethrottling",
+    //     image: Contacts.Threads,
+    //     href: "https://www.threads.net/@lifethrottling",
+    // },
     {
         name: "@canaryGrapher",
         image: Contacts.Twitter,

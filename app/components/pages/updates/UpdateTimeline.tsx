@@ -11,7 +11,7 @@ const UpdateTimeline = () => {
         return `${day} ${month}, ${year}`;
     };
     return (
-        <div className="flex flex-col items-center gap-2 text-center mx-auto mt-18">
+        <div className="flex flex-col items-center gap-2 text-center mx-auto mt-18 pb-20">
             <div className="grid grid-cols-1 md:grid-cols-[1fr_3fr] w-full text-left gap-4">
                 {/* Header */}
                 <div />
@@ -25,10 +25,10 @@ const UpdateTimeline = () => {
                             <h2 className="text-[#033EDF]">{formatDate(change.date)}</h2>
                         </div>
                         <div>
+                        <p className="text-lg text-gray-500">{change.changes}</p>
                             {change.image && (
                                 <Image src={change.image} alt={change.changes} width={400} height={400} className="mb-4" />
                             )}
-                            <p className="text-lg text-gray-500">{change.changes}</p>
                         </div>
                     </Fragment>
                 ))}

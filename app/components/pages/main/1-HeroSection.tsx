@@ -125,7 +125,7 @@ const HeroSection = () => {
 
     return (
         <section
-            className="relative max-h-screen h-screen overflow-hidden text-center w-full bg-black"
+            className="relative h-screen overflow-hidden text-center w-full bg-black"
             id="hero-section"
             ref={sectionRef}>
             {/* Main Content Section */}

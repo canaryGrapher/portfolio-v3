@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import HeaderData from "@/data/Headers";
 import AdditionalInfo from "@/data/general/AdditionalInfo";
 import Image from "next/image";
@@ -9,23 +10,27 @@ import { FaTimes } from "react-icons/fa";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="bg-black relative">
+    <header className={`bg-black absolute top-0 left-0 w-full z-50`}>
       {/* Main Header Content */}
       <div className="flex justify-between items-center p-4">
         {/* Logo */}
-        <Image
-          src={HeaderData.logo.src}
-          alt="Logo"
-          width={20}
-          height={20}
-          className="mx-3"
-        />
+        <Link href="/">
+          <Image
+            src={HeaderData.logo.src}
+            alt="Logo"
+            width={20}
+            height={20}
+            className="mx-3"
+          />
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex md:flex-row md:justify-evenly w-full">
@@ -46,19 +51,16 @@ export const Header = () => {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMenuOpen ? "rotate-45 translate-y-1.5" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMenuOpen ? "opacity-0" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
+            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
           />
         </button>
       </div>
@@ -66,11 +68,16 @@ export const Header = () => {
       {/* Job Seeking Banner */}
       {AdditionalInfo.lookingForJob && (
         <div className="bg-black border-t border-gray-800 overflow-hidden">
-          <div className="animate-marquee-single whitespace-wrap">
+          <div
+            className={`animate-marquee-single whitespace-wrap transition-all duration-300 ${isMarqueePaused ? 'animate-pause' : ''
+              }`}
+            onMouseEnter={() => setIsMarqueePaused(true)}
+            onMouseLeave={() => setIsMarqueePaused(false)}
+          >
             <div className="flex items-center text-sm text-gray-300 py-2 px-4">
-              <span>The developer of this website is looking for a job as a developer.&nbsp;</span>
-              <Link 
-                href="/contacts" 
+              <span>The developer of this website is looking for a job.&nbsp;</span>
+              <Link
+                href="/contacts"
                 className="text-white hover:text-blue-400 underline font-semibold ml-1"
               >
                 Click here
@@ -88,9 +95,8 @@ export const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full h-full bg-black/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Menu Header */}

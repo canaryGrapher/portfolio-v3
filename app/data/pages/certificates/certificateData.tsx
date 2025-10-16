@@ -207,7 +207,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Jan 2022",
         category: "Technology",
         link: "https://www.coursera.org/account/accomplishments/certificate/GM6MFP9GPR2Q",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Google_qHK5fZg0N6?updatedAt=1760627416913"
     },
     {
         name: "Algorithmic Thinking (Part 1)",
@@ -216,7 +216,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Sept 2021",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/NFFNRJB5BHT4",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Rice%20University_H-AVJiIO_"
     },
     {
         name: "Algorithmic Thinking (Part 2)",
@@ -225,7 +225,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Nov 2021",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/EAGG5MHQ2BEV",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Rice%20University_H-AVJiIO_"
     },
     {
         name: "Principles of Computing (Part 1)",
@@ -234,7 +234,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2021",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/J64R9JYX9GA2",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Rice%20University_H-AVJiIO_"
     },
     {
         name: "Principles of Computing (Part 2)",
@@ -243,7 +243,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Oct 2021",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/SD5SNSAXQCUF",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Rice%20University_H-AVJiIO_"
     },
     {
         name: "An Introduction to Interactive Programming in Python (Part 1)",
@@ -252,7 +252,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Apr 2021",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/VM6EGTHRG2DU",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Rice%20University_H-AVJiIO_"
     },
     {
         name: "An Introduction to Interactive Programming in Python (Part 2)",
@@ -261,7 +261,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2021",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/E2VBF44TF32D",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/Rice%20University_H-AVJiIO_"
     },
     {
         name: "Getting Started with Go",
@@ -270,7 +270,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Oct 2020",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/MCZ7SAEVQRJD",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20California_C60j93Rdk?updatedAt=1760627620725"
     },
     {
         name: "Blockchain Platforms",
@@ -279,7 +279,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2020",
         category: "Blockchain",
         link: "https://www.coursera.org/account/accomplishments/certificate/XG7EVU4CCP73",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Buffalo_DKNjPKCwA?updatedAt=1760627761072"
     },
     {
         name: "Blockchain Specialization",
@@ -288,7 +288,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2020",
         category: "Blockchain",
         link: "https://www.coursera.org/account/accomplishments/specialization/certificate/PP6JELVRVAHC",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Buffalo_DKNjPKCwA?updatedAt=1760627761072"
     },
     {
         name: "Decentralized Applications (Dapps)",
@@ -297,7 +297,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2020",
         category: "Blockchain",
         link: "https://www.coursera.org/account/accomplishments/certificate/24EA362GSZSF",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Buffalo_DKNjPKCwA?updatedAt=1760627761072"
     },
     {
         name: "Smart Contracts",
@@ -306,7 +306,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2020",
         category: "Blockchain",
         link: "https://www.coursera.org/account/accomplishments/certificate/QA8SSY93WSSZ",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Buffalo_DKNjPKCwA?updatedAt=1760627761072"
     },
     {
         name: "Blockchain Basics",
@@ -315,7 +315,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Mar 2020",
         category: "Blockchain",
         link: "https://www.coursera.org/account/accomplishments/verify/7MX9V5K68364",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Buffalo_DKNjPKCwA?updatedAt=1760627761072"
     },
     {
         name: "Front-End Web UI Framework and Tools: Bootstrap 4",
@@ -324,7 +324,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2020",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/certificate/VDT9F9QAUHBB",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Hong%20Kong_57YKggiyya?updatedAt=1760627867186"
     },
     {
         name: "Visual Elements of User Interface Designs",
@@ -333,7 +333,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Apr 2020",
         category: "UI/UX",
         link: "https://www.coursera.org/account/accomplishments/certificate/6K7UTD4JL3JD",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/CalArts_XvQ8m9T3T?updatedAt=1760627815070"
     },
     {
         name: "Interactivity with JavaScript",
@@ -342,7 +342,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Aug 2019",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/verify/AAEMW7SD97W7",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Michigan_bIABf4FyD?updatedAt=1760627991245"
     },
     {
         name: "Python Data Structures",
@@ -351,7 +351,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "Jun 2019",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/verify/2RTLH5ZVUHA6",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Michigan_bIABf4FyD?updatedAt=1760627991245"
     },
     {
         name: "Introduction to CSS3",
@@ -360,7 +360,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2019",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/verify/4RGQMJ2CAHZ3",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Michigan_bIABf4FyD?updatedAt=1760627991245"
     },
     {
         name: "Programming for Everybody (Getting Started with Python)",
@@ -369,7 +369,7 @@ const certificateData: CertificateData[] = [
         issuedDate: "May 2019",
         category: "Programming",
         link: "https://www.coursera.org/account/accomplishments/verify/LFUDUG5ZDC83",
-        image: "https://ik.imagekit.io/canarygrapher/Portfolio/home/Certificates/courseraLogo_SjHTU5bG9H4.jpg?updatedAt=1639117206338"
+        image: "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Certificates/Instructor/University%20of%20Michigan_bIABf4FyD?updatedAt=1760627991245"
     },
 
     {

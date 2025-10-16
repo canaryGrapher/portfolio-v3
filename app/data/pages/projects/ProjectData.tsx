@@ -6,308 +6,232 @@ const ProjectData = {
   projects: [
     {
       id: 1,
-      name: "Multipass NPM Package",
-      description: "An NPM package to control Multipass VM manager from within your NodeJS application for controls like launching, stopping, or deleting Ubuntu images. This package requires an installation of Multipass on your system. Made this package because I needed to use it in some other project.",
+      name: "SelioTube",
+      description: "SileoTube is a distraction-blocking extension designed to help you stay focused while using YouTube — so you’re not bombarded with endless recommendations, autoplay videos, or comment noise",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/multipass-npm"
+          link: "https://github.com/workvar/SileoTube"
         },
         {
           linkName: "Live product",
-          link: "https://www.npmjs.com/package/multipass-npm"
+          link: "https://microsoftedge.microsoft.com/addons/detail/sileotube/oabppnponkdokefoaonmgeohlpoehjbc"
         }
       ],
-      associatedWith: CompanyData["FireAI"].name,
-      associatedWithImage: CompanyData["FireAI"].image,
-      startDate: "2021-06-01",
-      endDate: "2022-02-01",
-      technologies: [Technologies["NodeJS"], Technologies["TypeScript"], Technologies["NPM"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWith: null,
+      associatedWithImage: null,
+      startDate: "2025-09-01",
+      endDate: "2025-09-30",
+      technologies: [Technologies["JavaScript"], Technologies["TypeScript"], Technologies["Chromium"]],
+      image: Projects.ProjectImages.SileoTube,
     },
     {
       id: 2,
-      name: "Portfolio Website v3",
-      description: "A modern, responsive portfolio website built with Next.js and TypeScript. Features include dynamic content management, smooth animations, and a clean, professional design. This is the third iteration of my personal portfolio, showcasing my growth as a developer.",
+      name: "FireAI.in Landing Page",
+      description: "FireAI.in Landing Page is a website that showcases the products and services offered by FireAI. It is a platform that allows users to learn about FireAI's products and services, and to contact FireAI for more information.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/portfolio-v3"
+          link: "null"
         },
         {
           linkName: "Live product",
-          link: "https://canarygrapher.dev"
-        }
-      ],
-      associatedWith: null,
-      startDate: "2024-01-01",
-      endDate: "2024-12-01",
-      technologies: [Technologies["NextJS"], Technologies["TypeScript"], Technologies["Tailwind"]],
-      image: Projects.ProjectImages.Anant,
-    },
-    {
-      id: 3,
-      name: "E-commerce Platform",
-      description: "A full-stack e-commerce solution with user authentication, product management, shopping cart, and payment integration. Built with React, Node.js, and PostgreSQL. Features include real-time inventory tracking and admin dashboard.",
-      projectLink: [
-        {
-          linkName: "Project code",
-          link: "https://github.com/canaryGrapher/ecommerce-platform"
-        },
-        {
-          linkName: "Live product",
-          link: "https://ecommerce-demo.canarygrapher.dev"
-        }
-      ],
-      associatedWith: "Freelance Client",
-      startDate: "2023-03-01",
-      endDate: "2023-08-01",
-      technologies: [Technologies["ReactJS"], Technologies["NodeJS"], Technologies["PostgreSQL"]],
-      image: Projects.ProjectImages.Anant,
-    },
-    {
-      id: 4,
-      name: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking. Built using React, Socket.io, and MongoDB. Includes drag-and-drop functionality and deadline notifications.",
-      projectLink: [
-        {
-          linkName: "Project code",
-          link: "https://github.com/canaryGrapher/task-manager"
-        },
-        {
-          linkName: "Live product",
-          link: "https://tasks.canarygrapher.dev"
+          link: "https://fireai.in"
         }
       ],
       associatedWith: CompanyData["FireAI"].name,
       associatedWithImage: CompanyData["FireAI"].image,
-      startDate: "2022-09-01",
-      endDate: "2023-01-01",
-      technologies: [Technologies["ReactJS"], Technologies["Socket.io"], Technologies["MongoDB"]],
-      image: Projects.ProjectImages.Anant,
+      startDate: "2024-10-01",
+      endDate: "2025-01-30",
+      technologies: [Technologies["ReactJS"], Technologies["TypeScript"], Technologies["Tailwind"], Technologies["NodeJS"], Technologies["PostgreSQL"], Technologies["Docker"], Technologies["ElectronJS"]],
+      image: Projects.ProjectImages.FireAILandingPage,
     },
     {
-      id: 5,
-      name: "Weather Dashboard",
-      description: "A responsive weather dashboard that displays current conditions and forecasts for multiple cities. Features include interactive maps, weather alerts, and historical data visualization. Built with React and integrated with multiple weather APIs.",
+      id: 3,
+      name: "FireSync",
+      description: "FireSync is an application that extracts and syncs data from Tally ERP on a user's PC to FireAI's servers. This helps in dashboarding user's data for better insights of their business.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/weather-dashboard"
+          link: null
         },
         {
           linkName: "Live product",
-          link: "https://weather.canarygrapher.dev"
+          link: null
         }
       ],
-      associatedWith: null,
-      startDate: "2023-05-01",
-      endDate: "2023-07-01",
-      technologies: [Technologies["ReactJS"], Technologies["TypeScript"], Technologies["Chart.js"]],
+      associatedWith: CompanyData["FireAI"].name,
+      associatedWithImage: CompanyData["FireAI"].image,
+      startDate: "2024-10-01",
+      endDate: "2025-01-30",
+      technologies: [Technologies["ReactJS"], Technologies["TypeScript"], Technologies["Tailwind"], Technologies["NodeJS"], Technologies["PostgreSQL"], Technologies["Docker"], Technologies["ElectronJS"]],
+      image: Projects.ProjectImages.FireSync,
+    },
+    {
+      id: 4,
+      name: "ScoutSherpa",
+      description: "ScoutSherpa is a Digital Adoption Platform based on the popular ShepherdJS project, customized for the needs of ICICI Bank.",
+      projectLink: [
+        {
+          linkName: "Project code",
+          link: "https://github.com/canaryGrapher/ScoutSherpa"
+        },
+        {
+          linkName: "Live product",
+          link: null
+        }
+      ],
+      associatedWith: CompanyData["ICICI Bank"].name,
+      associatedWithImage: CompanyData["ICICI Bank"].image,
+      startDate: "2023-10-01",
+      endDate: "2024-03-30",
+      technologies: [Technologies["Svelte"], Technologies["JavaScript"]],
+      image: Projects.ProjectImages.ScoutSherpa,
+    },
+    {
+      id: 5,
+      name: "Anant",
+      description: "aNANt is an initiative of the Materials Theory and Simulations Group, Materials Research Centre, Indian Institute of Science, Bangalore, to develop and host an open-access online repository of functional materials. My work with the team included redesigning and adding additional features to the existing website.",
+      projectLink: [
+        {
+          linkName: "Project code",
+          link: "https://github.com/canaryGrapher/project-anant"
+        },
+        {
+          linkName: "Live product",
+          link: "https://anant.mrc.iisc.ac.in"
+        }
+      ],
+      associatedWith: CompanyData["Indian Institute of Science"].name,
+      associatedWithImage: CompanyData["Indian Institute of Science"].image,
+      startDate: "2021-10-01",
+      endDate: "2022-06-30",
+      technologies: [Technologies["ReactJS"], Technologies["NodeJS"], Technologies["MongoDB"], Technologies["ThreeJS"]],
       image: Projects.ProjectImages.Anant,
     },
     {
       id: 6,
-      name: "Blockchain Voting System",
-      description: "A decentralized voting system built on Ethereum blockchain. Features include voter authentication, transparent vote counting, and immutable record keeping. Smart contracts ensure the integrity of the voting process.",
+      name: "Multipass-control",
+      description: "An NPM package to control Multipass VM manager from within your NodeJS application for controls like launching, stopping, or deleting Ubuntu images. This package requires an installation of Multipass on your system. Made this package because I needed to use it in some other project.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/blockchain-voting"
+          link: "https://github.com/canaryGrapher/multipass-control"
         },
         {
           linkName: "Live product",
-          link: "https://voting.canarygrapher.dev"
+          link: "https://www.npmjs.com/package/multipass-control"
         }
       ],
-      associatedWith: "University Project",
-      startDate: "2022-01-01",
-      endDate: "2022-05-01",
-      technologies: [Technologies["Ethereum"], Technologies["Web3"], Technologies["Solidity"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWith: null,
+      associatedWithImage: null,
+      startDate: "2021-06-01",
+      endDate: "2021-07-30",
+      technologies: [Technologies["JavaScript"], Technologies["NodeJS"], Technologies["NPM"], Technologies["Linux"],Technologies["Multipass"]],
+      image: Projects.ProjectImages.MultiPassControl,
     },
     {
       id: 7,
-      name: "AI Chatbot Assistant",
-      description: "An intelligent chatbot powered by OpenAI's GPT API. Features include natural language processing, context awareness, and multi-language support. Integrated with various platforms including Slack and Discord.",
+      name: "HelpCorona",
+      description: "I saw a lot of people giving out their phone numbers while asking for help on Twitter and other social media platforms during the Covid-19 pandemic, so I created a platform that would allow people to ask for help anonymously and then be reached out by a team of volunteers when a lead was available.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/ai-chatbot"
+          link: "https://github.com/canaryGrapher/HelpCorona"
         },
         {
           linkName: "Live product",
-          link: "https://chatbot.canarygrapher.dev"
+          link: null
         }
       ],
-      associatedWith: CompanyData["FireAI"].name,
-      associatedWithImage: CompanyData["FireAI"].image,
-      startDate: "2023-09-01",
-      endDate: "2023-12-01",
-      technologies: [Technologies["NodeJS"], Technologies["OpenAI"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWith: null,
+      associatedWithImage: null,
+      startDate: "2021-05-01",
+      endDate: "2021-05-30",
+      technologies: [Technologies["NodeJS"], Technologies["ReactJS"], Technologies["Google Sheets"]],
+      image: Projects.ProjectImages.HelpCorona,
     },
     {
       id: 8,
-      name: "Mobile Expense Tracker",
-      description: "A cross-platform mobile application for tracking personal expenses and budgeting. Features include receipt scanning, category management, and spending analytics. Built with React Native and integrated with cloud storage.",
+      name: "E-cell Website",
+      description: "I was assigned to create a new website for the brand new E-cell of the Manipal Institute of Technology. The website was made using HTML, CSS, and Bootstrap.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/expense-tracker"
+          link: "https://github.com/canaryGrapher/E-cell-MIT"
         },
         {
           linkName: "Live product",
-          link: "https://apps.apple.com/expense-tracker"
+          link: "https://ecellmit.com/"
         }
       ],
-      associatedWith: null,
-      startDate: "2023-01-01",
-      endDate: "2023-04-01",
-      technologies: [Technologies["React Native"], Technologies["Firebase"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWith: "Manipal E-Cell",
+      startDate: "2020-11-01",
+      endDate: "2020-12-01",
+      technologies: [Technologies["HTML"], Technologies["CSS"], Technologies["Bootstrap"]],
+      image: Projects.ProjectImages.EcellWebsite,
     },
     {
       id: 9,
-      name: "Real-time Analytics Dashboard",
-      description: "A comprehensive analytics dashboard for monitoring application performance and user behavior. Features include real-time data visualization, custom metrics, and automated reporting. Built with React and integrated with multiple data sources.",
+      name: "Open Journal",
+      description: "I wanted to have a personal e-journal where I could record my everyday thoughts and ideas. I did not want to use any of the online alternatives, and I wanted it to be running on my home server to access it only at my home. I created this project in ReactJS, NodeJS, and HalfmoonUI. It also comes with a CLI companion app to make posts on the fly but not read it. This companion app runs in the Terminal and can be accessed by a batch/bash file.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/analytics-dashboard"
+          link: "https://github.com/canaryGrapher/Open-Journal"
         },
         {
           linkName: "Live product",
-          link: "https://analytics.canarygrapher.dev"
+          link: null
         }
       ],
-      associatedWith: "Enterprise Client",
-      startDate: "2022-06-01",
-      endDate: "2022-11-01",
-      technologies: [Technologies["ReactJS"], Technologies["D3.js"], Technologies["WebSocket"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWith: null,
+      startDate: "2020-10-01",
+      endDate: "2020-11-30",
+      technologies: [Technologies["MongoDB"], Technologies["NodeJS"], Technologies["ReactJS"], Technologies["HalfMoon"]],
+      image: Projects.ProjectImages.OpenJournal,
     },
     {
       id: 10,
-      name: "API Gateway Service",
-      description: "A microservices API gateway built with Node.js and Express. Features include request routing, authentication, rate limiting, and monitoring. Handles thousands of requests per minute with high availability and fault tolerance.",
+      name: "MIST Website",
+      description: "I was assigned to create a new website for the creation of the site from scratch. I designed and coded the website, with a few amendments suggested by other club members.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/api-gateway"
+          link: "https://github.com/canaryGrapher/wearemist_v2"
         },
         {
           linkName: "Live product",
-          link: "https://api.canarygrapher.dev"
+          link: "https://www.wearemist.in"
         }
       ],
-      associatedWith: CompanyData["FireAI"].name,
-      associatedWithImage: CompanyData["FireAI"].image,
-      startDate: "2022-03-01",
-      endDate: "2022-08-01",
-      technologies: [Technologies["NodeJS"], Technologies["Express"], Technologies["Redis"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWith: CompanyData["Manipal Institute of Technology"].name,
+      associatedWithImage: CompanyData["Manipal Institute of Technology"].image,
+      startDate: "2020-03-01",
+      endDate: "2020-08-01",
+      technologies: [Technologies["ReactJS"], Technologies["NodeJS"], Technologies["MongoDB"]],
+      image: Projects.ProjectImages.MISTWebsite,
     },
     {
       id: 11,
-      name: "Social Media Scheduler",
-      description: "A web application for scheduling and managing social media posts across multiple platforms. Features include content calendar, post preview, and analytics. Integrated with Twitter, LinkedIn, and Instagram APIs.",
+      name: "slcmAPI",
+      description: "The slcmAPI is the Open-Sourced REST-API for Manipal University's Student Life cycle Management Portal. This API is an aid for those who want to build an app or a website requiring data on SLcM. Avoid the hassle of writing your code to scrape data from the website when all you can do is make queries to this API.",
       projectLink: [
         {
           linkName: "Project code",
-          link: "https://github.com/canaryGrapher/social-scheduler"
+          link: "https://github.com/canaryGrapher/slcmAPI"
         },
         {
           linkName: "Live product",
-          link: "https://scheduler.canarygrapher.dev"
+          link: null
         }
       ],
       associatedWith: null,
-      startDate: "2023-06-01",
-      endDate: "2023-09-01",
-      technologies: [Technologies["ReactJS"], Technologies["NodeJS"], Technologies["MongoDB"]],
-      image: Projects.ProjectImages.Anant,
-    },
-    {
-      id: 12,
-      name: "Cloud Storage Manager",
-      description: "A cloud storage management application that supports multiple providers including AWS S3, Google Drive, and Dropbox. Features include file synchronization, backup scheduling, and storage analytics. Built with React and Node.js.",
-      projectLink: [
-        {
-          linkName: "Project code",
-          link: "https://github.com/canaryGrapher/cloud-storage-manager"
-        },
-        {
-          linkName: "Live product",
-          link: "https://storage.canarygrapher.dev"
-        }
-      ],
-      associatedWith: "Cloud Solutions Inc",
-      startDate: "2022-10-01",
-      endDate: "2023-02-01",
-      technologies: [Technologies["ReactJS"], Technologies["AWS"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.Anant,
-    },
-    {
-      id: 13,
-      name: "Machine Learning Model API",
-      description: "A RESTful API service for serving machine learning models. Features include model versioning, A/B testing, and performance monitoring. Supports multiple ML frameworks and provides real-time predictions.",
-      projectLink: [
-        {
-          linkName: "Project code",
-          link: "https://github.com/canaryGrapher/ml-model-api"
-        },
-        {
-          linkName: "Live product",
-          link: "https://ml-api.canarygrapher.dev"
-        }
-      ],
-      associatedWith: CompanyData["FireAI"].name,
-      associatedWithImage: CompanyData["FireAI"].image,
-      startDate: "2023-04-01",
-      endDate: "2023-08-01",
-      technologies: [Technologies["Python"], Technologies["FastAPI"], Technologies["Docker"]],
-      image: Projects.ProjectImages.Anant,
-    },
-    {
-      id: 14,
-      name: "Document Management System",
-      description: "An enterprise document management system with version control, collaboration features, and advanced search capabilities. Built with React, Node.js, and Elasticsearch. Features include document approval workflows and audit trails.",
-      projectLink: [
-        {
-          linkName: "Project code",
-          link: "https://github.com/canaryGrapher/document-management"
-        },
-        {
-          linkName: "Live product",
-          link: "https://docs.canarygrapher.dev"
-        }
-      ],
-      associatedWith: "Enterprise Solutions Ltd",
-      startDate: "2023-02-01",
-      endDate: "2023-06-01",
-      technologies: [Technologies["ReactJS"], Technologies["Elasticsearch"], Technologies["NodeJS"]],
-      image: Projects.ProjectImages.Anant,
-    },
-    {
-      id: 15,
-      name: "IoT Device Monitor",
-      description: "A real-time monitoring system for IoT devices with data visualization and alerting. Features include device status tracking, data logging, and predictive maintenance. Built with React, Node.js, and MQTT protocol.",
-      projectLink: [
-        {
-          linkName: "Project code",
-          link: "https://github.com/canaryGrapher/iot-monitor"
-        },
-        {
-          linkName: "Live product",
-          link: "https://iot.canarygrapher.dev"
-        }
-      ],
-      associatedWith: null,
-      startDate: "2023-10-01",
-      endDate: "2024-01-01",
-      technologies: [Technologies["ReactJS"], Technologies["MQTT"], Technologies["TypeScript"]],
-      image: Projects.ProjectImages.Anant,
+      associatedWithImage: null,
+      startDate: "2020-05-01",
+      endDate: "2020-06-30",
+      technologies: [Technologies["NodeJS"], Technologies["Express"], Technologies["Puppeteer"]],
+      image: Projects.ProjectImages.slcmAPI,
     }
   ],
 };

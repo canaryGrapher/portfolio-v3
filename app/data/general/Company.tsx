@@ -120,6 +120,14 @@ const companyName = {
       "backgroundImage": null,
       "companyColor": "#131313",
       "companyGradient": ["#131313", "#0D0D0D"]
+    },
+    "Manipal Institute of Technology": {
+      "name": "Manipal Institute of Technology",
+      "description": "Manipal Institute of Technology is a private engineering college & constituent unit under Manipal Academy of Higher Education in India. The institute has 18 academic departments and awards undergraduate, graduate, and postgraduate degrees.",
+      "image": VolunteerWork.MIT,
+      "backgroundImage": null,
+      "companyColor": "#131313",
+      "companyGradient": ["#131313", "#0D0D0D"]
     }
   }
 

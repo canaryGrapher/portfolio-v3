@@ -1,3 +1,5 @@
+// icons imported from https://www.svgrepo.com/ and https://techicons.dev/icons/
+
 import ReactJSIcon from "./reactjs.svg"
 import ElectronJSIcon from "./electronjs.svg"
 import TypeScriptIcon from "./typescript.svg"
@@ -41,5 +43,13 @@ import GitHubActionsIcon from "./githubActions.svg"
 import MicrosoftClarityIcon from "./microsoftClarity.svg"
 import CosmosIcon from "./cosmos.svg"
 import EthereumIcon from "./ethereum.svg"
+import ThreeJSIcon from "./three-js.svg"
+import NPMIcon from "./NPM.svg"
+import LinuxIcon from "./linux.svg"
+import MultipassIcon from "./multipass.svg"
+import GoogleSheetsIcon from "./googleSheets.svg"
+import HalfMoonIcon from "./halfmoon.svg"
+import PuppeteerIcon from "./puppeteer.svg"
+import MongoDBIcon from "./mongodb.svg"
 
-export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon };
+export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon, ThreeJSIcon, NPMIcon, LinuxIcon, MultipassIcon, GoogleSheetsIcon, HalfMoonIcon, PuppeteerIcon, MongoDBIcon    };

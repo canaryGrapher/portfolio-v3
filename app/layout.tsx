@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "./components/layout/Header";
-import { Footer } from "./components/layout/Footer";
-import { Analytics } from "@vercel/analytics/next"
-import ClarityAnalytics from "./components/common/ClarityAnalytics";
+import { ClientLayout } from "./components/layout/ClientLayout";
 
 export const metadata: Metadata = {
   title: {
@@ -104,11 +101,9 @@ export default function RootLayout({
         className="font-sans antialiased scrollbar-hide"
         suppressHydrationWarning={true}
       >
-        <Header />
-        {children}
-        <Footer />
-        <Analytics />
-        <ClarityAnalytics />
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
