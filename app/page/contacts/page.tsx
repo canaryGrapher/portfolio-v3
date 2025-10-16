@@ -3,7 +3,7 @@ import { ContactsHeader, ContactsContent, ContactsSocials } from '@/components/p
 
 const ContactsPage = () => {
     return (
-        <div className="min-h-screen bg-gray-300 text-black">
+        <div className="min-h-screen bg-gray-300 text-black pt-20">
             <div className="max-w-7xl mx-auto py-10 px-4">
                 {/* Header */}
                 <div className="mb-8">

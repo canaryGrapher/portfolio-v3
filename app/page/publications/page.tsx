@@ -6,7 +6,7 @@ import PublicationsGrid from "@/components/pages/publications/PublicationGrid";
 
 const PublicationsPage = () => {
     return (
-        <div className="bg-gray-200 min-h-screen">
+        <div className="bg-gray-200 min-h-screen pt-20">
             <div className="pt-10 max-w-7xl mx-auto">
                 {/* Hero Section */}
                 <PageHeroSection

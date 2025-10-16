@@ -4,25 +4,21 @@ const HeaderData = {
   logo: LogoWhite,
   links: [
     {
-      title: "About",
-      href: "/#about",
+      title: "Skills",
+      href: "/#skills",
     },
     {
       title: "Experience",
       href: "/#experience",
     },
     {
-      title: "Blog",
-      href: "/blog",
+      title: "Blogs",
+      href: "/page/blogs",
     },
     {
-      title: "Trips",
-      href: "/trips",
-    },
-    {
-      title: "Resume",
-      href: "/resume",
-    },
+      title: "Projects",
+      href: "/page/projects",
+    }
   ]
 };
 

@@ -83,10 +83,6 @@ const ArticleTile: React.FC<ArticleTileProps> = ({ post, variant, className = ''
                             </div>
                         </div>
                     </div>
-                    {/* External link icon */}
-                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <FaExternalLinkAlt className="text-white text-lg" />
-                    </div>
                 </div>
             </div>
         );

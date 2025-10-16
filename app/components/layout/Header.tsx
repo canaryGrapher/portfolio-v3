@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import HeaderData from "@/data/Headers";
 import AdditionalInfo from "@/data/general/AdditionalInfo";
 import Image from "next/image";
@@ -11,7 +10,6 @@ import { FaTimes } from "react-icons/fa";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
-  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -33,7 +31,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:flex-row md:justify-evenly w-full">
+        <nav className="hidden md:flex md:flex-row md:justify-evenly w-[75%] mx-auto">
           {HeaderData.links.map((link) => (
             <Link
               href={link.href}

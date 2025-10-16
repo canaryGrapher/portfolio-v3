@@ -63,7 +63,7 @@ const BlogsPage = () => {
     }, [loading, error, posts]);
 
     return (
-        <div className="min-h-screen bg-[#e5e5e5] text-black">
+        <div className="min-h-screen bg-[#e5e5e5] text-black pt-20">
             <div className="container mx-auto px-4 py-10 grid gap-10">
                 <HeaderSection
                     title="Stories and chronicles"

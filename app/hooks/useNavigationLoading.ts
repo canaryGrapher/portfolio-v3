@@ -33,7 +33,7 @@ export const useNavigationLoading = () => {
       const fontsLoaded = document.fonts ? document.fonts.ready : Promise.resolve();
       
       // Wait for a minimum time to ensure smooth transition
-      const minLoadTime = isNavigating ? 1000 : 2000; // Shorter for navigation
+      const minLoadTime = isNavigating ? 500 : 1000; // Shorter for navigation
       const startTime = Date.now();
       
       Promise.all([

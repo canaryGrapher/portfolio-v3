@@ -20,7 +20,7 @@ export const useSimpleLoading = () => {
 
     const checkAndHideLoading = () => {
       // Simple timeout-based loading with minimum display time
-      const minLoadTime = wasLoading ? 1000 : 2000;
+      const minLoadTime = wasLoading ? 500 : 1000;
       
       setTimeout(() => {
         // Check if images are loaded
@@ -48,7 +48,7 @@ export const useSimpleLoading = () => {
 
     // Start the loading check
     checkAndHideLoading();
-  }, [pathname]);
+  }, [pathname, isLoading]);
 
   return { isLoading, isNavigating, progress: 0 };
 };

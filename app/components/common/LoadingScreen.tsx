@@ -8,7 +8,7 @@ interface LoadingScreenProps {
 }
 
 export const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
-  const { isLoading: contentLoading, isNavigating, progress } = useSimpleLoading();
+  const { isLoading: contentLoading } = useSimpleLoading();
   const { isLoading: globalLoading } = useLoading();
   
   const isLoading = contentLoading || globalLoading;

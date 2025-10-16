@@ -43,7 +43,7 @@ export const usePageLoading = () => {
       }
 
       // Wait for a minimum time to ensure smooth transition
-      const minLoadTime = 2000; // 2 seconds minimum
+      const minLoadTime = 500; // 0.5 second minimum
       const startTime = Date.now();
       
       const finalCheck = () => {

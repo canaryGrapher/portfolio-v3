@@ -6,18 +6,20 @@ import { Certificates } from "@/assets/images";
 
 const CertificatesPage = () => {
     return (
-        <div className="bg-gray-200 w-screen">
-            <div className="pt-10 mx-auto">
-                {/* Hero Section */}
-                <PageHeroSection
-                    backgroundImage={Certificates.certificateBG}
-                    title="Certificates"
-                    subtitle="A tangible demonstration of specialized skills, increasing professional credibility, and facilitating continuous learning."
-                    altText="Certificate Background"
-                />
+        <div className="bg-gray-200 w-screen pt-20">
+            <div className="pt-10 mx-auto container">
+                <div className="px-4">
+                    {/* Hero Section */}
+                    <PageHeroSection
+                        backgroundImage={Certificates.certificateBG}
+                        title="Certificates"
+                        subtitle="A tangible demonstration of specialized skills, increasing professional credibility, and facilitating continuous learning."
+                        altText="Certificate Background"
+                    />
+                </div>
 
                 {/* Certificates Content */}
-                <div className="container mx-auto px-4 py-12">
+                <div className="mx-auto py-12 px-5">
                     <CertificatesGrid certificates={certificateData} />
                 </div>
             </div>

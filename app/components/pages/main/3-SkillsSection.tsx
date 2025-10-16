@@ -35,7 +35,7 @@ const SkillsSection = () => {
     }, { scope: sectionRef });
 
     return (
-        <section className="min-h-screen bg-black py-20 px-6" ref={sectionRef}>
+        <section className="min-h-screen bg-black py-20 px-6" ref={sectionRef} id="skills">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="mb-20 text-center md:text-left">

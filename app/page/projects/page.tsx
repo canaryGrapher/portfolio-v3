@@ -7,7 +7,7 @@ import React from 'react';
 
 const ProjectsPage = () => {
     return (
-        <div className="bg-gray-200 min-h-screen">
+        <div className="bg-gray-200 min-h-screen pt-20">
             <div className="pt-10 max-w-7xl mx-auto">
                 {/* Hero Section */}
                 <PageHeroSection

@@ -31,7 +31,7 @@ const PageHeroSection: React.FC<PageHeroSectionProps> = ({
             {/* Content */}
             <div className="relative flex h-full flex-col justify-center text-left text-white px-10">
                 <h1 className="text-6xl md:text-7xl font-bold leading-tight">{title}</h1>
-                <p className="max-w-3xl text-xl md:text-2xl text-gray-200 leading-relaxed">
+                <p className="max-w-3xl text-base md:text-lg text-gray-200 leading-relaxed">
                     {subtitle}
                 </p>
             </div>

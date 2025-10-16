@@ -83,7 +83,7 @@ export const useContentLoading = () => {
   useEffect(() => {
     // Reset loading state when route changes
     const wasLoading = loadingState.isLoading;
-    setLoadingState(prev => ({
+    setLoadingState((prev: LoadingState) => ({
       isLoading: true,
       isNavigating: wasLoading, // Set navigating to true if we were already loading
       progress: 0
@@ -129,7 +129,7 @@ export const useContentLoading = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [pathname, searchParams, checkContentLoaded]);
+  }, [pathname, searchParams, checkContentLoaded, loadingState.isLoading]);
 
   return loadingState;
 };
