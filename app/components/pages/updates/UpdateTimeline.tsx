@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import ChangeLog from '@/data/general/ChangeLog'
+import ChangeLog from '@/data/pages/updates/ChangeLog'
 import Image from 'next/image'
 
 const UpdateTimeline = () => {
@@ -27,7 +27,15 @@ const UpdateTimeline = () => {
                         <div>
                         <p className="text-lg text-gray-500">{change.changes}</p>
                             {change.image && (
-                                <Image src={change.image} alt={change.changes} width={400} height={400} className="mb-4" />
+                                <Image
+                                    src={change.image}
+                                    alt={change.changes}
+                                    width={400}
+                                    height={400}
+                                    className="mb-4"
+                                    loading="lazy"
+                                    lazyBoundary='viewport'
+                                />
                             )}
                         </div>
                     </Fragment>

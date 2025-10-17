@@ -79,6 +79,11 @@ const ChangeLog = [
         "date": "2025-10-16",
         "changes": "Migrated all images to ImageKit CDN, optimizing and compressing assets for faster website performance.",
         "image": null
+    },
+    {
+        "date": "2025-10-17",
+        "changes": "Added splash and loading screens.",
+        "image": "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Updates/Splashed%20screen_Q_I-PK_2E"
     }
 ]
 
