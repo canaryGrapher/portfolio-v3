@@ -123,11 +123,35 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects }) => {
         }
     }
 
+    // Get remaining projects (beyond the first 10)
+    const remainingProjects = projects.slice(10);
+
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-4">
                 {gridItems}
             </div>
+
+            {/* Additional projects grid for projects beyond the first 10 */}
+            {remainingProjects.length > 0 && (
+                <div className="mt-8">
+                    <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                        More Projects
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-4">
+                        {remainingProjects.map((project) => (
+                            <ProjectCard
+                                key={`additional-project-${project.id}`}
+                                project={project}
+                                variant="white"
+                                span={1}
+                                formatDateRange={formatDateRange}
+                                onClick={() => setSelectedProject(project)}
+                            />
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {/* Project Popup Modal */}
             {selectedProject && (

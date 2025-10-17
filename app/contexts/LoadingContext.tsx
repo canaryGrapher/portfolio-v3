@@ -38,14 +38,14 @@ export const LoadingProvider = ({ children }: LoadingProviderProps) => {
   const addLoadingTask = useCallback((taskId: string) => {
     setLoadingTasks(prev => new Set([...prev, taskId]));
     
-    // Safety timeout: remove task after 10 seconds to prevent infinite loading
+    // Safety timeout: remove task after 3 seconds maximum
     setTimeout(() => {
       setLoadingTasks(prev => {
         const newSet = new Set(prev);
         newSet.delete(taskId);
         return newSet;
       });
-    }, 10000);
+    }, 3000);
   }, []);
 
   const removeLoadingTask = useCallback((taskId: string) => {

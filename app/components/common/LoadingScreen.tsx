@@ -1,6 +1,6 @@
 "use client";
 
-import { useSimpleLoading } from "../../hooks";
+import { useFastLoading } from "../../hooks";
 import { useLoading } from "../../contexts/LoadingContext";
 
 interface LoadingScreenProps {
@@ -8,7 +8,7 @@ interface LoadingScreenProps {
 }
 
 export const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
-  const { isLoading: contentLoading } = useSimpleLoading();
+  const { isLoading: contentLoading } = useFastLoading();
   const { isLoading: globalLoading } = useLoading();
   
   const isLoading = contentLoading || globalLoading;

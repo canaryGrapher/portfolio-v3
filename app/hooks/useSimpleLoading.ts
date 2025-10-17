@@ -19,25 +19,28 @@ export const useSimpleLoading = () => {
     setIsLoading(true);
 
     const checkAndHideLoading = () => {
-      // Simple timeout-based loading with minimum display time
-      const minLoadTime = wasLoading ? 500 : 1000;
+      // Much faster loading times
+      const minLoadTime = wasLoading ? 200 : 500;
       
       setTimeout(() => {
-        // Check if images are loaded
-        const images = document.querySelectorAll('img');
-        const allImagesLoaded = images.length === 0 || Array.from(images).every(img => img.complete);
+        // Only check for critical images (not lazy-loaded ones)
+        const criticalImages = document.querySelectorAll('img:not([loading="lazy"]):not([data-lazy])');
+        const criticalImagesLoaded =
+          criticalImages.length === 0 ||
+          Array.from(criticalImages).every(img =>
+            (img as HTMLImageElement).complete
+          );
         
         // Check if DOM is ready
         const domReady = document.readyState === 'complete';
-        
-        // If everything is ready, hide loading
-        if (allImagesLoaded && domReady) {
+        // If critical content is ready, hide loading quickly
+        if (criticalImagesLoaded && domReady) {
           setTimeout(() => {
             setIsLoading(false);
             setIsNavigating(false);
-          }, 300);
+          }, 100);
         } else {
-          // Fallback: hide after maximum time
+          // Fallback: hide after maximum 3 seconds
           setTimeout(() => {
             setIsLoading(false);
             setIsNavigating(false);
