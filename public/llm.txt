@@ -1,0 +1,155 @@
+# Yash Aryan - Portfolio Overview
+
+## About
+This is the portfolio website of Yash Aryan, a full-stack developer and product manager specializing in web development, cloud computing, and system design.
+
+## Contact Information
+- Email: hello@yasharyan.dev
+- LinkedIn: https://www.linkedin.com/in/yasharyan/
+- Twitter: https://x.com/canaryGrapher
+
+## Skills & Expertise
+- Web Development: Design and build scalable websites tailored to your brand, optimized for performance and user experience
+- Cloud Computing: Set up and manage secure, reliable cloud infrastructures to support business growth
+- Product Management: Guide product strategy and development, aligning every feature with user needs and business goals
+- API Engineering & Testing: Develop robust, well-documented APIs that are scalable and allow straight-forward consumption
+- System Design: Architect technical systems that handle complex workflows and adapt to future requirements
+- Mobile App Development: Create mobile applications for iOS and Android that blend sleek design and smooth usage
+
+## Technologies & Tools
+### Frontend Technologies
+- ReactJS, NextJS, TypeScript, JavaScript
+- HTML, CSS, Tailwind CSS, Bootstrap
+- Svelte, ElectronJS
+- ThreeJS for 3D graphics
+
+### Backend Technologies
+- NodeJS, ExpressJS
+- PostgreSQL, MongoDB, Redis
+- REST API development
+
+### Cloud & DevOps
+- AWS Services: EC2, ECS, RDS, API Gateway, Route53, CloudWatch
+- Docker, GitHub Actions
+- Linux, Multipass
+
+### Development Tools
+- GitHub, Postman, Jira, Confluence
+- Figma, Adobe XD for design
+- Dynatrace, Microsoft Clarity for analytics
+- Puppeteer for automation
+
+### Web3 & Blockchain
+- Ethereum, Solana, Cosmos Network
+- Web3 development, MetaMask integration
+
+### Product Management
+- Stakeholder Management
+- Microsoft Office Suite (Excel, PowerPoint, Word)
+- Google Sheets
+- MS Teams
+
+## Notable Projects
+
+### SelioTube (2025)
+A distraction-blocking browser extension for YouTube to help users stay focused by blocking endless recommendations, autoplay videos, and comment noise.
+- Technologies: JavaScript, TypeScript, Chromium
+- Links: GitHub, Microsoft Edge Add-ons
+
+### FireAI.in Landing Page (2024-2025)
+A comprehensive website showcasing FireAI's products and services, built with modern web technologies.
+- Technologies: ReactJS, TypeScript, Tailwind, NodeJS, PostgreSQL, Docker, ElectronJS
+- Live: https://fireai.in
+
+### FireSync (2024-2025)
+An application that extracts and syncs data from Tally ERP to FireAI's servers for business insights and dashboarding.
+- Technologies: ReactJS, TypeScript, Tailwind, NodeJS, PostgreSQL, Docker, ElectronJS
+
+### ScoutSherpa (2023-2024)
+A Digital Adoption Platform based on ShepherdJS, customized for ICICI Bank's needs.
+- Technologies: Svelte, JavaScript
+- Associated with: ICICI Bank
+
+### Anant (2021-2022)
+Redesigned and enhanced an open-access online repository of functional materials for the Materials Theory and Simulations Group at Indian Institute of Science, Bangalore.
+- Technologies: ReactJS, NodeJS, MongoDB, ThreeJS
+- Live: https://anant.mrc.iisc.ac.in
+
+### Multipass-control (2021)
+An NPM package to control Multipass VM manager from within NodeJS applications for launching, stopping, or deleting Ubuntu images.
+- Technologies: JavaScript, NodeJS, NPM, Linux, Multipass
+- Published on NPM
+
+### HelpCorona (2021)
+A platform created during the COVID-19 pandemic to allow people to ask for help anonymously and be reached by volunteers.
+- Technologies: NodeJS, ReactJS, Google Sheets
+
+### E-cell Website (2020)
+Created a new website for the Entrepreneurship Cell of Manipal Institute of Technology.
+- Technologies: HTML, CSS, Bootstrap
+- Live: https://ecellmit.com/
+
+### Open Journal (2020)
+A personal e-journal application running on a home server with a CLI companion app for making posts.
+- Technologies: MongoDB, NodeJS, ReactJS, HalfMoon
+
+### MIST Website (2020)
+Designed and coded a website from scratch for the Manipal Institute of Technology club.
+- Technologies: ReactJS, NodeJS, MongoDB
+- Live: https://www.wearemist.in
+
+### slcmAPI (2020)
+An open-sourced REST API for Manipal University's Student Life cycle Management Portal.
+- Technologies: NodeJS, ExpressJS, Puppeteer
+
+## Publications
+- "Understanding SSL Protocol and Its Cryptographic Weaknesses" (August 15, 2022)
+  - Authors: Aditya Aayush, Balachandra Muniyal
+  - Published in: 3rd IEEE International Conference on Intelligent Engineering and Management (ICIEM) 2022
+  - Link: https://ieeexplore.ieee.org/document/9853153/
+  - Description: Comprehensive analysis of SSL protocol design, implementation, and cryptographic vulnerabilities with proposed solutions.
+
+## Work Experience
+- FireAI: Worked on FireAI.in landing page and FireSync application
+- ICICI Bank: Developed ScoutSherpa Digital Adoption Platform
+- Indian Institute of Science: Enhanced Anant materials repository website
+- Manipal Institute of Technology: Created E-cell and MIST websites
+
+## Education & Certifications
+- Manipal Institute of Technology (MIT)
+- Various technology certifications and courses
+
+## Open Source Contributions
+- Active GitHub contributor with multiple public repositories
+- Published NPM packages
+- Contributed to open-source projects and APIs
+
+## Website Structure
+This portfolio website includes the following sections:
+- Home/Landing page with hero section
+- Projects showcase
+- Publications
+- Certificates
+- Contact information
+- Blog/Updates section
+- Photo gallery
+- Calendar/Trips section
+
+## Technical Stack (This Website)
+- Built with Next.js 15.4.6 and React 19.1.0
+- TypeScript for type safety
+- Tailwind CSS for styling
+- GSAP for animations
+- Lottie for animations
+- EmailJS for contact forms
+- Hashnode API integration for blog posts
+- ImageKit for image optimization
+- Microsoft Clarity for analytics
+- Vercel Analytics
+
+## API Integrations
+- Hashnode API for blog posts and user data
+- ImageKit API for image management
+- EmailJS for contact form functionality
+
+This portfolio demonstrates expertise in full-stack development, cloud computing, product management, and system design across various industries including fintech, education, and research institutions.

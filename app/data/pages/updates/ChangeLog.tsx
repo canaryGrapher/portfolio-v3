@@ -84,6 +84,11 @@ const ChangeLog = [
         "date": "2025-10-17",
         "changes": "Added splash and loading screens.",
         "image": "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Updates/Splashed%20screen_Q_I-PK_2E"
+    },
+    {
+        "date": "2025-10-25",
+        "changes": "Added robots.txt file for better SEO optimization and llm.txt for better LLM optimization.",
+        "image": null
     }
 ]
 
