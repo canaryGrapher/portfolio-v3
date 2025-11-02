@@ -89,6 +89,11 @@ const ChangeLog = [
         "date": "2025-10-25",
         "changes": "Added robots.txt file for better SEO optimization and llm.txt for better LLM optimization.",
         "image": null
+    },
+    {
+        "date": "2025-11-03",
+        "changes": "Fixed responsive issues.",
+        "image": null
     }
 ]
 

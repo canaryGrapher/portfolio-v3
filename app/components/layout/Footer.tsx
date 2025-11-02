@@ -27,7 +27,7 @@ export const Footer = () => {
           {FooterData.linksRow.map((row, index) => (
             <div key={index} className="flex flex-col text-center md:text-left w-full md:mx-5">
               <h4 className="font-bold text-white text-sm mb-2">{row.rowTitle}</h4>
-              <div className={`grid grid-cols-${row.links.length} md:grid-cols-1 space-y-1 mb-5 md:mb-0 mx-auto md:mx-0`}>
+              <div className={`grid grid-cols-3 md:grid-cols-1 space-y-1 mb-5 md:mb-0 mx-auto md:mx-0`}>
                 {row.links.map((link, linkIndex) => (
                   <a
                     key={linkIndex}

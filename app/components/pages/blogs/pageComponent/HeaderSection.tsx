@@ -31,7 +31,7 @@ const HeaderSection: React.FC<{
         <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-semibold">{title}</h1>
             <p className="text-lg md:text-xl text-gray-600 md:mt-3">{subtitle}</p>
-            <div className="flex flex-row justify-center mt-4">
+            <div className="flex flex-row justify-center mt-4 max-w-screen md:max-w-xl mx-auto">
                 {feedback ?
                     <div className="grid grid-cols-1 gap-4 max-w-xl mx-auto mt-4 px-4">
                         {feedback.type === 'already' && (
@@ -45,14 +45,14 @@ const HeaderSection: React.FC<{
                         )}
                     </div>
                     :
-                    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-[1fr_auto] md:max-w-xl mx-auto mt-4">
+                    <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 md:grid-cols-[1fr_auto] max-w-screen md:max-w-xl mx-auto mt-4">
                         <input
                             type="email"
                             placeholder="Enter your email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className={`px-4 py-2 rounded-l-md bg-gray-200 text-gray-600 placeholder-gray-400 border border-gray-300 focus:outline-none ${loading ? 'animate-pulse' : ''
+                            className={`mb-2 md:mb-0 px-4 py-2 rounded-l-md bg-gray-200 text-gray-600 placeholder-gray-400 border border-gray-300 focus:outline-none ${loading ? 'animate-pulse' : ''
                                 }`}
                         />
                         <button

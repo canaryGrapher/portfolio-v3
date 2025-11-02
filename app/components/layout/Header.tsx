@@ -72,7 +72,7 @@ export const Header = () => {
             onMouseEnter={() => setIsMarqueePaused(true)}
             onMouseLeave={() => setIsMarqueePaused(false)}
           >
-            <div className="flex items-center text-sm text-gray-300 py-2 px-4">
+            <div className="flex items-center text-xs sm:text-sm text-gray-300 py-2 px-4 whitespace-nowrap">
               <span>The developer of this website is looking for a job.&nbsp;</span>
               <Link
                 href="/contacts"

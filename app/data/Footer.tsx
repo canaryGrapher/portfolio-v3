@@ -15,10 +15,14 @@ const FooterData = {
                 title: "GitHub",
                 href: "https://github.com/canaryGrapher",
             },
-            // {
-            //     title: "Instagram",
-            //     href: "https://www.instagram.com/lifethrottling",
-            // },
+            {
+                title: "Instagram",
+                href: "https://www.instagram.com/lifethrottling",
+            },
+            {
+                title: "YouTube",
+                href: "https://www.youtube.com/@LifeThrottling",
+            },
             {
                 title: "Twitter",
                 href: "https://x.com/canaryGrapher",
@@ -38,11 +42,7 @@ const FooterData = {
             },
             {
                 title: "Resume",
-                href: "/resume",
-            },
-            {
-                title: "Calendly",
-                href: "https://cal.com/yasharyan",
+                href: "https://drive.google.com/file/d/1z1soa_Y64RD0hOHPNkBYehWugtoJ20Vm/view?usp=share_link",
             },
         ],
     },
