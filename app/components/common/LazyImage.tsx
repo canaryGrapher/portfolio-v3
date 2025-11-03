@@ -12,6 +12,7 @@ interface LazyImageProps {
   width?: number;
   height?: number;
   priority?: boolean;
+  aspectRatio?: string;
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
@@ -22,6 +23,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   width = 400,
   height = 400,
   priority = false,
+  aspectRatio = '1/1',
 }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
@@ -37,7 +39,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
     <div
       ref={ref}
       className={`relative overflow-hidden rounded-lg bg-gray-200 ${className}`}
-      style={{ aspectRatio: '1/1' }}
+      style={{ aspectRatio: aspectRatio }}
     >
       {/* Placeholder/Thumbnail */}
       {!imageLoaded && !imageError && (
@@ -48,7 +50,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
               alt=""
               width={width}
               height={height}
-              className="object-cover opacity-50 blur-sm"
+              className="object-contain opacity-50 blur-sm"
               style={{ width: '100%', height: '100%' }}
             />
           ) : (
@@ -64,7 +66,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          className={`object-cover transition-opacity duration-300 ${
+          className={`object-contain transition-opacity duration-300 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ width: '100%', height: '100%' }}
