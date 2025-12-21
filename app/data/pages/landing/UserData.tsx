@@ -522,7 +522,7 @@ const FunStuffData = {
     {
       title: "Trips",
       icon: Fun.TripsIcon,
-      pageRoute: "https://trips.yasharyan.dev",
+      pageRoute: "https://lifethrottling.yasharyan.dev",
       active: true
     },
     {
