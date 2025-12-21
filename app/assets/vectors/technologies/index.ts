@@ -51,5 +51,7 @@ import GoogleSheetsIcon from "./googleSheets.svg"
 import HalfMoonIcon from "./halfmoon.svg"
 import PuppeteerIcon from "./puppeteer.svg"
 import MongoDBIcon from "./mongodb.svg"
+import SupabaseIcon from "./supabase.svg"
+import GoogleCloudIcon from "./googleCloud.svg"
 
-export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon, ThreeJSIcon, NPMIcon, LinuxIcon, MultipassIcon, GoogleSheetsIcon, HalfMoonIcon, PuppeteerIcon, MongoDBIcon    };
+export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon, ThreeJSIcon, NPMIcon, LinuxIcon, MultipassIcon, GoogleSheetsIcon, HalfMoonIcon, PuppeteerIcon, MongoDBIcon, SupabaseIcon, GoogleCloudIcon    };

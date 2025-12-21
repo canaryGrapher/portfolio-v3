@@ -204,6 +204,14 @@ const Technologies = {
     "MongoDB": {
         icon: Icons.MongoDBIcon,
         name: "MongoDB"
+    },
+    "Supabase": {
+        icon: Icons.SupabaseIcon,
+        name: "Supabase"
+    },
+    "Google Cloud": {
+        icon: Icons.GoogleCloudIcon,
+        name: "Google Cloud"
     }
 }
 

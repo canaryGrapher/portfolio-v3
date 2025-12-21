@@ -27,6 +27,46 @@ const IntroSectionData = {
 const WorkExperienceData: WorkExperience = {
   professionalWorkExperience: [
     {
+      companyName: CompanyData["Dentisterié"].name,
+      bannerImage: CompanyData["Dentisterié"].backgroundImage,
+      popupImage: CompanyData["Dentisterié"].image,
+      jobTitle: "Web Developer",
+      employmentType: "Freelance",
+      startDate: "Sep'25",
+      endDate: "Sep'25",
+      companyDescription: CompanyData["Dentisterié"].description,
+      rolesAndResponsibilities: [
+        {
+          title: "Website Developer",
+          duration: "Sep'25 - Sep'25",
+          description: [
+            "Designed and developed a production-ready web application for a dental clinic, delivering a responsive, SEO optimized website to support patient acquisition and engagement.",
+            "Built core features including online appointment booking, service listings, and real-time patient communication using WhatsApp Business API integration and a chatbot-based ticketing system.",
+            "Developed the frontend using NextJS (ReactJS) and Tailwind CSS, and implemented backend logic using Supabase Edge Functions to ensure scalability, performance, and maintainability.",
+            "Executed on-page SEO optimization and local SEO best practices, improving search engine rankings, organic traffic, and lead quality.",
+            "Integrated chatbot automation and analytics tools to monitor user behavior, reduce manual support workload, and enable data-driven business decisions."
+          ],
+          employmentType: "Freelance"
+        }
+      ],
+      experienceGained: [
+        {
+          name: "Web Application Development",
+          technologies: [Technologies.ReactJS, Technologies.Tailwind, Technologies.NextJS]
+        },
+        {
+          name: "Backend Development",
+          technologies: [Technologies.Supabase, Technologies.PostgreSQL]
+        },
+        {
+          name: "SEO Optimization",
+          technologies: [Technologies["Google Cloud"]]
+        }
+      ],
+      companyColor: CompanyData["Dentisterié"].companyColor,
+      gradientColors: CompanyData["Dentisterié"].companyGradient
+    },
+    {
       companyName: CompanyData["FireAI"].name,
       bannerImage: CompanyData["FireAI"].backgroundImage,
       popupImage: CompanyData["FireAI"].image,
@@ -482,7 +522,7 @@ const FunStuffData = {
     {
       title: "Trips",
       icon: Fun.TripsIcon,
-      pageRoute: "/page/trips",
+      pageRoute: "https://trips.yasharyan.dev",
       active: true
     },
     {
