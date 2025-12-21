@@ -94,6 +94,16 @@ const ChangeLog = [
         "date": "2025-11-03",
         "changes": "Fixed responsive issues.",
         "image": null
+    },
+    {
+        "date": "2025-12-10",
+        "changes": "Removed buggy splash screen and loading screen. Added Google Analytics",
+        "image": null
+    },
+    {
+        "date": "2025-12-20",
+        "changes": "Created Trips website and linked to this website.",
+        "image": null
     }
 ]
 

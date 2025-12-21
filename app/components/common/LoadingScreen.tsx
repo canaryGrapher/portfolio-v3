@@ -1,20 +1,42 @@
 "use client";
 
-import { useFastLoading } from "../../hooks";
-import { useLoading } from "../../contexts/LoadingContext";
+import { useEffect, useState } from "react";
 
 interface LoadingScreenProps {
   onLoadingComplete?: () => void;
 }
 
 export const LoadingScreen = ({ onLoadingComplete }: LoadingScreenProps) => {
-  const { isLoading: contentLoading } = useFastLoading();
-  const { isLoading: globalLoading } = useLoading();
-  
-  const isLoading = contentLoading || globalLoading;
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    // Check if this is the first launch
+    const hasLaunchedBefore = localStorage.getItem("hasLaunched");
+    
+    if (!hasLaunchedBefore) {
+      // First launch - show loading screen for 1 second
+      setIsLoading(true);
+      
+      // Mark as launched
+      localStorage.setItem("hasLaunched", "true");
+      
+      // Hide after 1 second
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        onLoadingComplete?.();
+      }, 1000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    } else {
+      // Not first launch - don't show loading screen
+      setIsLoading(false);
+      onLoadingComplete?.();
+    }
+  }, [onLoadingComplete]);
 
   if (!isLoading) {
-    onLoadingComplete?.();
     return null;
   }
 
