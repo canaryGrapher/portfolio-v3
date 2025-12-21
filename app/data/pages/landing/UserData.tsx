@@ -18,9 +18,9 @@ const IntroSectionData = {
   responsiveLottieObject: IntroLottieResponsive,
   lines: [
     "Hello! I am Yash Aryan, a software engineer from India.",
-    "I specialize in web development, with experience in AWS Services, Web3 development, and sometimes, designing websites.",
-    "Building simplified user experiences that are easy to understand and follow through drives me.",
-    "I build with the mindset that I'm the end user, striving to make every interaction effortless and enjoyable."
+    "You must have heard the phrase, 'Jack of all trades, master of none'. Well that applies to me too. ",
+    "Web Developer, Cloud Engineer, System Designer, API Engineer, Mobile App Developer, Blockchain Developer, Social Media Manager, Stakeholder Management, Feature research and development and what not.",
+    "People see that as a disadvantage, but every company that has employed me would say otherwise. I bring a plethora of knowledge to the table that makes me make informed decisions and solve problems efficiently."
   ]
 }
 
