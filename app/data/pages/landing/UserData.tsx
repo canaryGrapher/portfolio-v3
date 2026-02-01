@@ -529,7 +529,7 @@ const FunStuffData = {
       title: "Contacts",
       icon: Fun.ContactsIcon,
       pageRoute: "/page/contacts",
-      active: true
+      active: false
     },
     {
       title: "Updates",
@@ -541,6 +541,12 @@ const FunStuffData = {
       title: "Calendar",
       icon: Fun.CalendarIcon,
       pageRoute: "/page/calendar",
+      active: false
+    },
+    {
+      title: "Rejections",
+      icon: Fun.RejectionIcon, 
+      pageRoute: "/page/rejections",
       active: true
     }
   ]
