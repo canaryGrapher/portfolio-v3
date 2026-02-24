@@ -104,6 +104,11 @@ const ChangeLog = [
         "date": "2025-12-20",
         "changes": "Created Trips website and linked to this website.",
         "image": null
+    },
+    {
+        "date": "2026-02-24",
+        "changes": "Added Rejections page and linked to this website. Updated intro section text.",
+        "image": null
     }
 ]
 

@@ -19,8 +19,8 @@ const IntroSectionData = {
   lines: [
     "Hello! I am Yash Aryan, a software engineer from India.",
     "You must have heard the phrase, 'Jack of all trades, master of none'. Well that applies to me too. ",
-    "Web Developer, Cloud Engineer, System Designer, API Engineer, Mobile App Developer, Blockchain Developer, Social Media Manager, Stakeholder Management, Feature research and development and what not.",
-    "People see that as a disadvantage, but every company that has employed me would say otherwise. I bring a plethora of knowledge to the table that makes me make informed decisions and solve problems efficiently."
+    "Web Developer, Cloud Engineer, System Designer, API Engineer, Mobile App Developer, Blockchain Developer, Social Media Manager, Stakeholder Management, Feature research and development. You name it, I've done it.",
+    "People see that as a disadvantage, but every company I have worked with would say otherwise. I bring a plethora of knowledge to the table that helps me make informed decisions and solve problems efficiently."
   ]
 }
 
