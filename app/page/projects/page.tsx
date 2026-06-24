@@ -7,7 +7,7 @@ import React from 'react';
 
 const ProjectsPage = () => {
     return (
-        <div className="bg-gray-200 min-h-screen pt-20">
+        <div className="bg-gradient-to-b from-gray-55 via-gray-100 to-gray-200 min-h-screen pt-20">
             <div className="pt-10 max-w-7xl mx-auto">
                 {/* Hero Section */}
                 <PageHeroSection
@@ -18,7 +18,7 @@ const ProjectsPage = () => {
                 />
 
                 {/* Projects Grid */}
-                <div className="container mx-auto px-4 py-12">
+                <div className="container mx-auto py-12">
                     <ProjectsGrid projects={ProjectData.projects} />
                 </div>
             </div>  

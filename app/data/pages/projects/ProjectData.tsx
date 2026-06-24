@@ -5,7 +5,6 @@ import { Projects } from "@/assets/images";
 const ProjectData = {
   projects: [
     {
-      id: 1,
       name: "SelioTube",
       description: "SileoTube is a distraction-blocking extension designed to help you stay focused while using YouTube — so you’re not bombarded with endless recommendations, autoplay videos, or comment noise",
       projectLink: [
@@ -26,7 +25,6 @@ const ProjectData = {
       image: Projects.ProjectImages.SileoTube,
     },
     {
-      id: 2,
       name: "FireAI.in Landing Page",
       description: "FireAI.in Landing Page is a website that showcases the products and services offered by FireAI. It is a platform that allows users to learn about FireAI's products and services, and to contact FireAI for more information.",
       projectLink: [
@@ -47,7 +45,6 @@ const ProjectData = {
       image: Projects.ProjectImages.FireAILandingPage,
     },
     {
-      id: 3,
       name: "FireSync",
       description: "FireSync is an application that extracts and syncs data from Tally ERP on a user's PC to FireAI's servers. This helps in dashboarding user's data for better insights of their business.",
       projectLink: [
@@ -68,7 +65,6 @@ const ProjectData = {
       image: Projects.ProjectImages.FireSync,
     },
     {
-      id: 4,
       name: "ScoutSherpa",
       description: "ScoutSherpa is a Digital Adoption Platform based on the popular ShepherdJS project, customized for the needs of ICICI Bank.",
       projectLink: [
@@ -89,7 +85,6 @@ const ProjectData = {
       image: Projects.ProjectImages.ScoutSherpa,
     },
     {
-      id: 5,
       name: "Anant",
       description: "aNANt is an initiative of the Materials Theory and Simulations Group, Materials Research Centre, Indian Institute of Science, Bangalore, to develop and host an open-access online repository of functional materials. My work with the team included redesigning and adding additional features to the existing website.",
       projectLink: [
@@ -110,7 +105,6 @@ const ProjectData = {
       image: Projects.ProjectImages.Anant,
     },
     {
-      id: 6,
       name: "Multipass-control",
       description: "An NPM package to control Multipass VM manager from within your NodeJS application for controls like launching, stopping, or deleting Ubuntu images. This package requires an installation of Multipass on your system. Made this package because I needed to use it in some other project.",
       projectLink: [
@@ -131,7 +125,6 @@ const ProjectData = {
       image: Projects.ProjectImages.MultiPassControl,
     },
     {
-      id: 7,
       name: "HelpCorona",
       description: "I saw a lot of people giving out their phone numbers while asking for help on Twitter and other social media platforms during the Covid-19 pandemic, so I created a platform that would allow people to ask for help anonymously and then be reached out by a team of volunteers when a lead was available.",
       projectLink: [
@@ -152,7 +145,6 @@ const ProjectData = {
       image: Projects.ProjectImages.HelpCorona,
     },
     {
-      id: 8,
       name: "E-cell Website",
       description: "I was assigned to create a new website for the brand new E-cell of the Manipal Institute of Technology. The website was made using HTML, CSS, and Bootstrap.",
       projectLink: [
@@ -172,7 +164,6 @@ const ProjectData = {
       image: Projects.ProjectImages.EcellWebsite,
     },
     {
-      id: 9,
       name: "Open Journal",
       description: "I wanted to have a personal e-journal where I could record my everyday thoughts and ideas. I did not want to use any of the online alternatives, and I wanted it to be running on my home server to access it only at my home. I created this project in ReactJS, NodeJS, and HalfmoonUI. It also comes with a CLI companion app to make posts on the fly but not read it. This companion app runs in the Terminal and can be accessed by a batch/bash file.",
       projectLink: [
@@ -192,7 +183,6 @@ const ProjectData = {
       image: Projects.ProjectImages.OpenJournal,
     },
     {
-      id: 10,
       name: "MIST Website",
       description: "I was assigned to create a new website for the creation of the site from scratch. I designed and coded the website, with a few amendments suggested by other club members.",
       projectLink: [
@@ -213,7 +203,6 @@ const ProjectData = {
       image: Projects.ProjectImages.MISTWebsite,
     },
     {
-      id: 11,
       name: "slcmAPI",
       description: "The slcmAPI is the Open-Sourced REST-API for Manipal University's Student Life cycle Management Portal. This API is an aid for those who want to build an app or a website requiring data on SLcM. Avoid the hassle of writing your code to scrape data from the website when all you can do is make queries to this API.",
       projectLink: [
@@ -234,7 +223,6 @@ const ProjectData = {
       image: Projects.ProjectImages.slcmAPI,
     },
     {
-      id: 12,
       name: "NewsX Studio",
       description: "Turn any story into a vintage newspaper graphic, then sequence those pages into a scroll-stopping match-cut video for Reels, Shorts, and TikTok. Fully in-browser, no server, no watermark. Built with Next.js, React, and ffmpeg.wasm.",
       projectLink: [

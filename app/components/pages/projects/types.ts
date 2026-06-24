@@ -1,5 +1,4 @@
 export interface Project {
-    id: number;
     name: string;
     description: string;
     projectLink: Array<{
@@ -35,8 +34,4 @@ export interface ProjectModalProps {
     onClose: () => void;
 }
 
-export interface ImagePlaceholderProps {
-    isWideBox: boolean;
-    imageIndex: number;
-    span?: number;
-}
+
