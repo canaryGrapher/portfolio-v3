@@ -75,7 +75,7 @@ export const Header = () => {
             <div className="flex items-center text-xs sm:text-sm text-gray-300 py-2 px-4 whitespace-nowrap">
               <span>The developer of this website is looking for a job.&nbsp;</span>
               <Link
-                href="/contacts"
+                href="/page/contacts"
                 className="text-white hover:text-blue-400 underline font-semibold ml-1"
               >
                 Click here

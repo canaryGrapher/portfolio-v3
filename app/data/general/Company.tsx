@@ -1,6 +1,14 @@
 import { VolunteerWork, WorkExBannerBackground, WorkExPopupImages } from "@/assets/images"
 
 const companyName = {
+  "MayaDeviUniversity": {
+    "name": "Maya Devi University",
+    "description": "Maya Devi University is a private university located in Uttrakhand, India. It offers undergraduate, postgraduate, and doctoral programs in various fields such as engineering, management, law, and humanities.",
+    "image": WorkExPopupImages.MayaDeviUniversityPopupImage,
+    "backgroundImage": WorkExBannerBackground.MayaDeviUniversityBannerBackground,
+    "companyColor": "#032F89",
+    "companyGradient": ["#010627", "#032F89"]
+  },
   "Dentisterié": {
     "name": "Dentisterié",
     "description": "Dentisterié is a dental clinic that provides a range of dental services to its patients. They offer services such as teeth cleaning, teeth whitening, teeth veneers, teeth implants, and teeth correction.",

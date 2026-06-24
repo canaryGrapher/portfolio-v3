@@ -4,5 +4,6 @@ import mobileDevelopment from "./mobileDev.svg";
 import productManagement from "./productManagement.svg";
 import systemDesign from "./systemDesign.svg";
 import webDevelopment from "./webDev.svg";
+import vibeCoding from "./vibeCoding.svg";
 
-export { ApiDev, cloudComputing, mobileDevelopment, productManagement, systemDesign, webDevelopment };
+export { ApiDev, cloudComputing, mobileDevelopment, productManagement, systemDesign, webDevelopment, vibeCoding };

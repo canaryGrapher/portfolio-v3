@@ -212,6 +212,59 @@ const Technologies = {
     "Google Cloud": {
         icon: Icons.GoogleCloudIcon,
         name: "Google Cloud"
+    },
+    // Add more technologies as needed
+    "Python": {
+        icon: Icons.PythonIcon,
+        name: "Python"
+    },
+    "KaliLinux": {
+        icon: Icons.KaliLinuxIcon,
+        name: "Kali Linux"
+    },
+    "Wireshark": {
+        icon: Icons.WiresharkIcon,
+        name: "Wireshark"
+    },
+    "Nmap": {
+        icon: Icons.NmapIcon,
+        name: "Nmap"
+    },
+    "Netcat": {
+        icon: Icons.NetcatIcon,
+        name: "Netcat"
+    },
+    "Metasploit": {
+        icon: Icons.MetasploitIcon,
+        name: "Metasploit"
+    },
+    "BurpSuite": {
+        icon: Icons.BurpSuiteIcon,
+        name: "Burp Suite"
+    },
+    "Automata": {
+        icon: Icons.AutomataIcon,
+        name: "Automata"
+    },
+    "Computability": {
+        icon: Icons.ComputabilityIcon,
+        name: "Computability"
+    },
+    "Complexity": {
+        icon: Icons.ComplexityIcon,
+        name: "Complexity"
+    },
+    "PublicSpeaking": {
+        icon: Icons.PublicSpeakingIcon,
+        name: "Public Speaking"
+    },
+    "TechnicalWriting": {
+        icon: Icons.TechnicalWritingIcon,
+        name: "Technical Writing"
+    },
+    "Mentorship": {
+        icon: Icons.MentorshipIcon,
+        name: "Mentorship"
     }
 }
 

@@ -5,5 +5,6 @@ const NonceBloxPopupImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/
 const ChillSpacePopupImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Popup%20Images/chillspace_h2R_wz01h.png?updatedAt=1760511304820"
 const IonCurePopupImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Popup%20Images/ioncure_JbBkcnvZ4.png?updatedAt=1760511304829"
 const DentisteriePopupImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Popup%20Images/dentisterie_2lmVDDmn1.png"
+const MayaDeviUniversityPopupImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Popup%20Images/maya_devi_university_wEDYgKK5-.png"
 
-export { FireAIPopupImage, ICICIBankPopupImage, LeapWalletPopupImage, NonceBloxPopupImage, ChillSpacePopupImage, IonCurePopupImage, DentisteriePopupImage };
+export { FireAIPopupImage, ICICIBankPopupImage, LeapWalletPopupImage, NonceBloxPopupImage, ChillSpacePopupImage, IonCurePopupImage, DentisteriePopupImage, MayaDeviUniversityPopupImage };

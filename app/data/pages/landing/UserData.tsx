@@ -27,6 +27,70 @@ const IntroSectionData = {
 const WorkExperienceData: WorkExperience = {
   professionalWorkExperience: [
     {
+      companyName: CompanyData["MayaDeviUniversity"].name,
+      bannerImage: CompanyData["MayaDeviUniversity"].backgroundImage,
+      popupImage: CompanyData["MayaDeviUniversity"].image,
+      jobTitle: "Teaching Asistant",
+      employmentType: "Part Time",
+      startDate: "Feb'26",
+      endDate: "Present",
+      companyDescription: CompanyData["MayaDeviUniversity"].description,
+      rolesAndResponsibilities: [
+        {
+          title: "Teaching Assistant",
+          duration: "Feb'26 - Present",
+          description: [
+            "Delivered practical instruction in Python Programming, Theory of Computation, and Ethical Hacking to undergraduate students.",
+            "Designed and evaluated coding assignments, laboratory exercises, quizzes, and examinations.",
+            "Guided students in Python development, data structures, automata theory, and cybersecurity fundamentals.",
+            "Conducted hands-on labs covering Linux, networking, penetration testing methodologies, and secure computing practices.",
+            "Mentored students in debugging, problem-solving, and project implementation.",
+            "Collaborated with faculty to improve course content, learning materials, and assessment methodologies."
+          ],
+          employmentType: "Part Time"
+        }
+      ],
+      experienceGained: [
+        {
+          name: "Programming",
+          technologies: [
+            Technologies.Python,
+            Technologies.GitHub,
+            Technologies.Linux,
+          ]
+        },
+        {
+          name: "Cybersecurity",
+          technologies: [
+            Technologies.KaliLinux,
+            Technologies.Wireshark,
+            Technologies.Nmap,
+            Technologies.Netcat,
+            Technologies.Metasploit,
+            Technologies.BurpSuite,
+          ]
+        },
+        {
+          name: "Computational Complexity",
+          technologies: [
+            Technologies.Automata,
+            Technologies.Computability,
+            Technologies.Complexity,
+          ]
+        },
+        {
+          name: "Communication",
+          technologies: [
+            Technologies.PublicSpeaking,
+            Technologies.TechnicalWriting,
+            Technologies.Mentorship,
+          ]
+        }
+      ],
+      companyColor: CompanyData["MayaDeviUniversity"].companyColor,
+      gradientColors: CompanyData["MayaDeviUniversity"].companyGradient
+    },
+    {
       companyName: CompanyData["Dentisterié"].name,
       bannerImage: CompanyData["Dentisterié"].backgroundImage,
       popupImage: CompanyData["Dentisterié"].image,
@@ -545,7 +609,7 @@ const FunStuffData = {
     },
     {
       title: "Rejections",
-      icon: Fun.RejectionIcon, 
+      icon: Fun.RejectionIcon,
       pageRoute: "/page/rejections",
       active: true
     }

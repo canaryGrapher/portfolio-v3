@@ -3,8 +3,8 @@ import { Skills } from "@/assets/vectors";
 const SkillsData = {
     skills: [
         {
-            name: "Web Development",
-            description: "Design and build scalable websites tailored to your brand, optimized for performance and user experience.",
+            name: "Web Development & API Engineering",
+            description: "Design and build scalable web applications with robust, well-documented APIs, optimized for performance, maintainability, and seamless integrations.",
             icon: Skills.webDevelopment,
         },
         {
@@ -18,11 +18,6 @@ const SkillsData = {
             icon: Skills.productManagement,
         },
         {
-            name: "API Engineering & Testing",
-            description: "Develop robust, well-documented APIs that are scalable and allow straight-forward consumption.",
-            icon: Skills.ApiDev,
-        },
-        {
             name: "System Design",
             description: "Architect technical systems that handle complex workflows and adapt to future requirements.",
             icon: Skills.systemDesign,
@@ -31,8 +26,13 @@ const SkillsData = {
             name: "Mobile App Development",
             description: "Create mobile applications for iOS and Android that blend sleek design and smooth usage.",
             icon: Skills.mobileDevelopment,
+        },
+        {
+            name: "Vibe Coding",
+            description: "Rapidly transform ideas into functional products using AI-assisted development, accelerating prototyping, iteration, and delivery.",
+            icon: Skills.vibeCoding,
         }
     ],
 };
 
-export default SkillsData
+export default SkillsData;

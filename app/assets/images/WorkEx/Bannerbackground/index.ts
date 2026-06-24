@@ -5,5 +5,6 @@ const IonCureBannerBackground = "https://ik.imagekit.io/canarygrapher/yasharyan.
 const LeapWalletBannerBackground = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Banner%20Background/LeapWallet_cBVQfGjwV.png?updatedAt=1760511220797"
 const ChillSpaceBannerBackground = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Banner%20Background/ChillSpace_9VX_UQaO3e.png?updatedAt=1760511220794"
 const DentisterieBannerBackground = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Banner%20Background/dentisterie-bg_nEE27xvC-.png"
+const MayaDeviUniversityBannerBackground = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Work%20Experience/Banner%20Background/maya_devi_university_3jXgoKdpq.png"
 
-export { FireAIBannerBackground, ICICIBankBannerBackground, LeapWalletBannerBackground, NonceBloxBannerBackground, ChillSpaceBannerBackground, IonCureBannerBackground, DentisterieBannerBackground };
+export { FireAIBannerBackground, ICICIBankBannerBackground, LeapWalletBannerBackground, NonceBloxBannerBackground, ChillSpaceBannerBackground, IonCureBannerBackground, DentisterieBannerBackground, MayaDeviUniversityBannerBackground  };
