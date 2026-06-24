@@ -9,6 +9,7 @@ const EcellWebsite = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Project
 const OpenJournal = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Projects/Items/Open%20Journal_fQTTJdlgx?updatedAt=1760617322222"
 const MISTWebsite = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Projects/Items/WeAreMIST_rxnHYsxft?updatedAt=1760623126043"
 const slcmAPI = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Projects/Items/SLcM_RHaXWmabh9?updatedAt=1760623232062"
+const NewsXStudio = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Projects/Items/NewsX-Studio_MZp3MHe5H.png?updatedAt=1782295225017"
 
 
-export { Anant, SileoTube, FireAILandingPage, FireSync, ScoutSherpa, MultiPassControl, HelpCorona, EcellWebsite, OpenJournal, MISTWebsite, slcmAPI };
+export { Anant, SileoTube, FireAILandingPage, FireSync, ScoutSherpa, MultiPassControl, HelpCorona, EcellWebsite, OpenJournal, MISTWebsite, slcmAPI, NewsXStudio };

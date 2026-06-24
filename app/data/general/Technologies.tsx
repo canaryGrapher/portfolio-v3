@@ -265,6 +265,9 @@ const Technologies = {
     "Mentorship": {
         icon: Icons.MentorshipIcon,
         name: "Mentorship"
+    },
+    "FFmpeg.wasm": {
+        icon: Icons.FFmpegWasm
     }
 }
 

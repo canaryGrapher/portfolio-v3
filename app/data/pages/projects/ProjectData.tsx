@@ -127,7 +127,7 @@ const ProjectData = {
       associatedWithImage: null,
       startDate: "2021-06-01",
       endDate: "2021-07-30",
-      technologies: [Technologies["JavaScript"], Technologies["NodeJS"], Technologies["NPM"], Technologies["Linux"],Technologies["Multipass"]],
+      technologies: [Technologies["JavaScript"], Technologies["NodeJS"], Technologies["NPM"], Technologies["Linux"], Technologies["Multipass"]],
       image: Projects.ProjectImages.MultiPassControl,
     },
     {
@@ -232,6 +232,26 @@ const ProjectData = {
       endDate: "2020-06-30",
       technologies: [Technologies["NodeJS"], Technologies["Express"], Technologies["Puppeteer"]],
       image: Projects.ProjectImages.slcmAPI,
+    },
+    {
+      id: 12,
+      name: "NewsX Studio",
+      description: "Turn any story into a vintage newspaper graphic, then sequence those pages into a scroll-stopping match-cut video for Reels, Shorts, and TikTok. Fully in-browser, no server, no watermark. Built with Next.js, React, and ffmpeg.wasm.",
+      projectLink: [
+        {
+          linkName: "Project code",
+          link: "https://github.com/canaryGrapher/newsX-studio"
+        },
+        {
+          linkName: "Try NewsX Studio",
+          link: "https://newsx-studio.workvar.com/"
+        }
+      ],
+      associatedWith: null,
+      startDate: "2026-06-20",
+      endDate: "2026-06-25",
+      technologies: [Technologies["ReactJS"], Technologies["FFmpeg.wasm"]],
+      image: Projects.ProjectImages.NewsXStudio,
     }
   ],
 };
