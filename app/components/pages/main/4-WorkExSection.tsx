@@ -154,15 +154,20 @@ const WorkExSection = () => {
     }, []);
 
     return (
-        <section className="max-w-screen bg-gray-300 pt-20 pb-10" ref={sectionRef} id="experience">
+        <section className="max-w-screen bg-gradient-to-b from-gray-100 via-gray-150 to-gray-200 pt-20 pb-10" ref={sectionRef} id="experience">
             <div className="mx-auto">
                 {/* Section Header */}
-                <div className="mb-10 max-w-7xl mx-auto text-center md:text-left" ref={headerRef}>
-                    <p className="text-xs md:text-sm text-gray-800 font-mono mb-4">
+                <div className="mb-10 max-w-7xl mx-auto text-center md:text-left px-4" ref={headerRef}>
+                    {/* Live Chip Tag */}
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50/80 border border-green-200/50 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-green-800 mb-6">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                        </span>
                         user.workExperiences()
-                    </p>
-                    <h2 className="text-4xl md:text-6xl font-bold text-gray-800">
-                        Work Experiences.
+                    </div>
+                    <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-5 leading-[1.1]">
+                        Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-800 via-emerald-705 to-teal-900">Experiences.</span>
                     </h2>
                 </div>
                 {/* Cards Container */}

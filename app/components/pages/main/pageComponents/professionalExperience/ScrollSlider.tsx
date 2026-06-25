@@ -5,7 +5,7 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import { ScrollSliderProps } from '@/interface/pages/Landing';
 
 const TRACK_PX = 256; 
-const THUMB_PX = 40;  
+const THUMB_PX = 32;  
 
 const ScrollSlider: React.FC<ScrollSliderProps> = ({
     isAutoScrolling,
@@ -35,23 +35,19 @@ const ScrollSlider: React.FC<ScrollSliderProps> = ({
     };
 
     return (
-        <div className="flex items-center gap-4 bg-black px-5 py-3 rounded-full">
-            <button onClick={onToggleAutoScroll} className="transition-all duration-200">
+        <div className="flex items-center gap-4 bg-white/90 backdrop-blur-sm border border-gray-200/80 px-5 py-3 rounded-full shadow-sm">
+            <button onClick={onToggleAutoScroll} className="transition-all duration-200 text-gray-700 hover:text-green-800 cursor-pointer flex items-center justify-center">
                 {isAutoScrolling ? (
-                    <div className="flex justify-center items-center h-full text-white cursor-pointer">
-                        <FaPause />
-                    </div>
+                    <FaPause className="w-3.5 h-3.5" />
                 ) : (
-                    <div className="flex justify-center items-center h-full text-white cursor-pointer">
-                        <FaPlay />
-                    </div>
+                    <FaPlay className="w-3.5 h-3.5" />
                 )}
             </button>
 
-            <div className="relative w-64 h-4 bg-gray-300 rounded-full select-none">
-                <div className="w-full h-full bg-gray-300 rounded-full"></div>
+            <div className="relative w-64 h-2 bg-gray-200 rounded-full select-none">
+                <div className="w-full h-full bg-gray-200 rounded-full"></div>
                 <div
-                    className="absolute top-1/2 w-10 h-4 bg-blue-500 rounded-full cursor-pointer transform -translate-y-1/2 hover:scale-110 transition-transform duration-200"
+                    className="absolute top-1/2 w-8 h-4 bg-green-800 hover:bg-green-700 rounded-full cursor-pointer transform -translate-y-1/2 hover:scale-115 transition-transform duration-200 shadow-sm"
                     style={{ left: `${Math.max(0, Math.min(TRACK_PX - THUMB_PX, progress * (TRACK_PX - THUMB_PX)))}px` }}
                     onMouseDown={handleMouseDown}
                 />

@@ -36,15 +36,20 @@ const RelatedWorkSection = () => {
     }, { scope: sectionRef });
 
     return (
-        <section className="w-full bg-black py-20" ref={sectionRef}>
+        <section className="w-full bg-gradient-to-b from-gray-100 to-gray-50 py-20" ref={sectionRef}>
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left" ref={headerRef}>
-                    <p className="text-sm text-gray-300 font-mono mb-4">
+                    {/* Live Chip Tag */}
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50/80 border border-green-200/50 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-green-800 mb-6">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                        </span>
                         user.morework()
-                    </p>
-                    <h2 className="text-5xl md:text-6xl font-bold text-gray-300">
-                        Hand of the diligent
+                    </div>
+                    <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-5 leading-[1.1]">
+                        Hand of the <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-800 via-emerald-705 to-teal-900">diligent.</span>
                     </h2>
                 </div>
 

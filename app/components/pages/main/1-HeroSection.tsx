@@ -125,7 +125,7 @@ const HeroSection = () => {
 
     return (
         <section
-            className="relative h-screen overflow-hidden text-center w-full bg-black"
+            className="relative h-screen overflow-hidden text-center w-full bg-gradient-to-b from-green-950 via-emerald-950 to-black"
             id="hero-section"
             ref={sectionRef}>
             {/* Main Content Section */}
@@ -149,10 +149,10 @@ const HeroSection = () => {
                             <span className="block md:hidden whitespace-pre-line leading-none">{HeroSectionData.name.toUpperCase().split(" ").join("\n")}</span>
                         </h1>
                     </div>
-                    <div className="text-gray-400 flex flex-row">
+                    <div className="flex flex-row text-gray-400 font-extrabold uppercase tracking-wide mt-4">
                         {HeroSectionData.title?.map((title, index) => (
-                            <p key={index} className={`text-xl md:text-4xl font-medium leading-tight heading-part ${index === HeroSectionData.title?.length - 1 ? 'mr-0' : 'mr-2'}`}>
-                                {title}{index < HeroSectionData.title?.length - 1 ? '.' : ''}
+                            <p key={index} className={`text-xl md:text-4xl font-extrabold leading-tight heading-part ${index === HeroSectionData.title?.length - 1 ? 'mr-0' : 'mr-2'} text-gray-300`}>
+                                {title}{index < HeroSectionData.title?.length - 1 ? <span className="text-emerald-500 font-black">.</span> : ''}
                             </p>
                         ))}
                     </div>
@@ -166,14 +166,14 @@ const HeroSection = () => {
                         alt="Motorcycle adventure landscape"
                         unoptimized={true}
                         fill
-                        className="object-cover w-full h-full"
+                        className="object-cover w-full h-full border border-white/10 shadow-[0_0_50px_rgba(16,185,129,0.15)]"
                     />
                     <div
                         ref={nameRefPost}
                         className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center"
                     >
                         <h2
-                            className="text-white/30 text-[120px] md:text-[250px] font-bold leading-none">
+                            className="text-white/10 text-[120px] md:text-[250px] font-black leading-none">
                             {HeroSectionData.name.toUpperCase()}
                         </h2>
                     </div>
@@ -183,14 +183,14 @@ const HeroSection = () => {
             {/* Scroll down indicator */}
             <div className="absolute bottom-40 md:bottom-20 left-0 w-full h-10 flex flex-col justify-center items-center">
                 <div className="hidden md:block animate-bounce mb-2">
-                    <FaMouse className="text-white text-2xl" />
+                    <FaMouse className="text-emerald-500 text-2xl" />
                 </div>
                 <div className="block md:hidden animate-bounce mb-2">
-                    <MdSwipeDown className="text-white text-2xl" />
+                    <MdSwipeDown className="text-emerald-500 text-2xl" />
                 </div>
 
-                <p className="text-gray-300 font-medium text-xs hidden md:block">Scroll down</p>
-                <p className="text-gray-300 font-medium text-xs block md:hidden">Swipe down</p>
+                <p className="text-gray-400 font-extrabold text-xs hidden md:block">Scroll down</p>
+                <p className="text-gray-400 font-extrabold text-xs block md:hidden">Swipe down</p>
             </div>
             {/* Header Section */}
         </section>
