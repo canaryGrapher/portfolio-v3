@@ -66,7 +66,7 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
 
                         {/* Provided by details */}
                         <div className="flex items-center gap-2 mt-2">
-                            <div className="relative w-6 h-6 rounded-full overflow-hidden border border-gray-300/20 bg-white">
+                            <div className="relative w-6 h-6 rounded-full overflow-hidden border border-gray-300/20 bg-white flex-shrink-0">
                                 <Image
                                     src={certificate.providers.icon}
                                     alt={certificate.providers.name}
