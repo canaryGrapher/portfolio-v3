@@ -1,7 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import Script from 'next/script';
 import { sendEmail, ContactFormData } from '@/lib/emailjs';
+
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
 
 interface ContactFormProps {
   className?: string;
@@ -69,7 +76,29 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
     setSubmitStatus('idle');
 
     try {
-      const success = await sendEmail(formData);
+      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+      if (!siteKey) {
+        throw new Error('reCAPTCHA site key is not defined.');
+      }
+
+      let token = '';
+      if (window.grecaptcha) {
+        token = await new Promise<string>((resolve, reject) => {
+          window.grecaptcha.ready(() => {
+            window.grecaptcha
+              .execute(siteKey, { action: 'submit_contact' })
+              .then(resolve)
+              .catch(reject);
+          });
+        });
+      } else {
+        throw new Error('reCAPTCHA failed to load.');
+      }
+
+      const success = await sendEmail({
+        ...formData,
+        recaptchaToken: token
+      });
 
       if (success) {
         setSubmitStatus('success');
@@ -87,12 +116,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
 
   return (
     <div className={`w-full ${className}`}>
-      <form onSubmit={handleSubmit} className="space-y-2">
-        <div className="flex flex-row gap-2">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-row gap-4">
           {/* Name Field */}
           <div className="w-1/2">
-            <label htmlFor="name" className="block text-sm font-medium text-blue-500 mb-2">
-              NAME
+            <label htmlFor="name" className="block text-[10px] font-black uppercase tracking-widest text-green-800 mb-2">
+              Name
             </label>
             <input
               type="text"
@@ -100,46 +129,46 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${formData.name && !isValidName(formData.name)
-                  ? 'border-red-500 focus:ring-red-300'
-                  : 'border-blue-500 focus:ring-blue-300'
+              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 bg-white/70 backdrop-blur-sm transition-all duration-300 ${formData.name && !isValidName(formData.name)
+                  ? 'border-red-400 focus:ring-red-100 focus:border-red-500'
+                  : 'border-gray-200 focus:ring-emerald-100 focus:border-emerald-500'
                 }`}
-              placeholder=""
+              placeholder="e.g. John Doe"
               required
             />
             {formData.name && !isValidName(formData.name) && (
-              <p className="text-red-500 text-xs mt-1">Please enter a valid name (letters only)</p>
+              <p className="text-red-500 text-xs mt-1.5 font-bold">Please enter a valid name (letters only)</p>
             )}
           </div>
 
           {/* Phone Field */}
           <div className="w-1/2">
-            <label htmlFor="phone" className="block text-sm font-medium text-blue-500 mb-2">
-              PHONE NUMBER
+            <label htmlFor="phone" className="block text-[10px] font-black uppercase tracking-widest text-green-800 mb-2">
+              Phone Number
             </label>
             <input
-              type="tel"
+              type="text"
               id="phone"
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${formData.phone && !isValidPhone(formData.phone)
-                  ? 'border-red-500 focus:ring-red-300'
-                  : 'border-blue-500 focus:ring-blue-300'
+              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 bg-white/70 backdrop-blur-sm transition-all duration-300 ${formData.phone && !isValidPhone(formData.phone)
+                  ? 'border-red-400 focus:ring-red-100 focus:border-red-500'
+                  : 'border-gray-200 focus:ring-emerald-100 focus:border-emerald-500'
                 }`}
-              placeholder=""
+              placeholder="e.g. +1 555-0199"
               required
             />
             {formData.phone && !isValidPhone(formData.phone) && (
-              <p className="text-red-500 text-xs mt-1">Please enter a valid phone number (digits, +, -, spaces, parentheses allowed)</p>
+              <p className="text-red-500 text-xs mt-1.5 font-bold">Please enter a valid phone number</p>
             )}
           </div>
         </div>
 
         {/* Message Field */}
         <div className="w-full">
-          <label htmlFor="message" className="block text-sm font-medium text-blue-500 mb-2">
-            MESSAGE
+          <label htmlFor="message" className="block text-[10px] font-black uppercase tracking-widest text-green-800 mb-2">
+            Message
           </label>
           <div className="relative">
             <textarea
@@ -148,31 +177,30 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
               value={formData.message}
               onChange={handleInputChange}
               rows={6}
-              className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:border-transparent resize-none ${isOverLimit || (formData.message && !isValidMessage(formData.message))
-                  ? 'border-red-500 focus:ring-red-300'
-                  : 'border-blue-500 focus:ring-blue-300'
+              className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 bg-white/70 backdrop-blur-sm transition-all duration-300 resize-none ${isOverLimit || (formData.message && !isValidMessage(formData.message))
+                  ? 'border-red-400 focus:ring-red-100 focus:border-red-500'
+                  : 'border-gray-200 focus:ring-emerald-100 focus:border-emerald-500'
                 }`}
-              placeholder=""
+              placeholder="What would you like to discuss?"
               required
             />
-            <div className={`absolute bottom-2 right-2 text-xs ${isOverLimit ? 'text-red-500' : 'text-gray-500'
+            <div className={`absolute bottom-3.5 right-3.5 text-xs ${isOverLimit ? 'text-red-500 font-bold' : 'text-gray-400'
               }`}>
               {charCount}/500
             </div>
           </div>
           {formData.message && !isValidMessage(formData.message) && (
-            <p className="text-red-500 text-xs mt-1">Please enter a meaningful message (at least 10 characters with letters)</p>
+            <p className="text-red-500 text-xs mt-1.5 font-bold">Please enter a meaningful message (at least 10 characters)</p>
           )}
         </div>
-
 
         {/* Submit Button */}
         <button
           type="submit"
           disabled={!isFormValid || isSubmitting}
-          className={`w-32 py-3 px-6 rounded-lg font-medium transition-colors ${!isFormValid || isSubmitting
-            ? 'border-2 border-blue-500 text-blue-500 cursor-not-allowed'
-            : 'border-2 border-blue-500 text-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300'
+          className={`w-36 py-3.5 px-6 rounded-xl font-black uppercase text-xs tracking-widest transition-all duration-300 ${!isFormValid || isSubmitting
+            ? 'bg-gray-100 border border-gray-200 text-gray-400 cursor-not-allowed'
+            : 'bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-500 hover:to-green-600 text-white shadow-md shadow-green-950/15 hover:shadow-emerald-950/30 cursor-pointer hover:scale-[1.02]'
             }`}
         >
           {isSubmitting ? 'SENDING...' : 'SEND'}
@@ -180,16 +208,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = '' }) => {
 
         {/* Status Messages */}
         {submitStatus === 'success' && (
-          <div className="text-green-600 text-sm text-left">
+          <div className="text-green-600 text-sm text-left font-bold mt-2">
             Message sent successfully! I&apos;ll get back to you soon.
           </div>
         )}
         {submitStatus === 'error' && (
-          <div className="text-red-600 text-sm text-left">
-            Failed to send message. Please try again or contact me through .
+          <div className="text-red-600 text-sm text-left font-bold mt-2">
+            Failed to send message. Please try again or contact me directly via email.
           </div>
         )}
       </form>
+      {/* Load reCAPTCHA v3 script */}
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeHxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'}`}
+        strategy="afterInteractive"
+      />
     </div>
   );
 };

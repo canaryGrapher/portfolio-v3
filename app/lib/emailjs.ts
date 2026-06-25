@@ -2,6 +2,7 @@ export interface ContactFormData {
   name: string;
   phone: string;
   message: string;
+  recaptchaToken?: string;
 }
 
 export const sendEmail = async (formData: ContactFormData): Promise<boolean> => {

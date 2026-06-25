@@ -10,10 +10,48 @@ export interface ContactFormData {
   name: string;
   phone: string;
   message: string;
+  recaptchaToken?: string;
 }
+
+// In-memory rate limiting map
+interface RateLimitRecord {
+  count: number;
+  resetTime: number;
+}
+const rateLimitMap = new Map<string, RateLimitRecord>();
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate Limiting Check
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 
+               request.headers.get('x-real-ip') || 
+               '127.0.0.1';
+    
+    const now = Date.now();
+    const windowMs = 10 * 60 * 1000; // 10 minutes
+    const limit = 3; // Max 3 submissions per window
+    
+    let limitRecord = rateLimitMap.get(ip);
+    if (!limitRecord) {
+      limitRecord = { count: 1, resetTime: now + windowMs };
+      rateLimitMap.set(ip, limitRecord);
+    } else {
+      if (now > limitRecord.resetTime) {
+        limitRecord.count = 1;
+        limitRecord.resetTime = now + windowMs;
+      } else {
+        limitRecord.count += 1;
+      }
+    }
+    
+    if (limitRecord.count > limit) {
+      const minutesLeft = Math.ceil((limitRecord.resetTime - now) / (60 * 1000));
+      return NextResponse.json(
+        { error: `Too many submissions. Please try again in ${minutesLeft} minute${minutesLeft > 1 ? 's' : ''}.` },
+        { status: 429 }
+      );
+    }
+
     // Parse the request body
     const body: ContactFormData = await request.json();
     
@@ -21,6 +59,42 @@ export async function POST(request: NextRequest) {
     if (!body.name || !body.phone || !body.message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
+        { status: 400 }
+      );
+    }
+
+    // Validate reCAPTCHA token
+    if (!body.recaptchaToken) {
+      return NextResponse.json(
+        { error: 'reCAPTCHA verification is required.' },
+        { status: 400 }
+      );
+    }
+
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+    if (!recaptchaSecret) {
+      console.error('RECAPTCHA_SECRET_KEY is not defined in environment variables');
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
+
+    // Verify token with Google reCAPTCHA API
+    const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+    const verifyResponse = await fetch(verifyUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${encodeURIComponent(recaptchaSecret)}&response=${encodeURIComponent(body.recaptchaToken)}`,
+    });
+
+    const verifyData = await verifyResponse.json();
+    if (!verifyData.success || (verifyData.score !== undefined && verifyData.score < 0.5)) {
+      console.warn('reCAPTCHA verification failed or score too low:', verifyData);
+      return NextResponse.json(
+        { error: 'reCAPTCHA verification failed. Bot activity suspected.' },
         { status: 400 }
       );
     }
