@@ -59,7 +59,7 @@ const BlogsPage = () => {
     }, [loading, error, posts]);
 
     return (
-        <div className="bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 min-h-screen pt-20">
+        <div className="bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 min-h-screen pt-20 pb-16 md:pb-24">
             <div className="max-w-7xl mx-auto px-4">
                 
                 {/* Minimalist Typography Hero Header */}

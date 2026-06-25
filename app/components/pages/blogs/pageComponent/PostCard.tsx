@@ -18,7 +18,7 @@ const PostCard: React.FC<{ post: HashnodePost, className?: string }> = ({ post, 
                 <p className="text-sm text-gray-600 line-clamp-3">{post.brief}</p>
                 <div className="flex flex-wrap gap-2">
                     {post.tags.map((t, i) => (
-                        <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-gray-500 text-gray-200">#{t.name}</span>
+                        <span key={i} className="text-xs px-2 py-0.5 rounded-full bg-green-900 text-gray-200">#{t.name}</span>
                     ))}
                 </div>
                 <a
