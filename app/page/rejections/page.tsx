@@ -3,8 +3,8 @@ import { RejectionsHeader, RejectionsFooter, RejectionsContent } from '@/compone
 
 const RejectionsPage = () => {
     return (
-        <div className="min-h-screen bg-gray-300 text-black pt-20">
-            <div className="max-w-7xl mx-auto py-10">
+        <div className="bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 min-h-screen pt-20 pb-16 md:pb-24">
+            <div className="max-w-7xl mx-auto px-4">
                 <RejectionsHeader />
                 <RejectionsContent />
                 <RejectionsFooter />

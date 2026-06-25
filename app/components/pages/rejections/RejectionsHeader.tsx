@@ -1,17 +1,26 @@
-import React from 'react'
-import { LogoBlue } from '@/assets/vectors'
-import Image from 'next/image'
+import React from 'react';
 
 const RejectionsHeader = () => {
     return (
-        <div className="flex flex-col items-center gap-2 text-center mx-auto">
-            <div className="flex flex-row items-center gap-2">
-                <Image src={LogoBlue} alt="Logo" />
-                <h1 className='text-7xl font-bold capitalize text-[#033EDF]'>Job Rejections</h1>
+        <div className="pt-16 pb-10">
+            {/* Live Chip Tag */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50/80 border border-green-200/50 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-green-800 mb-6">
+                <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
+                </span>
+                No&apos;s &amp; Redirections
             </div>
-            <div className="md:w-4/12 w-3/4">
-                <p className='text-base text-[#4A6BC5]'>Every rejection is a redirection. Here&apos;s my collection of &quot;thanks, but no thanks&quot; moments.</p>
-            </div>
+            
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-5 max-w-4xl leading-[1.1]">
+                Every rejection is a <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-800 via-emerald-700 to-teal-900">redirection.</span>
+            </h1>
+            
+            {/* Subtitle description */}
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl leading-relaxed font-semibold">
+                A collection of &quot;thanks, but no thanks&quot; letters, documenting the setbacks and redirections that paved the way for growth, resilience, and progress.
+            </p>
         </div>
     )
 }
