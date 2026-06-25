@@ -65,3 +65,59 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+/* Custom Masonry Column Layout */
+.masonry-gallery {
+  display: flow-root;
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* Polaroid Tilt and Hover Transitions */
+.polaroid-tilt-0 {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+.polaroid-tilt-1 {
+  transform: rotate(1deg);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+.polaroid-tilt-2 {
+  transform: rotate(1.5deg);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+.polaroid-tilt-3 {
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+.polaroid-tilt-4 {
+  transform: rotate(-1.5deg);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+
+.polaroid-tilt-hover {
+  will-change: transform;
+}
+
+.polaroid-tilt-hover:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.03) !important;
+}

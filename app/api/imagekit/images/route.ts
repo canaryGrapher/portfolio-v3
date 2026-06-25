@@ -18,6 +18,23 @@ export interface ImageKitImage {
   hasAlpha: boolean;
   createdAt: string;
   updatedAt: string;
+  embeddedMetadata?: {
+    Model?: string;
+    Make?: string;
+    ExposureTime?: string;
+    FNumber?: number;
+    ISO?: number;
+    FocalLength?: string;
+    DateTimeOriginal?: string;
+    DateCreated?: string;
+  } | null;
+  customMetadata?: {
+    location?: string;
+    state?: string;
+    country?: string;
+    description?: string;
+    captured_date?: string;
+  } | null;
 }
 
 export interface ImageKitResponse {
@@ -68,8 +85,6 @@ export async function GET(request: NextRequest) {
           transformation: [
             {
               width: 400,
-              height: 400,
-              cropMode: 'maintain_ratio',
               format: 'auto',
               quality: 80,
             },
@@ -80,8 +95,6 @@ export async function GET(request: NextRequest) {
           transformation: [
             {
               width: 200,
-              height: 200,
-              cropMode: 'maintain_ratio',
               format: 'auto',
               quality: 60,
             },
