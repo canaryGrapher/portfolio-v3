@@ -9,8 +9,14 @@ import FunStuffSection from "./7-FunStuffSection";
 const Main = () => {
     return (
         <div className="w-full">
-            <HeroSection />
-            <AboutSection />
+            <div id="hero-about-wrapper" className="relative w-full h-screen overflow-hidden">
+                <div id="hero-section-container" className="absolute inset-0 w-full h-full z-20">
+                    <HeroSection />
+                </div>
+                <div id="about-section-container" className="absolute inset-0 w-full h-full z-10">
+                    <AboutSection />
+                </div>
+            </div>
             <SkillsSection />
             <WorkExSection />
             <VolunteerSection />

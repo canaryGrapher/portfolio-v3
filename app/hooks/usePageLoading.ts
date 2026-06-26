@@ -1,78 +1,128 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const usePageLoading = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState(0);
+  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    let progress = 0;
-    const totalChecks = 4; // images, styles, fonts, dom
-
-    const updateProgress = () => {
-      progress += 1;
-      setLoadingProgress((progress / totalChecks) * 100);
-    };
-
-    const checkContentLoaded = () => {
-      // Check if all images are loaded
-      const images = document.querySelectorAll('img');
-      const allImagesLoaded = Array.from(images).every(img => img.complete);
-      if (allImagesLoaded) updateProgress();
-
-      // Check if all stylesheets are loaded
-      const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-      const allStylesLoaded = Array.from(stylesheets).every(link => {
-        const sheet = (link as HTMLLinkElement).sheet;
-        return sheet !== null;
-      });
-      if (allStylesLoaded) updateProgress();
-
-      // Check if DOM is ready
-      const domReady = document.readyState === 'complete';
-      if (domReady) updateProgress();
-
-      // Check fonts
-      if (document.fonts) {
-        document.fonts.ready.then(() => {
-          updateProgress();
+    // 1. Start smooth progress increments up to 95%
+    const startProgressTimer = () => {
+      progressIntervalRef.current = setInterval(() => {
+        setLoadingProgress((prev) => {
+          if (prev < 40) return prev + 3;
+          if (prev < 70) return prev + 1.5;
+          if (prev < 90) return prev + 0.6;
+          if (prev < 97) return prev + 0.15;
+          return prev; // Hold at 97% until assets are actually loaded
         });
-      } else {
-        updateProgress();
-      }
-
-      // Wait for a minimum time to ensure smooth transition
-      const minLoadTime = 500; // 0.5 second minimum
-      const startTime = Date.now();
-      
-      const finalCheck = () => {
-        const elapsed = Date.now() - startTime;
-        const remainingTime = Math.max(0, minLoadTime - elapsed);
-        
-        setTimeout(() => {
-          setIsLoading(false);
-        }, remainingTime);
-      };
-
-      // Start final check after a short delay
-      setTimeout(finalCheck, 100);
+      }, 60);
     };
 
-    // Start checking after a short delay to allow initial rendering
-    const timeoutId = setTimeout(checkContentLoaded, 100);
-    
-    // Also listen for load events
-    window.addEventListener('load', checkContentLoaded);
-    
-    // Listen for font loading
-    if (document.fonts) {
-      document.fonts.ready.then(checkContentLoaded);
+    startProgressTimer();
+
+    // 2. Track real assets
+    let isMounted = true;
+    let domLoaded = false;
+    let fontsLoaded = false;
+    let imagesLoaded = false;
+
+    const checkCompletion = () => {
+      if (domLoaded && fontsLoaded && imagesLoaded) {
+        if (progressIntervalRef.current) {
+          clearInterval(progressIntervalRef.current);
+        }
+        setLoadingProgress(100);
+        
+        // Small delay to allow the progress bar to fill completely and be seen
+        setTimeout(() => {
+          if (isMounted) {
+            setIsLoading(false);
+          }
+        }, 300);
+      }
+    };
+
+    // DOM Ready check
+    if (document.readyState === "complete") {
+      domLoaded = true;
+    } else {
+      const handleDomLoad = () => {
+        domLoaded = true;
+        checkCompletion();
+      };
+      window.addEventListener("load", handleDomLoad);
     }
 
+    // Fonts Ready check
+    if (document.fonts) {
+      document.fonts.ready
+        .then(() => {
+          fontsLoaded = true;
+          checkCompletion();
+        })
+        .catch(() => {
+          // Fail gracefully if fonts.ready rejects
+          fontsLoaded = true;
+          checkCompletion();
+        });
+    } else {
+      fontsLoaded = true;
+    }
+
+    // Images check
+    const checkImages = () => {
+      const images = Array.from(document.querySelectorAll("img"));
+      if (images.length === 0) {
+        imagesLoaded = true;
+        checkCompletion();
+        return;
+      }
+
+      let loadedCount = 0;
+      const totalImages = images.length;
+
+      const onImageLoad = () => {
+        loadedCount++;
+        if (loadedCount >= totalImages) {
+          imagesLoaded = true;
+          checkCompletion();
+        }
+      };
+
+      images.forEach((img) => {
+        if (img.complete) {
+          onImageLoad();
+        } else {
+          img.addEventListener("load", onImageLoad);
+          img.addEventListener("error", onImageLoad); // Count errors as loaded so we don't block
+        }
+      });
+    };
+
+    // Check images after a tiny delay so the DOM has rendered the initial elements
+    const imgTimeout = setTimeout(checkImages, 50);
+
+    // Fallback safety timeout (4 seconds)
+    const safetyTimeout = setTimeout(() => {
+      if (isMounted && isLoading) {
+        domLoaded = true;
+        fontsLoaded = true;
+        imagesLoaded = true;
+        checkCompletion();
+      }
+    }, 4000);
+
     return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('load', checkContentLoaded);
+      isMounted = false;
+      if (progressIntervalRef.current) {
+        clearInterval(progressIntervalRef.current);
+      }
+      clearTimeout(imgTimeout);
+      clearTimeout(safetyTimeout);
+      window.removeEventListener("load", checkCompletion);
     };
   }, []);
 

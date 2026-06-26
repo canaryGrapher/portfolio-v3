@@ -13,10 +13,8 @@ if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 }
 
-
 const AboutSection = () => {
 
-    const TOTAL_LOTTIE_FRAMES = 12;
     const [isMobile, setIsMobile] = useState(false);
 
     const sectionRef = useRef<HTMLElement>(null);
@@ -37,15 +35,18 @@ const AboutSection = () => {
     }, []);
 
     const IntroLottieStyle = {
-        height: isMobile ? "100vh !important" : "100vh !important",
-        width: isMobile ? "100vw !important" : "100vw !important",
+        height: "100vh !important",
+        width: "100vw !important",
         objectFit: "cover" as const,
         objectPosition: "center" as const,
         transform: isMobile ? "scale(1.2)" : "scale(1)", // Scale up for mobile to fill better
     }
 
+    const animationData = isMobile ? IntroSectionData.responsiveLottieObject : IntroSectionData.lottieObject;
+    const TOTAL_LOTTIE_FRAMES = (animationData as any)?.op || 12;
+
     const IntroLottieOptions = {
-        animationData: isMobile ? IntroSectionData.responsiveLottieObject : IntroSectionData.lottieObject,
+        animationData: animationData,
         autoplay: false,
         loop: false,
         rendererSettings: {
@@ -56,28 +57,46 @@ const AboutSection = () => {
     const lottieObject = useLottie(IntroLottieOptions, IntroLottieStyle);
 
     useGSAP(() => {
-        if (sectionRef.current && lottieRef.current) {
+        if (lottieRef.current) {
+            // Set initial state for the cross-fade (about starts hidden)
+            gsap.set("#about-section-container", { opacity: 0 });
+
             const timeline = gsap.timeline({
                 scrollTrigger: {
-                    trigger: sectionRef.current,
+                    trigger: "#hero-about-wrapper",
                     start: "top top",
-                    end: "bottom top",
+                    end: "+=350%", // scroll length for transition + about animation
                     scrub: 5,
-                    pin: true,
-                    id: "about-section-trigger",
+                    pin: "#hero-about-wrapper",
+                    id: "hero-about-trigger",
                 }
             });
 
-            // Animate Lottie along with the timeline
+            // Phase 1: Cross-fade in place (Hero out, Intro in)
+            timeline.to("#hero-section-container", {
+                opacity: 0,
+                duration: 1.0,
+                ease: "power2.out",
+            }, "0");
+
+            timeline.to("#about-section-container", {
+                opacity: 1,
+                duration: 1.0,
+                ease: "power2.out",
+            }, "0");
+
+            // Phase 2: Intro Section animations (Lottie & Text)
             const totalParagraphs = IntroSectionData.lines.length;
             const lastParagraphEndTime = (totalParagraphs - 1) * 0.5 + 0.3;
 
+            // Mobile blackout fade out (starts right after cross-fade is done)
             timeline.to(mobileBlackoutRef.current, {
                 opacity: 0,
                 duration: 0.5,
                 ease: "power2.in",
-            }, "0");
+            }, "1.0");
 
+            // Lottie scroll update (starts at 1.1)
             timeline.to({ frame: 0 }, {
                 frame: TOTAL_LOTTIE_FRAMES - 1,
                 duration: lastParagraphEndTime + 0.5,
@@ -89,9 +108,9 @@ const AboutSection = () => {
                 onComplete: function () {
                     lottieObject.goToAndStop(TOTAL_LOTTIE_FRAMES - 1, true);
                 }
-            }, "0.1");
+            }, "1.1");
 
-            // Animate each paragraph one at a time
+            // Paragraphs display sequentially (starts at 1.2)
             paragraphsRef.current.forEach((paragraph, index) => {
                 if (paragraph) {
                     // Hide all paragraphs initially
@@ -103,7 +122,7 @@ const AboutSection = () => {
                         y: 0,
                         duration: 0.3,
                         ease: "power2.out",
-                    }, index * 0.5);
+                    }, 1.2 + index * 0.5);
 
                     // Hide current paragraph before next one appears (except the last one)
                     if (index < paragraphsRef.current.length - 1) {
@@ -112,16 +131,16 @@ const AboutSection = () => {
                             y: -100,
                             duration: 0.3,
                             ease: "power2.in",
-                        }, (index + 1) * 0.5 - 0.1);
+                        }, 1.2 + (index + 1) * 0.5 - 0.1);
                     }
                 }
             });
         }
-    }, { scope: sectionRef });
+    });
 
     return (
-        <section ref={sectionRef} className="w-screen h-screen bg-black relative overflow-hidden">
-            <div className="w-screen h-screen absolute md:hidden top-0 left-0 bg-black z-10 flex flex-col justify-start pt-25 items-center" ref={mobileBlackoutRef} style={{
+        <section ref={sectionRef} className="w-full h-full bg-black relative overflow-hidden">
+            <div className="w-full h-full absolute md:hidden top-0 left-0 bg-black z-10 flex flex-col justify-start pt-25 items-center" ref={mobileBlackoutRef} style={{
                 transform: isMobile ? 'scale(1.2)' : 'scale(1)',
             }}>
                 <h2 className="text-4xl font-bold text-white">About Me</h2>
@@ -130,7 +149,7 @@ const AboutSection = () => {
                     <FaArrowDown />
                 </div>
             </div>
-            <div ref={lottieRef} className="w-screen h-screen absolute top-0 left-0">
+            <div ref={lottieRef} className="w-full h-full absolute top-0 left-0">
                 {lottieObject.View}
             </div>
             <div className="text-white absolute top-0 left-0 w-full h-full flex justify-center items-center text-center px-5">
@@ -150,4 +169,4 @@ const AboutSection = () => {
     );
 };
 
-export default AboutSection;    
+export default AboutSection;
