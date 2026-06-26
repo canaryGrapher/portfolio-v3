@@ -10,7 +10,7 @@ const VolunteerCard: React.FC<VolunteerCardProps> = (props) => {
     return (
         <div
             ref={props.ref}
-            className={`bg-white/90 backdrop-blur-sm border border-gray-200/80 hover:border-gray-300 w-[300px] md:w-[400px] h-full min-h-[150px] md:min-h-[250px] rounded-2xl p-6 relative flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-gray-300/40 hover:-translate-y-1.5 group ${props.index === 0 ? 'ml-5 md:ml-[calc((100vw-80rem)/2)]' : ''}`}
+            className="bg-white/90 backdrop-blur-sm border border-gray-200/80 hover:border-gray-300 w-[300px] md:w-[400px] h-full min-h-[150px] md:min-h-[250px] rounded-2xl p-6 relative flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-gray-300/40 hover:-translate-y-1.5 group"
         >
             {/* Card content */}
             <div className="flex flex-col space-y-3 items-start w-full">

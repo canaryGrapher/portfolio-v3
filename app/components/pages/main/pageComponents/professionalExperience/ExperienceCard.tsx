@@ -16,7 +16,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
     return (
         <div
             ref={props.ref}
-            className={`w-[300px] md:w-[420px] h-[400px] md:h-[600px] flex-none rounded-2xl p-8 relative flex flex-col justify-start overflow-hidden mr-2 ${props.index === 0 ? 'ml-5 md:ml-[calc((100vw-1280px)/2)]' : ''}`}
+            className="w-[300px] md:w-[420px] h-[400px] md:h-[600px] flex-none rounded-2xl p-8 relative flex flex-col justify-start overflow-hidden"
             style={{ 
                 backgroundImage: `url(${getBannerSrc()})`,
                 backgroundSize: 'cover',
