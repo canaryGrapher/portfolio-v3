@@ -269,7 +269,31 @@ const Technologies = {
     "FFmpeg.wasm": {
         icon: Icons.FFmpegWasm,
         name: "FFmpeg.wasm"
-    }
+    },
+    "React Native": {
+        icon: Icons.ReactJSIcon,
+        name: "React Native"
+    },
+    "Gemini": {
+        icon: Icons.Gemini,
+        name: "Gemini"
+    },
+    "Claude": {
+        icon: Icons.Claude,
+        name: "Claude"
+    },
+    "Ollama": {
+        icon: Icons.Ollama,
+        name: "Ollama"
+    },
+    "Cursor": {
+        icon: Icons.Cursor,
+        name: "Cursor"
+    },
+    "Antigravity": {
+        icon: Icons.Antigravity,
+        name: "Antigravity"
+    },
 }
 
 export default Technologies;

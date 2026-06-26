@@ -25,7 +25,7 @@ const SkillsData = {
                 "CI/CD Pipeline Automation",
                 "Cloud Security & Compliance"
             ],
-            techStack: ["Google Cloud", "Docker", "ECS", "EC2", "GitHubActions", "CloudWatch"],
+            techStack: ["Google Cloud", "Docker", "ECS", "EC2", "GitHubActions", "CloudWatch", "Linux"],
             impact: "99.9% uptime architectures with zero-downtime deployment pipelines."
         },
         {
@@ -64,7 +64,7 @@ const SkillsData = {
                 "Sleek UI/UX Transitions",
                 "App Store Publishing"
             ],
-            techStack: ["ReactJS", "TypeScript", "LocalStorage", "GitHub"],
+            techStack: ["React Native", "TypeScript", "LocalStorage"],
             impact: "Highly responsive, feature-rich iOS and Android mobile solutions."
         },
         {
@@ -75,9 +75,9 @@ const SkillsData = {
                 "AI-Assisted Development",
                 "Rapid MVP Prototyping",
                 "Prompt Engineering & Automation",
-                "Mentorship & Best Practices"
+                "Token Usage Minimization"
             ],
-            techStack: ["JavaScript", "TypeScript", "GitHub", "Mentorship", "TechnicalWriting"],
+            techStack: ["Gemini", "Claude", "Ollama", "Cursor", "Antigravity"],
             impact: "Drastically reduced time-to-market for early-stage software products."
         }
     ],

@@ -67,7 +67,13 @@ import NmapIcon from "./nmap.svg"
 import NetcatIcon from "./netcat.svg"
 import MetasploitIcon from "./metasploit.svg"
 import FFmpegWasm from "./ffmpeg_wasm.svg"
+import Gemini from "./gemini.svg"
+import Claude from "./claude.svg"
+import Ollama from "./ollama.svg"
+import Cursor from "./cursor.svg"
+import Antigravity from "./antigravity.svg"
 
 
 
-export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon, ThreeJSIcon, NPMIcon, LinuxIcon, MultipassIcon, GoogleSheetsIcon, HalfMoonIcon, PuppeteerIcon, MongoDBIcon, SupabaseIcon, GoogleCloudIcon, PythonIcon, KaliLinuxIcon, WiresharkIcon, NmapIcon, NetcatIcon, MetasploitIcon, BurpSuiteIcon, AutomataIcon, ComputabilityIcon, ComplexityIcon, PublicSpeakingIcon, TechnicalWritingIcon, MentorshipIcon, FFmpegWasm };    
+
+export { EthereumIcon, ReactJSIcon, ElectronJSIcon, TypeScriptIcon, NodeJSIcon, PostgreSQLIcon, GitHubIcon, ExpressJSIcon, RedisIcon, DockerIcon, ECSIcon, EC2Icon, RDSIcon, Route53Icon, CloudWatchIcon, APIGatewayIcon, PowerPointIcon, WordIcon, MSTeamsIcon, ExcelIcon, JiraIcon, ConfluenceIcon, LocalStorageIcon, SvelteIcon, ReduxIcon, NextJSIcon, DynatraceIcon, PostmanIcon, AdobeXDIcon, BootstrapIcon, ChromiumIcon, CSSIcon, FigmaIcon, HTMLIcon, JavaScriptIcon, MetamaskIcon, SolanaIcon, TailwindIcon, GitHubActionsIcon, Web3Icon, StakeholderManagementIcon, MicrosoftClarityIcon, CosmosIcon, ThreeJSIcon, NPMIcon, LinuxIcon, MultipassIcon, GoogleSheetsIcon, HalfMoonIcon, PuppeteerIcon, MongoDBIcon, SupabaseIcon, GoogleCloudIcon, PythonIcon, KaliLinuxIcon, WiresharkIcon, NmapIcon, NetcatIcon, MetasploitIcon, BurpSuiteIcon, AutomataIcon, ComputabilityIcon, ComplexityIcon, PublicSpeakingIcon, TechnicalWritingIcon, MentorshipIcon, FFmpegWasm, Gemini, Claude, Ollama, Cursor, Antigravity };    

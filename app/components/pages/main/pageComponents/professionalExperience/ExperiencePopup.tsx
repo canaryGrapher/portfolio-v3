@@ -1,12 +1,19 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { FaTimes } from 'react-icons/fa';
 import { ProfessionalExperiencePopupProps } from '@/interface/pages/Landing';
 
 const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
-    React.useEffect(() => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
         if (props.isOpen && props.experience) {
             const originalBodyStyle = document.body.style.overflow;
             const originalHtmlStyle = document.documentElement.style.overflow;
@@ -21,10 +28,10 @@ const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
         }
     }, [props.isOpen, props.experience]);
 
-    if (!props.isOpen || !props.experience) return null;
+    if (!props.isOpen || !props.experience || !mounted) return null;
 
-    return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
+    return createPortal(
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Backdrop */}
             <div
                 className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 touch-none"
@@ -167,7 +174,8 @@ const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 };
 
