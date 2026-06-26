@@ -2,60 +2,108 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { FaTimes } from 'react-icons/fa';
 import { VolunteerPopupProps } from '@/interface/pages/Landing';
-
-
 
 const VolunteerPopup: React.FC<VolunteerPopupProps> = (props) => {
     if (!props.isOpen || !props.experience) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center h-screen w-screen overflow-hidden">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Backdrop */}
             <div
-                className="absolute inset-0 bg-black/65 backdrop-blur-sm"
+                className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
                 onClick={props.onClose}
             />
 
-            {/* Popup Content - match professional VolunteerPopup */}
+            {/* Popup Content Card */}
             <div
-                className="relative w-full md:w-[50%] max-h-[95vh] bg-white/90 overflow-x-hidden overflow-y-scroll transform transition-all duration-300 ease-out rounded-xl"
+                className="relative w-full max-w-3xl max-h-[85vh] bg-zinc-950/95 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.8),_0_0_80px_rgba(16,185,129,0.03)] transform transition-all duration-300 ease-out rounded-2xl flex flex-col overflow-hidden"
                 style={{
-                    transform: props.isOpen ? 'scale(1)' : 'scale(0.8)',
+                    transform: props.isOpen ? 'scale(1)' : 'scale(0.95)',
                     opacity: props.isOpen ? 1 : 0
                 }}
             >
-                <div className="w-[80%] mx-auto py-10 relative overflow-hidden">
-                    {/* Header/Banner */}
-                    <div className="p-0 relative overflow-hidden">
+                {/* Floating Close Button */}
+                <button
+                    onClick={props.onClose}
+                    className="absolute top-4 right-4 z-20 cursor-pointer w-9 h-9 bg-black/50 hover:bg-zinc-800/80 border border-white/10 rounded-full flex items-center justify-center text-zinc-300 hover:text-white transition-all duration-200 shadow-md"
+                    aria-label="Close details"
+                >
+                    <FaTimes className="text-sm" />
+                </button>
 
-                        <div className="relative z-10 flex flex-col md:flex-row">
-                            <Image src={props.experience.companyLogo} alt={props.experience.companyName} className="md:w-52 md:h-52 w-24 h-24" width={100} height={100} unoptimized={true} />
-                            <div className="pt-5 md:p-8">
-                                <h2 className="text-lg font-bold text-gray-600">
-                                    {props.experience.companyName}
-                                </h2>
-                                <h3 className="text-4xl font-bold text-black opacity-90 mt-1">
-                                    {props.experience.role}
-                                </h3>
-                                <p className="text-md mb-1"
-                                    style={{ color: props.experience.companyColor }}
-                                >{props.experience.category}</p>
-                                <p className="text-lg text-gray-600 opacity-90">
-                                    {props.experience.companyDescription}
-                                </p>
-                            </div>
+                {/* Header Information Row */}
+                <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 p-6 sm:p-10 border-b border-white/5 bg-zinc-900/10">
+                    {props.experience.companyLogo && (
+                        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-zinc-900/85 border border-white/10 p-2 flex items-center justify-center shrink-0 shadow-lg shadow-black/25 overflow-hidden">
+                            <Image
+                                src={props.experience.companyLogo}
+                                alt={props.experience.companyName}
+                                width={80}
+                                height={80}
+                                className="w-full h-full object-contain"
+                                unoptimized={true}
+                            />
                         </div>
+                    )}
+                    <div className="flex-1">
+                        <span
+                            className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border bg-zinc-900/60 border-zinc-800/80"
+                            style={{ color: props.experience.companyColor || '#10b981' }}
+                        >
+                            {props.experience.category}
+                        </span>
+                        <h2 className="text-xl sm:text-2xl font-black text-white uppercase tracking-wide mt-3.5">
+                            {props.experience.companyName}
+                        </h2>
+                        <h3 className="text-lg sm:text-xl font-black text-zinc-400 mt-1 uppercase tracking-wider">
+                            {props.experience.role}
+                        </h3>
+                    </div>
+                </div>
 
-                        {/* Role and Duration */}
-                        <div className="mt-6">
-                            <h2 className="text-xl font-bold text-gray-600">Contributions</h2>
+                {/* Scrollable Container */}
+                <div className="flex-1 overflow-y-auto scrollbar-hide px-6 sm:px-10 pb-10 pt-6">
+                    {/* Description */}
+                    <div className="border-b border-white/5 pb-6">
+                        <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-medium">
+                            {props.experience.companyDescription}
+                        </p>
+                    </div>
+
+                    {/* Contributions Timeline */}
+                    <div className="pt-6">
+                        <h3 className="text-xs font-black uppercase text-zinc-500 tracking-widest mb-6">
+                            Contributions & Responsibilities
+                        </h3>
+                        <div className="space-y-8 relative pl-4 border-l border-zinc-800">
                             {props.experience.responsibilities.map((responsibility, index) => (
-                                <div key={index} className="mb-2">
-                                    <h3 className="text-md font-bold" style={{ color: props.experience.companyColor }}>{responsibility.date}</h3>
-                                    <ul className="space-y-1 text-sm leading-relaxed list-disc list-outside ml-4 text-gray-600">
-                                        {responsibility.description.map((description, index) => (
-                                            <li key={index} className="text-gray-600 leading-relaxed">{description}</li>
+                                <div className="relative" key={index}>
+                                    {/* Timeline Marker Dot */}
+                                    <div
+                                        className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full border-2 border-zinc-950"
+                                        style={{ backgroundColor: props.experience.companyColor || '#10b981' }}
+                                    />
+
+                                    {/* Date */}
+                                    <h4
+                                        className="text-xs sm:text-sm font-black uppercase tracking-wider mb-2.5"
+                                        style={{ color: props.experience.companyColor || '#10b981' }}
+                                    >
+                                        {responsibility.date}
+                                    </h4>
+
+                                    {/* Contribution Items */}
+                                    <ul className="space-y-2 text-sm text-zinc-400 font-medium leading-relaxed">
+                                        {responsibility.description.map((desc, descIndex) => (
+                                            <li key={descIndex} className="flex items-start">
+                                                <span
+                                                    className="mr-2.5 mt-2 w-1.5 h-1.5 shrink-0 rounded-sm"
+                                                    style={{ backgroundColor: props.experience.companyColor || '#10b981' }}
+                                                />
+                                                <span>{desc}</span>
+                                            </li>
                                         ))}
                                     </ul>
                                 </div>
@@ -64,16 +112,6 @@ const VolunteerPopup: React.FC<VolunteerPopupProps> = (props) => {
                     </div>
                 </div>
             </div>
-
-            {/* Close Button - sticky/fixed like professional */}
-            <button
-                onClick={props.onClose}
-                className="border-2 border-white/90 cursor-pointer w-12 h-12 bg-black/40 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200 fixed bottom-6 mr-6 mb-6 z-10"
-            >
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
         </div>
     );
 };
