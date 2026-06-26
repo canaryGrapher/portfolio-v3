@@ -49,6 +49,10 @@ type SkillCardProps = {
     icon: string;
     title: string;
     description: string;
+    focusAreas: string[];
+    techStack: string[];
+    impact: string;
+    index: number;
 } & BaseProps;
 
 interface CarPlayIconProps {
