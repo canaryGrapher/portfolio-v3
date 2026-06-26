@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import HeaderData from "@/data/Headers";
 import AdditionalInfo from "@/data/general/AdditionalInfo";
 import { HeroSectionData } from "@/data/pages/landing/UserData";
@@ -11,16 +11,59 @@ import { FaTimes } from "react-icons/fa";
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const threshold = 15; // minimum scroll distance in pixels to trigger show/hide
+    let accumulatedDiff = 0;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const diff = currentScrollY - lastScrollY.current;
+
+      // Reset accumulated diff if scroll direction changes
+      if ((diff > 0 && accumulatedDiff < 0) || (diff < 0 && accumulatedDiff > 0)) {
+        accumulatedDiff = 0;
+      }
+
+      accumulatedDiff += diff;
+
+      // Force show navbar when at or near the very top
+      if (currentScrollY <= 10) {
+        setIsVisible(true);
+        accumulatedDiff = 0;
+      } else if (!isMenuOpen) {
+        // Scroll down threshold exceeded -> hide
+        if (accumulatedDiff > threshold && currentScrollY > 50) {
+          setIsVisible(false);
+          accumulatedDiff = 0;
+        } 
+        // Scroll up threshold exceeded -> show
+        else if (accumulatedDiff < -threshold) {
+          setIsVisible(true);
+          accumulatedDiff = 0;
+        }
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMenuOpen]);
+
   return (
     <>
       {/* Job Seeking Banner - Static Full Width at the top */}
       {AdditionalInfo.lookingForJob && (
-        <div className="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-sm border-b border-white/5 z-50 overflow-hidden h-9 flex items-center">
+        <div className={`fixed left-0 w-full bg-black/90 backdrop-blur-sm border-b border-white/5 z-50 overflow-hidden h-9 flex items-center transition-all duration-300 ${
+          isVisible ? "top-0" : "-top-10"
+        }`}>
           <div
             className={`animate-marquee-single whitespace-wrap transition-all duration-300 ${
               isMarqueePaused ? "animate-pause" : ""
@@ -45,7 +88,7 @@ export const Header = () => {
       {/* Floating Pill Navigation Bar */}
       <header
         className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[92%] sm:w-[85%] max-w-5xl rounded-full bg-black/60 backdrop-blur-md border border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.6),_0_0_30px_rgba(16,185,129,0.03)] py-2 px-5 flex items-center justify-between ${
-          AdditionalInfo.lookingForJob ? "top-13" : "top-5"
+          !isVisible ? "-top-24" : AdditionalInfo.lookingForJob ? "top-[52px]" : "top-5"
         }`}
       >
         {/* Left Side: Brand Logo & Name */}

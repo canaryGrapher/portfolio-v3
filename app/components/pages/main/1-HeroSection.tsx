@@ -23,6 +23,7 @@ const HeroSection = () => {
 
     useGSAP(() => {
         if (sectionRef.current) {
+            const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: sectionRef.current,
@@ -33,30 +34,14 @@ const HeroSection = () => {
                 }
             });
 
-            // Hide the heading parts
-            timeline.from(".heading-part", {
-                y: 100,
-                duration: 1,
-                ease: "power2.in",
-                stagger: 0.1,
+            // Animate out subtitles and description on scroll
+            timeline.to([".heading-part", ".heading-description"], {
+                y: -50,
                 opacity: 0,
-            }, "0")
-
-
-            // Show the heading parts
-            timeline.fromTo(".heading-part", {
-                y: 0,
                 duration: 1,
+                stagger: 0.05,
                 ease: "power2.out",
-                stagger: 0.1,
-                opacity: 1,
-            }, {
-                y: -100,
-                duration: 1,
-                ease: "power2.in",
-                stagger: 0.1,
-                opacity: 0,
-            }, "0.5")
+            }, "0")
 
             // Hide the name
             timeline.to(nameRef.current, {
@@ -90,12 +75,10 @@ const HeroSection = () => {
             timeline.to(backgroundRef.current, {
                 duration: 1,
                 ease: "power2.out",
-                width: "90%",
-                height: "60%",
-                left: "5%",
-                right: "5%",
-                bottom: "20%",
-                top: "20%",
+                width: isMobile ? "92%" : "90%",
+                height: isMobile ? "75%" : "60%",
+                left: isMobile ? "4%" : "5%",
+                top: isMobile ? "12.5%" : "20%",
             }, "2")
 
             // Show the name post
@@ -118,7 +101,7 @@ const HeroSection = () => {
             timeline.to('#hero-section-background', {
                 duration: 1,
                 ease: "power2.in",
-                borderRadius: "50px",
+                borderRadius: isMobile ? "24px" : "50px",
             }, "3")
         }
     }, { scope: sectionRef });
@@ -131,11 +114,11 @@ const HeroSection = () => {
             {/* Main Content Section */}
             <div className="flex flex-col justify-center items-center h-full relative">
                 {/* Text Overlay */}
-                <div className="mx-auto flex flex-col items-center text-center w-full mb-32 md:mb-0">
-                    <div className="flex flex-col justify-around h-full mx-aut font-black">
+                <div className="mx-auto flex flex-col items-center text-center w-full mb-20 md:mb-0">
+                    <div className="flex flex-col justify-around h-full mx-auto font-black">
                         <h1
                             ref={nameRef}
-                            className="text-[120px] md:text-[250px] font-black leading-none"
+                            className="text-[25vw] sm:text-[18vw] md:text-[220px] lg:text-[250px] font-black leading-none"
                             style={{
                                 backgroundImage: `url(${HeroSectionData.image.HeroImage})`,
                                 backgroundSize: 'cover',
@@ -149,13 +132,20 @@ const HeroSection = () => {
                             <span className="block md:hidden whitespace-pre-line leading-none">{HeroSectionData.name.toUpperCase().split(" ").join("\n")}</span>
                         </h1>
                     </div>
-                    <div className="flex flex-row text-gray-400 font-extrabold uppercase tracking-wide mt-4">
+                    <div className="flex flex-row text-gray-400 font-extrabold uppercase tracking-wide mt-4 px-4 justify-center flex-wrap gap-y-1">
                         {HeroSectionData.title?.map((title, index) => (
-                            <p key={index} className={`text-xl md:text-4xl font-extrabold leading-tight heading-part ${index === HeroSectionData.title?.length - 1 ? 'mr-0' : 'mr-2'} text-gray-300`}>
+                            <p key={index} className={`text-sm sm:text-xl md:text-4xl font-extrabold leading-tight heading-part ${index === HeroSectionData.title?.length - 1 ? 'mr-0' : 'mr-2'} text-gray-300`}>
                                 {title}{index < HeroSectionData.title?.length - 1 ? <span className="text-emerald-500 font-black">.</span> : ''}
                             </p>
                         ))}
                     </div>
+
+                    {/* Description to fill vertical whitespace and provide intro context */}
+                    {HeroSectionData.description && (
+                        <p className="lg:hidden text-gray-300/80 font-medium text-xs sm:text-sm md:text-base max-w-[280px] sm:max-w-md md:max-w-lg mt-5 px-6 leading-relaxed tracking-wider heading-description text-center">
+                            {HeroSectionData.description}
+                        </p>
+                    )}
                 </div>
 
                 {/* Video Section */}
@@ -173,15 +163,17 @@ const HeroSection = () => {
                         className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center"
                     >
                         <h2
-                            className="text-white/10 text-[120px] md:text-[250px] font-black leading-none">
-                            {HeroSectionData.name.toUpperCase()}
+                            className="text-white/10 text-[25vw] sm:text-[18vw] md:text-[220px] lg:text-[250px] font-black leading-none"
+                        >
+                            <span className="hidden md:block">{HeroSectionData.name.toUpperCase()}</span>
+                            <span className="block md:hidden whitespace-pre-line leading-none">{HeroSectionData.name.toUpperCase().split(" ").join("\n")}</span>
                         </h2>
                     </div>
                 </div>
             </div>
 
             {/* Scroll down indicator */}
-            <div className="absolute bottom-40 md:bottom-20 left-0 w-full h-10 flex flex-col justify-center items-center">
+            <div className="absolute bottom-8 md:bottom-20 left-0 w-full h-10 flex flex-col justify-center items-center">
                 <div className="hidden md:block animate-bounce mb-2">
                     <FaMouse className="text-emerald-500 text-2xl" />
                 </div>

@@ -9,7 +9,7 @@ import CompanyData from "@/data/general/Company";
 const HeroSectionData = {
   name: "Yash Aryan",
   title: ["Developer", "Thinker", "Explorer"],
-  description: "I'm a developer who loves to tell stories and explore new things.",
+  description: "I'm a developer and I love travelling on my motorcycle. I have a dream to travel every state oin India on my bike. I also love experimenting with new technologies building stuff on my free time.",
   image: HeroImage,
 };
 
