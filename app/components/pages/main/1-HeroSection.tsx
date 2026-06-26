@@ -125,7 +125,7 @@ const HeroSection = () => {
 
     return (
         <section
-            className="relative h-screen overflow-hidden text-center w-full bg-gradient-to-b from-green-950 via-emerald-950 to-black"
+            className="relative h-screen overflow-hidden text-center w-full bg-gradient-to-b from-green-800 to-gray-600"
             id="hero-section"
             ref={sectionRef}>
             {/* Main Content Section */}

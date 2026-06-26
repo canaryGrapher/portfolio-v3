@@ -1,3 +1,3 @@
-const HeroImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Hero/heroImage_BVIraoPsC.jpg?updatedAt=1760418219054"
+const HeroImage = "https://ik.imagekit.io/canarygrapher/yasharyan.dev/Hero/hero_1z5HtphZv.jpeg"
 
 export { HeroImage };
