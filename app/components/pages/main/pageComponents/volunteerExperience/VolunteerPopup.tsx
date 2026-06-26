@@ -6,13 +6,28 @@ import { FaTimes } from 'react-icons/fa';
 import { VolunteerPopupProps } from '@/interface/pages/Landing';
 
 const VolunteerPopup: React.FC<VolunteerPopupProps> = (props) => {
+    React.useEffect(() => {
+        if (props.isOpen && props.experience) {
+            const originalBodyStyle = document.body.style.overflow;
+            const originalHtmlStyle = document.documentElement.style.overflow;
+
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            return () => {
+                document.body.style.overflow = originalBodyStyle;
+                document.documentElement.style.overflow = originalHtmlStyle;
+            };
+        }
+    }, [props.isOpen, props.experience]);
+
     if (!props.isOpen || !props.experience) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Backdrop */}
             <div
-                className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
+                className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 touch-none"
                 onClick={props.onClose}
             />
 
@@ -64,7 +79,7 @@ const VolunteerPopup: React.FC<VolunteerPopupProps> = (props) => {
                 </div>
 
                 {/* Scrollable Container */}
-                <div className="flex-1 overflow-y-auto scrollbar-hide px-6 sm:px-10 pb-10 pt-6">
+                <div className="flex-1 overflow-y-auto overscroll-contain scrollbar-hide px-6 sm:px-10 pb-10 pt-6">
                     {/* Description */}
                     <div className="border-b border-white/5 pb-6">
                         <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-medium">

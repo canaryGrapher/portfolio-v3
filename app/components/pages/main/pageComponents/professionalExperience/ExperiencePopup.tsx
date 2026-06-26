@@ -6,13 +6,28 @@ import { FaTimes } from 'react-icons/fa';
 import { ProfessionalExperiencePopupProps } from '@/interface/pages/Landing';
 
 const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
+    React.useEffect(() => {
+        if (props.isOpen && props.experience) {
+            const originalBodyStyle = document.body.style.overflow;
+            const originalHtmlStyle = document.documentElement.style.overflow;
+
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+
+            return () => {
+                document.body.style.overflow = originalBodyStyle;
+                document.documentElement.style.overflow = originalHtmlStyle;
+            };
+        }
+    }, [props.isOpen, props.experience]);
+
     if (!props.isOpen || !props.experience) return null;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Backdrop */}
             <div
-                className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
+                className="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 touch-none"
                 onClick={props.onClose}
             />
 
@@ -34,7 +49,7 @@ const ExperiencePopup: React.FC<ProfessionalExperiencePopupProps> = (props) => {
                 </button>
 
                 {/* Scrollable Container */}
-                <div className="flex-1 overflow-y-auto scrollbar-hide">
+                <div className="flex-1 overflow-y-auto overscroll-contain scrollbar-hide">
                     {/* Header Banner Image */}
                     {props.experience.popupImage && (
                         <div className="relative w-full h-44 sm:h-56 overflow-hidden">
