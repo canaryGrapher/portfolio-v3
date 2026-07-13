@@ -26,7 +26,21 @@ const RejectionsContent: React.FC = () => {
         setError(null);
         addLoadingTask(taskId);
         const fetchedImages = await ImageKitService.getAllImages('/job-rejections');
-        setImages(fetchedImages);
+        
+        // Sort in descending order of date
+        const sortedImages = [...fetchedImages].sort((a, b) => {
+          const customMetaA = a.customMetadata as any;
+          const customMetaB = b.customMetadata as any;
+          const dateA = customMetaA?.date || a.embeddedMetadata?.DateTimeOriginal || a.embeddedMetadata?.DateCreated || a.createdAt;
+          const dateB = customMetaB?.date || b.embeddedMetadata?.DateTimeOriginal || b.embeddedMetadata?.DateCreated || b.createdAt;
+          
+          const timeA = dateA ? new Date(dateA).getTime() : 0;
+          const timeB = dateB ? new Date(dateB).getTime() : 0;
+          
+          return timeB - timeA;
+        });
+
+        setImages(sortedImages);
       } catch (err) {
         console.error('Error fetching rejection images:', err);
         setError('Failed to load rejection images. Please try again later.');
