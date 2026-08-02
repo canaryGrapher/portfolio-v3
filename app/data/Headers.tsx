@@ -16,6 +16,10 @@ const HeaderData = {
       href: "/page/blogs",
     },
     {
+      title: "Thoughts",
+      href: "/page/thoughts",
+    },
+    {
       title: "Projects",
       href: "/page/projects",
     }

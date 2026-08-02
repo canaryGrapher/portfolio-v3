@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /page/thoughts/write
+Disallow: /api/thoughts/

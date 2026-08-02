@@ -121,3 +121,159 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .polaroid-tilt-hover:hover {
   transform: rotate(0deg) translateY(-8px) scale(1.03) !important;
 }
+/* ---------------------------------------------------------------------------
+   Thoughts section: markdown prose styles.
+   Written by hand rather than via @tailwindcss/typography to avoid adding a
+   plugin for one page, and to match the portfolio's green/gray palette.
+   --------------------------------------------------------------------------- */
+.thoughts-prose {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.thoughts-prose > *:first-child { margin-top: 0; }
+.thoughts-prose > *:last-child { margin-bottom: 0; }
+
+.thoughts-prose p {
+  margin: 0 0 1.35rem;
+}
+
+.thoughts-prose h1,
+.thoughts-prose h2,
+.thoughts-prose h3,
+.thoughts-prose h4 {
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 2.25rem 0 0.85rem;
+}
+
+.thoughts-prose h1 { font-size: 1.95rem; }
+.thoughts-prose h2 { font-size: 1.6rem; }
+.thoughts-prose h3 { font-size: 1.3rem; }
+.thoughts-prose h4 { font-size: 1.1rem; }
+
+.thoughts-prose a {
+  color: #166534;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: color 0.2s ease;
+}
+.thoughts-prose a:hover { color: #15803d; }
+
+.thoughts-prose strong { color: #111827; font-weight: 700; }
+.thoughts-prose em { font-style: italic; }
+
+.thoughts-prose ul,
+.thoughts-prose ol {
+  margin: 0 0 1.35rem;
+  padding-left: 1.5rem;
+}
+.thoughts-prose ul { list-style: disc; }
+.thoughts-prose ol { list-style: decimal; }
+.thoughts-prose li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+.thoughts-prose li::marker { color: #166534; }
+.thoughts-prose ul ul,
+.thoughts-prose ol ol,
+.thoughts-prose ul ol,
+.thoughts-prose ol ul { margin: 0.5rem 0 0; }
+
+.thoughts-prose blockquote {
+  margin: 1.75rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 3px solid #166534;
+  color: #4b5563;
+  font-style: italic;
+}
+.thoughts-prose blockquote p:last-child { margin-bottom: 0; }
+
+.thoughts-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: #f3f4f6;
+  color: #166534;
+  padding: 0.15em 0.4em;
+  border-radius: 0.3rem;
+  border: 1px solid #e5e7eb;
+}
+
+.thoughts-prose pre {
+  margin: 1.75rem 0;
+  padding: 1.15rem 1.35rem;
+  background: #0f2417;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+.thoughts-prose pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #e5e7eb;
+  font-size: inherit;
+}
+
+.thoughts-prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.75rem 0;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.thoughts-prose hr {
+  margin: 2.5rem 0;
+  border: 0;
+  border-top: 1px dashed #d1d5db;
+}
+
+.thoughts-prose table {
+  width: 100%;
+  margin: 1.75rem 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+}
+.thoughts-prose th,
+.thoughts-prose td {
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+}
+.thoughts-prose th {
+  background: #f9fafb;
+  font-weight: 700;
+  color: #111827;
+}
+
+.thoughts-prose input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: #166534;
+}
+
+/* Syntax highlighting (highlight.js token classes) tuned for the dark pre block */
+.thoughts-prose .hljs-comment,
+.thoughts-prose .hljs-quote { color: #7f9c8a; font-style: italic; }
+.thoughts-prose .hljs-keyword,
+.thoughts-prose .hljs-selector-tag,
+.thoughts-prose .hljs-literal { color: #7dd3a0; }
+.thoughts-prose .hljs-string,
+.thoughts-prose .hljs-title,
+.thoughts-prose .hljs-name,
+.thoughts-prose .hljs-attr { color: #fcd34d; }
+.thoughts-prose .hljs-number,
+.thoughts-prose .hljs-symbol,
+.thoughts-prose .hljs-bullet { color: #f9a8d4; }
+.thoughts-prose .hljs-function,
+.thoughts-prose .hljs-built_in { color: #93c5fd; }
+.thoughts-prose .hljs-variable,
+.thoughts-prose .hljs-template-variable { color: #fca5a5; }
+.thoughts-prose .hljs-emphasis { font-style: italic; }
+.thoughts-prose .hljs-strong { font-weight: 700; }
