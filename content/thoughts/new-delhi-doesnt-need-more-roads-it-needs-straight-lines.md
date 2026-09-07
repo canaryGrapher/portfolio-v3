@@ -2,7 +2,7 @@
 title: "New Delhi Doesn't Need More Roads. It Needs Straight Lines"
 subtitle: "The cheapest fix for the capital region's traffic is already painted on the tarmac. We just refuse to use it."
 date: "2026-09-07T16:37:29.099Z"
-updated: "2026-09-07T16:43:59.198Z"
+updated: "2026-09-07T17:17:56.779Z"
 tags: []
 featureImage: ""
 excerpt: "New Delhi Doesn't Need More Roads. It Needs Straight Lines. The cheapest fix for the capital region's traffic is already painted on the tarmac. We just refuse..."
@@ -16,7 +16,9 @@ readingTime: 7
 
 Stand on the Delhi-Gurugram Expressway at 9:15 on a Tuesday morning and count the lanes. Then count the columns of vehicles actually moving down them. The second number is always higher. Four painted lanes routinely carry six or seven ragged files of traffic, each one a few inches from the next, and another vehicle squeezing in to make another lane, as if looking for answers from the government as to why they made so few lanes on such a wide road. Motorcycles thread the seams. A truck sits in the extreme right lane doing 40. An SUV crosses all the four lanes in one move to make an exit it spotted late. Everyone driving at the peak of their patience. 
 
-We have come to believe for over two decades that this is a problem of holding capacity of our roads. So we build more and more, every year. Flyovers at Rajokri, underpasses in Noida, elevated corridors in Ghaziabad, an expressway to Meerut, another to Dwarka. And every year the numbers get worse. DL registered vehicles crossed 87.6 lakh in 2025-26, a rise of nearly 8 percent in a single year, at a density of 522 vehicles per thousand people. TomTom's index put New Delhi at a 60 percent congestion level, with 104 hours lost per driver in rush hour. The Centre for Science and Environment found something more damning still: on Delhi's arterial roads, peak and non-peak speeds have converged at around 26 to 27 km/h. There is no longer an off-peak. The jam is now the baseline condition.
+
+
+We have come to believe for over two decades that this is a problem of holding capacity of our roads. So we build more and more, every year. Flyovers at Rajokri, underpasses in Noida, elevated corridors in Ghaziabad, an expressway to Meerut, another to Dwarka. And every year the numbers get worse. **DL** registered vehicles crossed 87.6 lakh in 2025-26, a rise of nearly 8 percent in a single year, at a density of 522 vehicles per thousand people. [TomTom's index](https://www.tomtom.com/traffic-index/city/new-delhi/) put New Delhi at a 60 percent congestion level, with 104 hours lost per driver in rush hour. The Centre for Science and Environment found something more damning still: on Delhi's arterial roads, peak and non-peak speeds have converged at around 26 to 27 km/h. There is no longer an off-peak. The jam is now the baseline condition.
 
 Here is the uncomfortable proposition. A meaningful share of that congestion is not caused by too many vehicles for the asphalt. It is caused by the way those vehicles occupy the asphalt. NCR does not have a road shortage. It has a queuing disorder. And unlike almost every other intervention on the table, fixing it costs close to nothing.
 
